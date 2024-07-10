@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JiPOS User Manual</title>
+    <link rel="icon" href="./Images/Iosoft logo.avif" />
+    <link rel="stylesheet" href="Improved Manual.css" />
+    <script
+      src="https://kit.fontawesome.com/18ed336f4c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="header container-fluid p-2 text-black">
+      <h1 class="text-center">JiPOS User Manual</h1>
+    </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="d-flex align-items-start">
+          <div
+            class="nav flex-column nav-pills me-3"
+            id="v-pills-tab"
+            role="tablist"
+            aria-orientation="vertical"
+          >
+            <!-- button tabs -->
+            <button
+              class="btn-primary nav-link active m-1"
+              id="v-pills-intro-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-intro"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-intro"
+              aria-selected="true"
+            >
+              <h6>Introduction</h6>
+            </button>
+            <button
+              class="btn-primary nav-link m-1"
+              id="v-pills-UI-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-UI"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-UI"
+              aria-selected="false"
+            >
+              <h6>System User Layout</h6>
+            </button>
+            <button
+              class="btn-primary nav-link m-1"
+              id="v-pills-configs-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-configs"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-configs"
+              aria-selected="false"
+            >
+              <h6>System Configurations</h6>
+            </button>
+            <button
+              class="btn-primary nav-link m-1"
+              id="v-pills-users-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-users"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-users"
+              aria-selected="false"
+            >
+              <h6>System Users & Role Management</h6>
+            </button>
+            <button
+              class="btn-primary nav-link m-1"
+              id="v-pills-products-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-products"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-products"
+              aria-selected="false"
+            >
+              <h6>Products & Stock</h6>
+            </button>
+            <button
+              class="btn-primary nav-link m-1"
+              id="v-pills-purchases-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-purchases"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-purchases"
+              aria-selected="false"
+            >
+              <h6>Purchases</h6>
+            </button>
+            <button
+            class="btn-primary nav-link m-1"
+            id="v-pills-sales-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-sales"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-sales"
+            aria-selected="false"
+          >
+            <h6>Sales</h6>
+          </button>
+          </div>
+          <!-- tab content-->
+          <div class="tab-content" id="v-pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="v-pills-intro"
+              role="tabpanel"
+              aria-labelledby="v-pills-intro-tab"
+            >
+              <h1>Introduction</h1>
+              <p class="fs-5">
+                JiPOS is a web-based point of sale system, which handles
+                inventory, production, requisition, purchasing, sales,
+                accommodation, accounting, user management and reporting
+                modules. JiPOS is mainly used in hotels & restaurants, wines &
+                spirit shops, hardware, mini-marts, mines, organizations and
+                pharmacies.
+              </p>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="v-pills-UI"
+              role="tabpanel"
+              aria-labelledby="v-pills-UI-tab"
+            >
+              <h1>System User Layout</h1>
+              <p class="fs-5">
+                The system has two login pages, for the waiters and for front
+                office or back-office. Waiters use their pin only to login to
+                the system while the front and back office uses their registered
+                username and password to login.
+              </p>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="v-pills-configs"
+              role="tabpanel"
+              aria-labelledby="v-pills-configs-tab"
+            >
+              <h1>System Configurations</h1>
+              <h3>Organization configurations</h3>
+              <h5>
+                1. How to setup organization details including:
+                business/organization name, email, phone, KRA PIN, address, logo
+                e.t.c
+              </h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Organizations > Orgs. In the window
+                that opens, you can update the details in the form appropriately
+                and save as shown in the image below
+              </p>
+              <h5>2. How to set-up stations</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Organizations > Stations. In the
+                window that opens, expand the form by clicking the top-right +
+                icon. Fill the form appropriately then save. You can view, edit
+                and delete all the registered stations from the list visible
+                under the form as shown below.
+              </p>
+              <h5>3. How to set-up departments</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Organizations > Departments. Fill in
+                the left form and submit to register a new department. Use the
+                table on the right to view, edit or delete already registered
+                departments.
+              </p>
+              <h3>General configurations</h3>
+              <h5>1. How to Happy Hour</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Happy Hour. Enter
+                the times you would like to sell with the happy hour prices. You
+                can switch the set times ON/OFF in the status column as shown
+                below
+              </p>
+              <h5>2. How to set-up attributes</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Attributes. Fill in
+                the left form and submit to register a new attribute. Use the
+                table on the right to view, edit or delete already registered
+                attribute.
+              </p>
+              <h5>3. How to set-up item categories</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Categories. Fill in
+                the left form and submit to register a new category. Use the
+                table on the right to view, edit or delete already registered
+                category. <br /><b>Note:</b>You map categories per store/shop
+                for multi-store system setup. This will respectively display the
+                categories at the specified points of sale. If a category is
+                hidden, it will not be displayed at the point of sale.
+              </p>
+              <h5>4. How to set-up brands</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Brands. Fill in the
+                left form and submit to register a new brand. Use the table on
+                the right to view, edit or delete already registered brand.
+              </p>
+              <h5>5. How to set-up colors</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Colors. Fill in the
+                left form and submit to register a new color. Use the table on
+                the right to view, edit or delete already registered color.
+              </p>
+              <h5>6. How to set-up units (item units)</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Units. Fill in the
+                left form and submit to register a new unit. Use the table on
+                the right to view, edit or delete already registered unit
+              </p>
+              <h5>7. How to set-up tax types</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Tax Types. Fill in
+                the left form and submit to register a new Tax Type. Use the
+                table on the right to view, edit or delete already registered
+                Tax type.
+              </p>
+              <h5>8. How to set-up fiscal years</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Fiscal Years. Fill
+                in the left form and submit to register a new Fiscal Year. Use
+                the table on the right to view, edit or delete already
+                registered Fiscal Year. The systems runs in an active
+                Fiscal/Financial Year, which should be set and activated in this
+                section.
+              </p>
+              <h5>9. How to set-up tables/counters</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Tables/Counters.
+                Fill in the left form and submit to register a new
+                Table/Counter. Use the table on the right to view, edit or
+                delete already registered Table/Counter. This option allows the
+                waiter to map every order to a given table so it is easy to
+                track. All the tables must be mapped appropriately per
+                store/shop/selling point.
+              </p>
+              <h5>10. How to set-up stores</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Stores. Fill in the
+                left form and submit to register a new Store. Use the table on
+                the right to view, edit or delete already registered Stores.
+                Making a store a <i>default selling point</i> makes it the
+                default store from which all the goods are sold upon login to
+                the POS. If the store is associated to accommodation, then check
+                <i>yes</i> in the <i>In accommodation</i> option. If this is
+                yes, then you should give it its appropriate M-Pesa payment
+                options (if available).
+              </p>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="v-pills-users"
+              role="tabpanel"
+              aria-labelledby="v-pills-users-tab"
+            >
+              <h1>System Users & Role Management</h1>
+              <h5>1. How to set-up system users</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to System Users > System Users. Fill in
+                the left form and submit to register new Stores. Use the table
+                on the right to view or delete already registered Users.
+              </p>
+              <h5>2. How to set-up customers</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to System Users > Customers. Fill in
+                the left form and submit to register a new Customer. Use the
+                table on the right to view, edit & delete already registered
+                Customer.
+              </p>
+              <h5>3. How to set-up customers</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to System Users > Customers. Fill in
+                the left form and submit to register a new Customer. Use the
+                table on the right to view, edit & delete already registered
+                Customer.
+              </p>
+              <h5>4. How to set-up user roles & privileges</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to System Users > Role Management. This
+                will open a page with the list of all roles. You can view/
+                delete the created roles. Click Add Role button at the top-left
+                section to add a new role In the new page enter the name of the
+                role and check all the boxes appropriately then save. The
+                created roles can then be assigned to users while setting up a
+                user.
+              </p>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="v-pills-products"
+              role="tabpanel"
+              aria-labelledby="v-pills-products-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h5>1. How to register, view, edit and delete items</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Products > Items. You are presented
+                with the items list. Click <b>Add Item</b> button to register a
+                new item. In the window, which appears, fill in the form
+                appropriately and submit. All the mandatory fields (*) must be
+                field to submit the form. All the select input fields
+                (Categories/Units/Attributes/Tax Types) are set in the
+                Configurations section. Ensure you set these configurations
+                before you register an item. All the registered items are
+                displayed in the items list
+              </p>
+              <h5>2. How to import items</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Products > Items. You are presented
+                with the items list. Click Add Item button. In the new page,
+                click Upload Items button. This will open a popup form. Click
+                CSV Template button to download the data template, which you
+                appropriately fill then upload using the same form.
+                <br /><b>Note:</b> The system will redirect you to a failed
+                imports page where you will be able to see all the data, which
+                have not been imported. You can correct the data in the table
+                and import again. Alternatively, you can export the failed data,
+                correct them appropriately and then import again. The following
+                columns are required:
+                <i>
+                  Name, Barcode/SKU, Unit, Category, Buying Price, Selling
+                  Price/Marked Price and Opening Stock.</i
+                >
+                <br />All the failed imports data can be delete by clicking
+                Delete all button at the top-right of the page.
+              </p>
+              <h5>3. How to generate item serial numbers</h5>
+              <p class="fs-5">
+                On the sidebar click Products > Items. This will open a list of
+                items. Click on the item code to open the item profile. In the
+                serials widget, click Generate button to generate a new serial.
+                To print the generated serial, click Print button as shown in
+                the image below.
+              </p>
+              <h5>4. How to create item by-product</h5>
+              <p class="fs-5">
+                This is also known as
+                <i
+                  >item breakdown/ creating smaller versions of the same
+                  item.</i
+                >
+                On the sidebar click Products > Items. This will open a list of
+                items. Click on the item code to open the item profile. At the
+                top section, click Create By-product button to open the popup
+                form.
+              </p>
+              <h5>5. How to map items in respective stores (redistribution)</h5>
+              <p class="fs-5">
+                The purpose is to register/associate items into their preferred
+                respective store(s) selected, hence allowing for stock
+                monitoring/sales/requisitions per store/shop. Navigate to
+                Products > Stocks. Click Redistribute items button. In the popup
+                window, fill in the form appropriately and submit. Preferred
+                store/shop: select the preferred store/shop where you want to
+                avail/push these items. Get items: select the items here.
+                <br />Choose action point: <br />Distribute - allocates the
+                selected store the items selected <br />Rollback - a way undo
+                already redistributed items <br />Override - re-allocates the
+                selected store the items selected with the opening stock value
+                registered earlier during item registration
+              </p>
+              <h5>6. How to take stock</h5>
+              <p class="fs-5">
+                This feature allows for manual taking of stock. It can be
+                conducted daily, weekly, monthly, quarterly, semi-annually or
+                annually. Navigate to Products > Stocks the click the Stock Take
+                button. In the page, there is the form to create a stock
+                instance. Select the organization/store, set the instance name
+                (by default the current date is given), select the instance
+                date, mark as active, give any other description then submit.
+                <br />This will create an instance, which is visible on the
+                table displayed in the above image. If you open one instance,
+                you will be able to view all the items in the given store with
+                the system stock balances already generated. You are then
+                required to edit each item updating the physically counted
+                quantities. This will give either a positive or a negative
+                deviation, which will call for Stock reconciliation.
+              </p>
+              <h5>7. How to reconcile stock</h5>
+              <p class="fs-5">
+                This feature allows for the updating of the stock balances after
+                a stock take. It clears the deviations experienced after stock
+                takes. Navigate to Products > Stocks then click Reconcile Stock
+                button. In the popup, select the store for the reconciliation,
+                and the instance, and then submit. This will update the stock
+                balances to the instance selected.
+              </p>
+              <h5>8. How to directly move stock</h5>
+              <p class="fs-5">
+                This feature helps you directly move stock from one store/shop
+                to the other.
+                <br /><b>Note:</b> You can only move items from one store to the
+                other if and only if the item is already redistributed in the
+                two stores. Navigate to Products > Move stock. Fill in the form
+                and submit as shown below; You can always check the availability
+                of an item within a given store before initiating a movement.
+              </p>
+              <h5>9. How to make requisition (internal/external)</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Products > Requisition. This will
+                open a page with the list of all requisitions. The list will
+                contain all requisitions from all departments or only a user’s
+                requisition; this depends on whether you have the approval
+                rights or not. First, select the store, which needs the items,
+                then the store, which should issue the items. Fill in the rest
+                of the form appropriately then submit. In the case of external
+                requisition, the issuing store should be ‘External Store’. If
+                this store is not appearing in the list, then it can be created
+                in the configurations-store section.
+              </p>
+              <h5>
+                10. How to approve, print, delete and convert requisition into
+                LPO
+              </h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Products > Requisition. This will
+                open a page with the list of all requisitions. The list will
+                contain all requisitions from all departments. In the action
+                column, click View. This will open the requisition details. You
+                can approve/suspend/reject the requisition in this window. For
+                External Requisition, you will be able to select the supplier as
+                you convert the requisition into LPO. Only approved external
+                requisition can be converted into LPO.
+                <br /><b>Note:</b> You can only delete a requisition that has
+                neither been approved nor rejected.
+              </p>
+              <h5>11. How to create recipe (Production)</h5>
+              <p class="fs-5">
+                Ensure all the required recipe items are already registered in
+                the item registration section. Navigate to Products > Recipe.
+                Read carefully the instructions on the right section of the page
+                before you begin creating the recipe. Fill in the recipe form
+                appropriately then submit.
+                <br /><b>Note:</b> All the recipe items must be redistributed in
+                the Affected Store per Sale before creating a recipe. This will
+                ensure accurate stock control during sales. If an item has been
+                registered before and you wish to override/replace its profile
+                with a new recipe, then insert the initial item code (barcode)
+                in the ‘Conflicting Barcode/SKU (cbs)’ input field. All created
+                recipes are found at the bottom table on the same page. You can
+                view/edit/delete any recipe created. The recipes are also
+                available in the general items list in the Products > Items
+                section.
+              </p>
+              <h5>12. How to record Wastes</h5>
+              <p class="fs-5">
+                We can have all wastes recorded in this section. Navigate to
+                Products > Wastages. Click Add Wastage button at the top-right
+                to open the waste registration form. Select the store affected,
+                item, quantity, date and an explanation (if any) then submit the
+                form. All the wastes are shown in the list displayed on the same
+                page.
+              </p>
+            </div>
+           <div
+              class="tab-pane fade"
+              id="v-pills-purchases"
+              role="tabpanel"
+              aria-labelledby="v-pills-purchases-tab"
+            >
+              <h1>Purchases</h1>
+              <h3>How to create, view and delete a purchase</h3>
+              <h5>1. Register a purchase</h5>
+              <p class="fs-5">
+                On the left sidebar click Purchase which will then be expanded.
+                Click New purchase, which will redirect you to purchase
+                registration page Fill in the purchase form by select the
+                supplier, the store that will receive the purchased items and
+                the items. After ensuring everything is OK, click the Submit
+                button to register the purchase.
+                <br /><b>Note:</b> Registering a new purchase will automatically
+                increase the stock balances in the selected store as well as
+                affect the purchase and supplier accounts.
+              </p>
+              <h5>2. Viewing and editing a purchase</h5>
+              <p class="fs-5">
+                To view a purchase, click Purchases > Purchase List in the
+                sidebar. This will open the list of all initial purchases On the
+                Action/Last table column, click Action button, which will
+                expand. The click View to view more information about the
+                purchase. This page is called the purchase profile page. You can
+                then edit and save this particular purchase details. At the
+                bottom-right section of the page, you can add Purchase Expenses,
+                which are directly sent to the Expenses & Payments module as
+                explained later on.
+              </p>
+              <h5>3. Deleting a purchase</h5>
+              <p class="fs-5">
+                To Delete A purchase, click Purchases > Purchase List in the
+                sidebar. This will open the list of all initial purchases. On
+                the Action/Last table column, click Action button, which will
+                expand. The click Delete to delete the purchase.
+              </p>
+              <h3>How to create, view and delete a purchase</h3>
+              <p class="fs-5">
+                This can also be called Settling of supplier balances. To make
+                new or view purchase payment(s), click Purchases > Purchase List
+                on the sidebar. This will open the list of all purchases. On the
+                Action/Last table column, click Action button that will expand.
+                The click View to open the purchase profile. At the bottom of
+                the profile, you will find ‘Make payment’ form. Fill it
+                appropriately then submit. This will make the purchase payment.
+                <br />This form allows you to make payments in bits: you only
+                need to specify the paying account, amount, date and a
+                reference. All the purchase payment (also known as order
+                payments) will be displayed in the same page at the bottom. You
+                can then click the last print action button to get the payment
+                voucher, which can be printed/downloaded. <br /><b>Note:</b> The
+                purchase payment form appears only if the purchase has some
+                balances not settled. If the balances are cleared fully, then
+                only the ‘Order payments’ table will be visible. This helps
+                avoid double payments.
+              </p>
+              <h3>How to create, view and delete an LPO</h3>
+              <h5>1. Creating a new LPO</h5>
+              <p class="fs-5">There two ways of creating and LPO;</p>
+              <h6 class="fs-5">a. Direct creation through New LPO link</h6>
+              <p class="fs-5">
+                On the left sidebar click Purchase > New LPO which will redirect
+                you to LPO form page. Fill in the LPO form by select the
+                supplier, the store that will receive the purchased items and
+                the items. After ensuring everything is OK, click the Submit
+                button to register the new LPO.
+              </p>
+              <h6 class="fs-5">b. Converting an External Requisition into an LPO
+              </h6>
+              <p class="fs-5">
+                Navigate to Products > Requisition. From the list, click the
+                action button in the action column. From the drop-down menu,
+                click Edit In the popup form that displays the LPO details;
+                convert the requisition to LPO by checking Yes option. Then,
+                select the supplier and click the Submit button as shown.
+                <br /><b>Note:</b> Only External Requisitions can be converted
+                to an LPO.
+              </p>
+              <h5>2. Viewing and editing LPO</h5>
+              <p class="fs-5">
+                To view an LPO, click Purchases > LPO List in the sidebar. This
+                will open the list of all LPOs. On the Action/Last table column,
+                click Action button, which will expand. Then click View link to
+                view more information about the LPO. The new page opened is
+                called the LPO profile page where you can edit then save the LPO
+                details.<br /><b>Note:</b> To move an LPO into the Purchase
+                List; Select YES option under Move to purchase order? Before you
+                click Update LPO button. This action also auto-increases the
+                stock balances in the respective stores.
+              </p>
+              <h5>3. Deleting an LPO</h5>
+              <p class="fs-5">
+                Navigate to Purchases > LPO List. In the LPO list Action table
+                column, click Action button, which will expand. Then click
+                Delete to delete the LPO.
+              </p>
+          </div>
+          <div
+              class="tab-pane fade"
+              id="v-pills-purchases"
+              role="tabpanel"
+              aria-labelledby="v-pills-purchases-tab"
+            >
+              <h1>Purchases</h1>
+              <h3>How to create, view and delete a purchase</h3>
+              <h5>1. Register a purchase</h5>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
