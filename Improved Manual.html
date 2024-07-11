@@ -36,7 +36,7 @@
             aria-orientation="vertical"
           >
             <!-- button tabs -->
-            <button
+            <!-- intro button --><button
               class="btn-primary nav-link active m-1"
               id="v-pills-intro-tab"
               data-bs-toggle="pill"
@@ -48,7 +48,7 @@
             >
               <h6>Introduction</h6>
             </button>
-            <button
+            <!-- system user layout button --><button
               class="btn-primary nav-link m-1"
               id="v-pills-UI-tab"
               data-bs-toggle="pill"
@@ -60,7 +60,7 @@
             >
               <h6>System User Layout</h6>
             </button>
-            <button
+            <!-- system configs button --><button
               class="btn-primary nav-link m-1"
               id="v-pills-configs-tab"
               data-bs-toggle="pill"
@@ -72,7 +72,7 @@
             >
               <h6>System Configurations</h6>
             </button>
-            <button
+            <!-- users button --><button
               class="btn-primary nav-link m-1"
               id="v-pills-users-tab"
               data-bs-toggle="pill"
@@ -84,7 +84,7 @@
             >
               <h6>System Users & Role Management</h6>
             </button>
-            <button
+            <!-- products button --><button
               class="btn-primary nav-link m-1"
               id="v-pills-products-tab"
               data-bs-toggle="pill"
@@ -96,7 +96,7 @@
             >
               <h6>Products & Stock</h6>
             </button>
-            <button
+            <!-- purchases button --><button
               class="btn-primary nav-link m-1"
               id="v-pills-purchases-tab"
               data-bs-toggle="pill"
@@ -108,21 +108,46 @@
             >
               <h6>Purchases</h6>
             </button>
-            <button
-            class="btn-primary nav-link m-1"
-            id="v-pills-sales-tab"
-            data-bs-toggle="pill"
-            data-bs-target="#v-pills-sales"
-            type="button"
-            role="tab"
-            aria-controls="v-pills-sales"
-            aria-selected="false"
-          >
-            <h6>Sales</h6>
-          </button>
+            <!-- sales button --><button
+              class="btn-primary nav-link m-1"
+              id="v-pills-sales-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-sales"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-sales"
+              aria-selected="false"
+            >
+              <h6>Sales</h6>
+            </button>
+            <!-- rooms button --><button
+              class="btn-primary nav-link m-1"
+              id="v-pills-rooms-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-rooms"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-rooms"
+              aria-selected="false"
+            >
+              <h6>Rooms</h6>
+            </button>
+            <!-- accounting button --><button
+              class="btn-primary nav-link m-1"
+              id="v-pills-accounting-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-accounting"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-accounting"
+              aria-selected="false"
+            >
+              <h6>Accounting</h6>
+            </button>
           </div>
           <!-- tab content-->
           <div class="tab-content" id="v-pills-tabContent">
+            <!-- intro content-->
             <div
               class="tab-pane fade show active"
               id="v-pills-intro"
@@ -139,6 +164,7 @@
                 pharmacies.
               </p>
             </div>
+            <!-- system User Layout content-->
             <div
               class="tab-pane fade"
               id="v-pills-UI"
@@ -153,6 +179,7 @@
                 username and password to login.
               </p>
             </div>
+            <!-- system configs content-->
             <div
               class="tab-pane fade"
               id="v-pills-configs"
@@ -268,6 +295,7 @@
                 options (if available).
               </p>
             </div>
+            <!-- system users content-->
             <div
               class="tab-pane fade"
               id="v-pills-users"
@@ -306,6 +334,7 @@
                 user.
               </p>
             </div>
+            <!-- products content-->
             <div
               class="tab-pane fade"
               id="v-pills-products"
@@ -473,7 +502,8 @@
                 page.
               </p>
             </div>
-           <div
+            <!-- purchases content-->
+            <div
               class="tab-pane fade"
               id="v-pills-purchases"
               role="tabpanel"
@@ -543,7 +573,8 @@
                 the items. After ensuring everything is OK, click the Submit
                 button to register the new LPO.
               </p>
-              <h6 class="fs-5">b. Converting an External Requisition into an LPO
+              <h6 class="fs-5">
+                b. Converting an External Requisition into an LPO
               </h6>
               <p class="fs-5">
                 Navigate to Products > Requisition. From the list, click the
@@ -572,17 +603,407 @@
                 column, click Action button, which will expand. Then click
                 Delete to delete the LPO.
               </p>
-          </div>
-          <div
+            </div>
+            <!-- sales content-->
+            <div
               class="tab-pane fade"
-              id="v-pills-purchases"
+              id="v-pills-sales"
               role="tabpanel"
-              aria-labelledby="v-pills-purchases-tab"
+              aria-labelledby="v-pills-sales-tab"
             >
-              <h1>Purchases</h1>
-              <h3>How to create, view and delete a purchase</h3>
-              <h5>1. Register a purchase</h5>
-              
+              <h1>Sales</h1>
+              <h3>How to make a sale</h3>
+              <p class="fs-5">
+                To make a sale in the system, navigate to Sales > POS as shown
+                below. If you login using your pin, the system will
+                auto-redirect you the POS section.<br />JiPOS has two POS modes:
+              </p>
+              <h5>1. Desktop Mode</h5>
+              <p class="fs-5">
+                This is mainly used in other industries except the Hospitality
+                Industry. It is used with the non-touch screen devices. This
+                mode supports bar-code scanners.
+              </p>
+              <h5>2. POS Mode</h5>
+              <p class="fs-5">
+                This mode is commonly used in the Hospitality Industry and
+                supports both touch screen and non-touch screen devices.After
+                opening the POS window, fill in the form appropriately and click
+                sell as shown below. You can filter the items by categories
+                displayed at the top. You can also search the item in the search
+                bar, by typing the item name or barcode then clicking the item
+                in the display. This action will auto-add the item in the
+                calculator displayed in the left section of the page. You can
+                increase the item quantity from the calculator section.
+                <br /><b>Note:</b> You can only sell items with their quantities
+                greater than 1. The quantities available is displayed by the
+                blue icon at the top of every item except for the recipe items.
+                <br />Upon clicking the SELL button, you will be automatically
+                logged out of the system, while the system prints the invoice
+                and/or captain order, where applicable.
+              </p>
+              <h3>How to edit open sales/ open orders/ pending bills</h3>
+              <p class="fs-5">
+                Navigate to the POS section. At top of the page, click Open
+                Sales. In the popup window, search the sales, which you would
+                like to edit and click View/Edit button. You can add new items
+                onto the same order in this new page. Note that the initially
+                sold items in the same order cannot be removed or edited. One
+                done, click the Update button to post this edited order. The
+                captain order printed after editing this order will contain only
+                the added items.
+              </p>
+              <h3>How to settle/clear/make payment on a sale</h3>
+              <p class="fs-5">
+                The cashier or accountant should preferably be handling this
+                section. Navigate to the Sales > Sales List on the sidebar. This
+                will present you all the sales made arranged in a descending
+                order. All the pending bills/open sales will be having a
+                balance. Click the Bill No to open the sale profile as shown
+                below. At the bottom of the sale profile, you will find the
+                ‘Make Payment’ form. Enter the payment mode, amount, date and
+                reference then submit. You can post multiple payments in this
+                form. The form disappears as soon as the sale balance is
+                completely settled. You can find all the payments made on this
+                sale in the ‘Payments Made’ table. After clearing the bill, you
+                can print the receipt.
+              </p>
+              <h3>How to void a sale</h3>
+              <p class="fs-5">
+                Navigate to the Sales > Sales List on the sidebar. This will
+                present you all the sales made arranged in a descending order.
+                Find the last column (Action column) in the table the click the
+                Action button. If your display screen is small, then you will
+                have to expand the row details by clicking the blue plus (+)
+                icon to open the action column as shown below. Click Void Sale
+                link and confirm to void the sale. Voiding a sale is like
+                cancellation of a whole order. The order/sale is canceled with
+                the items restocked. All voided sales are pushed to Products >
+                Voided Sales section.
+              </p>
+              <h3>How to complement a sale</h3>
+              <p class="fs-5">
+                Navigate to the Sales > Sales List on the sidebar. This will
+                present you all the sales made arranged in a descending order.
+                Find the last column (Action column) in the table the click the
+                Action button. If your display screen is small, then you will
+                have to expand the row details by clicking the blue plus (+)
+                icon to open the action column as shown in the image above.
+                Click Complement Sale link and confirm to complement the sale.
+                All complementary sales are pushed to Products > Complementary
+                Sales section and are recorded as business expenses.
+              </p>
+              <h3>How to extend credit</h3>
+              <p class="fs-5">
+                Giving the sales Extended Credit tag helps easily track the
+                long-term credit sales as well as allows you to close shift with
+                some open sales Navigate to the Sales > Sales List on the
+                sidebar. This will present you all the sales made arranged in a
+                descending order. Find the last column (Action column) in the
+                table the click the Action button. If your display screen is
+                small, then you will have to expand the row details by clicking
+                the blue plus (+) icon to open the action column as shown in the
+                image above. Click Extend Credit link and confirm to extend
+                credit. From the sales list, all sales are tagged with the
+                Extend Credit tag.
+              </p>
+              <h3>How to receive sales returns</h3>
+              <p class="fs-5">
+                Returns as conducted on a specific sale/purchase item. You must
+                have the order reference number to conduct a successful return.
+                To record a return, navigate to Sales > Returns. This will open
+                the returns page. Fill in the return form appropriately and
+                Save. For sales: Select Sale Return option, select the order and
+                the item to be returned. Insert the quantity to be return and
+                the return condition. You can describe the return before you
+                Save. For purchase: Select the Purchase Return option, select
+                the order and the item to be returned. Insert the quantity to be
+                return and the return condition. You can describe the return
+                before you Save.
+              </p>
+            </div>
+            <!-- rooms content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-rooms"
+              role="tabpanel"
+              aria-labelledby="v-pills-rooms-tab"
+            >
+              <h1>Rooms</h1>
+              <h3>How to set-up room types</h3>
+              <p class="fs-5">
+                Navigate to Rooms > Room Types. Fill in the form on the left
+                section of the page and submit. All the registered room types
+                can be viewed from the table within the page as shown below.
+              </p>
+              <h3>How to set-up room maintenance status</h3>
+              <p class="fs-5">
+                Navigate to Rooms > Register Maintenance Status Fill in the form
+                on the left section of the page and submit. All the registered
+                Maintenance Status can be viewed from the table within the page
+                as shown below.
+              </p>
+              <h3>How to set-up rooms</h3>
+              <p class="fs-5">
+                Navigate to Rooms > Rooms. Click New Room button at the top
+                right section of the page. Fill in the pop-up form that appears
+                and submit. All the registered rooms are displayed in the table
+                within the same page. You can Activate/ Deactivate a room in the
+                Active column as shown below. Inactive rooms are not visible in
+                the front office for booking while Active rooms are visible for
+                booking.
+              </p>
+              <h3>How to change room maintenance status</h3>
+              <p class="fs-5">
+                Navigate to Rooms > Rooms. Locate condition column in the table.
+                Click the edit icon in this column to change the room condition
+                status as shown below.
+              </p>
+              <h3>How to add/assign amenities to a room</h3>
+              <p class="fs-5">
+                Navigate to Rooms > Rooms. Click View button in the action
+                column. This will open the room profile. Click Add Amenity
+                button at the top-right section of the page. This will open the
+                registration form. Fill it and click submit. The store has to be
+                selected first to generate the item list available in the
+                preferred store. This is the store from which the item is
+                issued.
+                <br /><b>Note:</b> To move items into and out the room use the
+                action buttons explained below; <br /><b>1. Add Qty:</b> This
+                helps in restocking the quantities of the same item in the room.
+                <br /><b>2. Consumed:</b> This helps in reducing the quantities
+                of the same item in the room. <br /><b>3. View Icon:</b> This
+                opens the item movement ledger as shown below.
+              </p>
+              <h3>How to book a room</h3>
+              <p class="fs-5">
+                On the sidebar open Rooms > Book Room. This opens the booking
+                page. To create a booking, follow the steps below;
+                <br />1. Select the reservation dates and click Search button.
+                This will auto-populate the number of nights input field while
+                it filters in the open rooms within the set period. <br />2.
+                Select the booking type. <br />3. Pick the room would like to
+                reserve. <br />4. Input Full Name, <br />5. Input Phone Number,
+                <br />6. Input Occupancy <br />7. Input the description in the
+                narrative input field. This field is optional <br />8. Input the
+                Amount Paid and 0 (zero) if no amount is paid at this time
+                <br />9. Select the Payment Mode if some amount is paid. If no
+                amount is paid, select Not Applicable from the list <br />10.
+                Input the transaction Reference number, if available, and NA if
+                not available <br />11. After ensuring all the details are
+                correct, click Book Now button to complete the reservation
+                process
+              </p>
+              <h3>How to check-in & checkout guest</h3>
+              <p class="fs-5">
+                To check-in a guest, navigate to Rooms > Bookings section in the
+                sidebar. This will open a list of all the bookings. Search the
+                client using name, ID/passport number, phone number, reference
+                number in the search box. Click the Bill No to open the booking
+                profile.
+              </p>
+              <h3>How to add extra charges to guest bookings</h3>
+              <p class="fs-5">
+                To check-in a guest, navigate to Rooms > Bookings section in the
+                sidebar. This will open a list of all the bookings. Search the
+                client using name, ID/passport number, phone number, reference
+                number in the search box. Click the Bill No to open the booking
+                profile. Click More Action button at the bottom-right section of
+                the page. Choose Extra Charges option from the list displayed.
+                Fill in the form appropriately then submit.
+              </p>
+              <h3>How to map food/drink orders to guest booking</h3>
+              <p class="fs-5">
+                It is a good practice to add food/drink orders to the
+                accommodation bill. This is done while making a sale in the POS
+                window. You have to select the room then then guest for this to
+                be successful as shown below.
+              </p>
+              <h3>How to settle/clear guest bill</h3>
+              <p class="fs-5">
+                To check-in a guest, navigate to Rooms > Bookings section in the
+                sidebar. This will open a list of all the bookings. Search the
+                client using name, ID/passport number, phone number, reference
+                number in the search box. Click the Bill No to open the booking
+                profile. As long as the guest has any pending bill, Make Payment
+                form at the bottom of the booking profile will be displayed. Use
+                this form to ONLY settle the room/accommodation charges.
+              </p>
+            </div>
+            <!-- accounting content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-accounting"
+              role="tabpanel"
+              aria-labelledby="v-pills-accounting-tab"
+            >
+              <h1>Accounting</h1>
+              <h3>How to set-up sub-account types</h3>
+              <p class="fs-5">
+                Navigate to Accounting > Account Types on the sidebar. Fill in
+                the form appropriately at the right section of the page and
+                submit. All the registered Sub-account types are displayed in
+                the same page at the bottom table. To edit already registered
+                sub-account type, navigate to the action column and click edit
+                icon.
+              </p>
+              <h3>
+                How to set-up accounts/ ledger accounts / charts of accounts
+              </h3>
+              <p class="fs-5">
+                Navigate to Accounting > Charts of Accounts on the sidebar.
+                Click the plus(+) icon at the top-right section of the page to
+                display the Account registration form. In the registration form,
+                you can choose the store/shop to which this account belongs.
+                Leave this with default selection if you operate one
+                store/branch.
+                <br /><b>Is Key Account (yes):</b> helps to disable this account
+                from being deleted easily. All the registered accounts are
+                displayed in the table within the same page. You can use the
+                action column to View/Edit/Delete these accounts
+              </p>
+              <h3>How to request, approve & make petty cash payments</h3>
+              <p class="fs-5">
+                This sub-module allows any other employee to request for petty
+                cash using their account.
+              </p>
+              <h5>1. Making a petty cash request</h5>
+              <p class="fs-5">
+                To make a petty cash request, navigate to Accounting > Petty
+                Cash in the sidebar. Fill in the form as shown below then
+                submit. All the requests made are displayed in the table at the
+                right section of the page.
+              </p>
+              <h5>2. Approval of petty cash request</h5>
+              <p class="fs-5">
+                Navigate to Accounting > Petty Cash section. Click the green
+                icon (which shows the number of requests) at the top-right
+                section of the page to view all the incoming requests. Click
+                view icon in the action column to view/approve/reject this
+                particular request.
+              </p>
+              <h5>3. Payment of petty cash request</h5>
+              <p class="fs-5">
+                Only approved requests can get paid. Within the same page shown
+                above, click the payment icon which is displayed for ONLY
+                approved request as shown below. Fill in the payment form and
+                submit. A request cannot be deleted/edited once a payment has
+                been made against it.
+              </p>
+              <h3>How to set-up budgets</h3>
+              <p class="fs-5">
+                You can set-up budgets and truck you expenditure in this
+                section.
+              </p>
+              <h5>1. Creating a budget</h5>
+              <p class="fs-5">
+                Navigate to Account > Budgeting. Fill in the all the required
+                fields in the form and submit to create an expense budget. All
+                the budgets created are displayed in the table at the right
+                section of the page.
+              </p>
+              <h5>2. Tracking budget expenditure</h5>
+              <p class="fs-5">
+                Navigate to Account > Budgeting. On the table to the right, you
+                can filter the budget and view the Budget Amount vs Practical
+                Amount column. The practical amount column shows the actual
+                amounts spent on these particular expense heads. You can click
+                the Name column to view the budget ledger.
+              </p>
+              <h3>How to create, approve & make expenses payments</h3>
+              <h5>1. Creating an expense</h5>
+              <p class="fs-5">
+                Navigate to Accounting > Expenses & Payments. Fill in the form
+                appropriately to create a new expense.
+              </p>
+              <h5>2. Approving an expense</h5>
+              <p class="fs-5">
+                All expenses have to be approved before payments can be made
+                against them. Navigate to Accounting > Expenses & Payments.
+                Search for the expense in the table displayed on the same page
+                then click the reference number for the expense, which needs
+                approval as shown in the image below. In the expense profile,
+                select approved/canceled/suspended option from the drop-down as
+                shown below and update.
+              </p>
+              <h5>3. Making expense payment(s)</h5>
+              <p class="fs-5">
+                Navigate to Accounting > Expenses & Payments Open the open as
+                explained in section 7.5.1 & section 7.5.2 Once the expense has
+                been approved, Make Payment will automatically appear at the top
+                of the page. Click Make Payment button. Fill in the payment form
+                appropriately then Submit Payment. At the bottom of the same
+                page, you will find the posted payment. To print the payment
+                voucher, click print icon in the action column. The collector
+                can then sign the voucher.
+              </p>
+              <h3>How to make a journal entry</h3>
+              <p class="fs-5">
+                Navigate to Accounting > Journal Entry. In the page, you can
+                make a single journal entry at a time or do transfers. Transfers
+                are effective when working with asset accounts e.g. loading the
+                cash account from bank and vice versa. See the image below.
+              </p>
+              <h3>Creating a sub-account type</h3>
+              <p class="fs-5">
+                Navigate to Accounting > Account Types. At the right section
+                fill in the form appropriately to add/register a new sub-account
+                type. All the registered sub-account type are displayed at the
+                bottom of the same page as shown in the image below. If Is
+                Payment Mode is Yes, the all the accounts under this sub-account
+                type will be visible in the payment options found the sales &
+                purchase options.
+              </p>
+              <h3>Creating an account/journal account/ledger account</h3>
+              <p class="fs-5">
+                This is how to register the expense types, income accounts,
+                asset accounts (& payment modes) and liability accounts.
+                Navigate to Accounting > Charts or Accounts. In the page
+                displayed, expand the plus (+) icon at the top right section to
+                open the account registration form. Select the account type,
+                sub-account type then fill in the remaining input fields in the
+                form before you submit. All the registered accounts are found at
+                the bottom section of the same page. You can edit/delete the
+                account created from the action column.
+              </p>
+              <h3>Account balances report</h3>
+              <p class="fs-5">
+                Navigate to Accounting > Account Balances. This will give you an
+                overview of all the account balances. At the top-right section
+                of the page, click print icon to print/export the report to PDF.
+              </p>
+              <h3>Cash flow report</h3>
+              <p class="fs-5">
+                Navigate to Accounting > Cash Flow. This will get you the cash
+                flow report.
+              </p>
+              <h3>Balance sheet report</h3>
+              <p class="fs-5">
+                Navigate to Accounting > Balance Sheet. Select the date the
+                click the print icon to get the report, which can then be
+                printed or downloaded.
+              </p>
+              <h3>Profit & Loss report</h3>
+              <p class="fs-5">
+                Navigate to Accounting > Profit & Loss. Select the Store/Shop in
+                the window that appears. If this is left to the default store
+                already selected, then the report will be for the overall
+                business. Selecting a store/shop helps you extract PnL for a
+                specific store/shop. Select the report period and the Purchase
+                Option including:
+                <br />a. General Purchases: If selected, notice the difference
+                in the purchase expense section. This will get you a summation
+                of all the purchases made within this period in the expense
+                section. <br />b. Cost of Sale: This option will only give you
+                the cost of sale recorded during the sales posted within the
+                specified report period.
+              </p>
+              <h3>General ledger report</h3>
+              <p class="fs-5">
+                Navigate to Accounting > General Ledger. This will open all the
+                accounting transactions in the system.
+              </p>
+            </div>
           </div>
         </div>
       </div>
