@@ -144,6 +144,30 @@
             >
               <h6>Accounting</h6>
             </button>
+            <!-- reports button --><button
+              class="btn-primary nav-link m-1"
+              id="v-pills-reports-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-reports"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-reports"
+              aria-selected="false"
+            >
+              <h6>Reports</h6>
+            </button>
+            <!-- other button --><button
+              class="btn-primary nav-link m-1"
+              id="v-pills-other-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-other"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-other"
+              aria-selected="false"
+            >
+              <h6>Other Configurations</h6>
+            </button>
           </div>
           <!-- tab content-->
           <div class="tab-content" id="v-pills-tabContent">
@@ -1002,6 +1026,169 @@
               <p class="fs-5">
                 Navigate to Accounting > General Ledger. This will open all the
                 accounting transactions in the system.
+              </p>
+            </div>
+            <!-- reports content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-reports"
+              role="tabpanel"
+              aria-labelledby="v-pills-reports-tab"
+            >
+              <h1>Reports</h1>
+              <h3>End of day/ close day report</h3>
+              <p class="fs-5">
+                This is a summary of all the sale activities carried out within
+                a given time-frame. This report can be queried either Shift mode
+                and/or Time-frame mode. Navigate to Reports > Close Day Report.
+                In the window that appears, based on the preferred mode, select
+                the store/shop the the time-frame or shift period. Selecting the
+                store/shop helps, you to query this report per store/shop
+                especially of your business is operating in multi-store mode.
+                Click Filter button to first query the report preview before you
+                click the Print button to either print/download the report.
+              </p>
+              <h3>Room sales report</h3>
+              <p class="fs-5">
+                Navigate to Reports > Room Sales. Filter based the preferred
+                mode, then Print the report as shown below. This gives you the
+                list of rooms sold, the amounts and balances.
+              </p>
+              <h3>Item sales report</h3>
+              <p class="fs-5">
+                This report shows only the specific items sold within the
+                defined report period. Navigate to Reports > Items Sales Report.
+                Chose the preferred mode and Filter. You can then either
+                Print/export the report to .CSV format.
+              </p>
+              <h3>Item purchase report</h3>
+              <p class="fs-5">
+                This report shows a summary of the purchases, which have been
+                made over given period. Navigate to Reports > Item Purchase
+                Report. Filter the report based on the preferred mode the
+                print/export to .CSV format. All the recorded purchase expense
+                are also displayed in the report as shown below.
+              </p>
+              <h3>Staff sales summary/ sales per staff report</h3>
+              <p class="fs-5">
+                This report shows sales for every staff account. Navigate to
+                Reports > Staff Sales Summary. Select the Staff/User then define
+                the report period. Click the filter button to get you a summary
+                of the report. Click the Staff name to get a detailed report.
+                Once the detailed report is opened, cross-check the date filter
+                and adjust appropriately and click the filter button again as
+                shown below.
+              </p>
+              <h3>General sales report</h3>
+              <p class="fs-5">
+                This report gives you an overview of all the sales per store.
+                Navigate to Reports > General Sales. Select the Store and Report
+                period the click Generate Button.
+              </p>
+              <h3>Suppliers report</h3>
+              <p class="fs-5">
+                This gives you the list of suppliers and the purchases made from
+                them over time. Navigate to Reports > Suppliers. In the action
+                column, select Orders to view the order history of the preferred
+                supplier.
+              </p>
+              <h3>Customers report</h3>
+              <p class="fs-5">
+                This gives you the list of customers and the sales made to them
+                over time. Navigate to Reports > Customers. In the action
+                column, select Orders to view the order history of the preferred
+                customer.
+              </p>
+              <h3>Account statements report</h3>
+              <p class="fs-5">
+                You can get the ledger statements for any account in this
+                particular section. Navigate to Reports > Account Statements.
+                Select the desired account and the date filter then click the
+                Filter button. You can then export this report to pdf/csv file
+                formats.
+              </p>
+              <h3>Customer statements report</h3>
+              <p class="fs-5">
+                This allows you to generate and print all the customer
+                statements. Navigate to Reports > Customer Statements. Select
+                the customer and the report period then click the filter button.
+              </p>
+              <h3>Supplier statements report</h3>
+              <p class="fs-5">
+                This allows you to generate and print all the supplier
+                statements. Navigate to Reports > Supplier Statements. Select
+                the supplier and the report period then click the filter button.
+              </p>
+              <h3>Supplier balances report</h3>
+              <p class="fs-5">
+                This allows you to have an overview of the supplier balances
+                reports. Navigate to Reports > Supplier Balances.
+              </p>
+              <h3>General expenses report</h3>
+              <p class="fs-5">
+                Navigate to Reports > General Expenses. This gives an overview
+                of expenses ran in the business.
+              </p>
+            </div>
+            <!-- other content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-other"
+              role="tabpanel"
+              aria-labelledby="v-pills-other-tab"
+            >
+              <h1>Other Configurations</h1>
+              <h3>Printer configurations</h3>
+              <p class="fs-5">
+                The printer configuration described below is specifically for
+                the 80mm thermal receipt printer. Visit
+                <a
+                  href="https://www.iosoftsolutions.co.ke/downloads"
+                  target="_blank"
+                  >"https://www.iosoftsolutions.co.ke/downloads"</a
+                >
+                to download the printer driver. The driver provided runs only on
+                Windows 7 and higher versions. Unzip the downloaded file. Ensure
+                your printer is connected the computer then right click on the
+                file. Select Run as Administrator the click proceed. In the
+                window which appears, click Install. After successful
+                installation of the driver, open Control Panel > View Devices
+                and Printers The printer will be listed in the Printers section
+                Right click on the printer and select Set as Default Printer
+                Right click on the printer then select Print Preferences. In the
+                opened window, select ///////. At the top bar, click //////.
+                Select //// in the page that appears. After finishing all these,
+                click OK at the bottom of the page to exit the window. To test
+                if the printer is configured correctly; print a test page as
+                described
+                <a
+                  href="https://www.howtogeek.com/736310/how-to-print-a-test-page-in-windows-10/"
+                  target="_blank"
+                  >here</a
+                >.
+              </p>
+              <h3>Browser configurations</h3>
+              <p class="fs-5">
+                The preferred browser for running JiPOS is
+                <a
+                  href="https://www.mozilla.org/en-US/firefox/new/"
+                  target="_blank"
+                  >FireFox</a
+                >
+                which you can download and install. Set FireFox as the default
+                browser as explained
+                <a
+                  href="https://blog.mozilla.org/en/products/firefox/how-to-set-firefox-as-your-default-browser-on-windows/"
+                  target="_blank"
+                  >here</a
+                >. Open FireFox browser. In the url section type
+                about:preferences#home without any spaces. Type url in the
+                search box which appears. Under Homepage and new windows, select
+                Custom URL and insert the url given to you by the vendor as
+                shown below. In the same search box, type popup. Click
+                Exceptions in Block pop-up windows section. Insert the URL
+                provided by the vendor in this section, Click Allow then Save
+                Changes.
               </p>
             </div>
           </div>
