@@ -5,11 +5,11 @@
 }
 
 .header {
-  background-color: #d07171;
+  background-color: #F7F7F7;
 }
 
 .btn-primary {
-  color: #af6161 !important;
+  color: #147975 !important;
   
 }
 .btn-primary:hover,
@@ -17,6 +17,6 @@
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
-  color: #000000 !important;
-  background-color: #d07171 !important;
+  color: #F7F7F7 !important;
+  background-color: #147975 !important;
 }
