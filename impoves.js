@@ -1,4 +1,26 @@
 $(document).ready(function(){
+  $("#v-pills-configs-tab").click(function(){
+    $("#v-pills-organizationconfiguration-tab").toggle();
+  });
+  
+  $("#v-pills-configs-tab").click(function(){
+    $("#v-pills-organizationdetails-tab").hide();
+    $("#v-pills-stations-tab").hide();
+    $("#v-pills-departments-tab").hide();
+  });
+
+
+  $("#v-pills-organizationconfiguration-tab").click(function(){
+    $("#v-pills-organizationdetails-tab").toggle();
+    $("#v-pills-stations-tab").toggle();
+    $("#v-pills-departments-tab").toggle();
+
+  });
+
+
+
+
+
     $("#v-pills-products-tab").click(function(){
       $("#v-pills-register-tab").toggle();
       $("#v-pills-import-tab").toggle();
@@ -27,7 +49,7 @@ $(document).ready(function(){
   });
 
   
-  
+ 
   
  
   
