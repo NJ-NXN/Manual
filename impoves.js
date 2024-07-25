@@ -16,12 +16,17 @@ $(document).ready(function(){
 
       $("#v-pills-requisition-tab").toggle();
 
+      $("#v-pills-approve-tab").toggle();
+
+      $("#v-pills-recipe-tab").toggle();
+
+      $("#v-pills-wastes-tab").toggle();
+
 
     });
   });
 
   
- 
   
   
  
