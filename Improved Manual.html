@@ -22,6 +22,8 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./impoves.js"></script>
   </head>
   <body>
     <div class="header container-fluid text-black">
@@ -42,7 +44,7 @@
             aria-orientation="vertical"
           >
             <!-- button tabs -->
-            <!-- intro button --><button
+            <!--MAIN intro button --><button
               class="btn-primary nav-link active m-1"
               id="v-pills-intro-tab"
               data-bs-toggle="pill"
@@ -54,7 +56,7 @@
             >
               <h6>Introduction</h6>
             </button>
-            <!-- system user layout button --><button
+            <!--MAIN system user layout button --><button
               class="btn-primary nav-link m-1"
               id="v-pills-UI-tab"
               data-bs-toggle="pill"
@@ -66,7 +68,7 @@
             >
               <h6>System User Layout</h6>
             </button>
-            <!-- system configs button --><button
+            <!--MAIN system configs button --><button
               class="btn-primary nav-link m-1"
               id="v-pills-configs-tab"
               data-bs-toggle="pill"
@@ -78,7 +80,7 @@
             >
               <h6>System Configurations</h6>
             </button>
-            <!-- users button --><button
+            <!--MAIN users button --><button
               class="btn-primary nav-link m-1"
               id="v-pills-users-tab"
               data-bs-toggle="pill"
@@ -90,7 +92,8 @@
             >
               <h6>System Users & Role Management</h6>
             </button>
-            <!-- products button --><button
+
+            <!--MAIN products button --><button
               class="btn-primary nav-link m-1"
               id="v-pills-products-tab"
               data-bs-toggle="pill"
@@ -102,7 +105,168 @@
             >
               <h6>Products & Stock</h6>
             </button>
-            <!-- purchases button --><button
+            <!--Products Sub buttons-->
+            <div>
+              <!--how to register button --><button
+                class="btn-primary nav-link m-1"
+                id="v-pills-register-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-register"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-register"
+                aria-selected="false"
+              >
+                <h7>&#x2022;Register,view,edit and delete items</h7>
+              </button>
+
+              <!--import items --><button
+                class="btn-primary nav-link m-1"
+                id="v-pills-import-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-import"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-import"
+                aria-selected="false"
+              >
+                <h7>&#x2022; Import Items</h7>
+              </button>
+
+              <!--generate serial number --><button
+                class="btn-primary nav-link m-1"
+                id="v-pills-serial-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-serial"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-serial"
+                aria-selected="false"
+              >
+                <h7>&#x2022; Generate Serial Number</h7>
+              </button>
+
+              <!--create item by-product --><button
+                class="btn-primary nav-link m-1"
+                id="v-pills-item-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-item"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-item"
+                aria-selected="false"
+              >
+                <h7>&#x2022; Create item by-product</h7>
+              </button>
+
+              <!--map items in respective stores --><button
+                class="btn-primary nav-link m-1"
+                id="v-pills-map-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-map"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-map"
+                aria-selected="false"
+              >
+                <h7>&#x2022; Map items in stores</h7>
+              </button>
+
+              <!--take stock --><button
+                class="btn-primary nav-link m-1"
+                id="v-pills-stock-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-stock"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-stock"
+                aria-selected="false"
+              >
+                <h7>&#x2022; Take stock</h7>
+              </button>
+
+              <!--reconcile stock --><button
+                class="btn-primary nav-link m-1"
+                id="v-pills-reconcile-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-reconcile"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-reconcile"
+                aria-selected="false"
+              >
+                <h7>&#x2022; Reconcile stock</h7>
+              </button>
+
+              <!--directly move stock --><button
+                class="btn-primary nav-link m-1"
+                id="v-pills-move-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-move"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-move"
+                aria-selected="false"
+              >
+                <h7>&#x2022; Directly move stock</h7>
+              </button>
+
+              <!--make requisition --><button
+                class="btn-primary nav-link m-1"
+                id="v-pills-requisition-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-requisition"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-requisition"
+                aria-selected="false"
+              >
+                <h7>&#x2022; Make requisition</h7>
+              </button>
+
+              <!--How to approve, print, delete and convert requisition into LPO--><button
+                class="btn-primary nav-link m-1"
+                id="v-pills-approve-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-approve"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-approve"
+                aria-selected="false"
+              >
+                <h7
+                  >&#x2022; Approve, print, delete and convert requisition into
+                  LPO</h7
+                >
+              </button>
+
+              <!--Create Recipe--><button
+                class="btn-primary nav-link m-1"
+                id="v-pills-recipe-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-recipe"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-recipe"
+                aria-selected="false"
+              >
+                <h7>&#x2022; Create Recipe</h7>
+              </button>
+
+              <!--Record wastes--><button
+                class="btn-primary nav-link m-1"
+                id="v-pills-wastes-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-wastes"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-wastes"
+                aria-selected="false"
+              >
+                <h7>&#x2022; Record wastes</h7>
+              </button>
+            </div>
+            <!--MAIN purchases button --><button
               class="btn-primary nav-link m-1"
               id="v-pills-purchases-tab"
               data-bs-toggle="pill"
@@ -114,7 +278,7 @@
             >
               <h6>Purchases</h6>
             </button>
-            <!-- sales button --><button
+            <!--MAIN sales button --><button
               class="btn-primary nav-link m-1"
               id="v-pills-sales-tab"
               data-bs-toggle="pill"
@@ -126,7 +290,7 @@
             >
               <h6>Sales</h6>
             </button>
-            <!-- rooms button --><button
+            <!--MAIN rooms button --><button
               class="btn-primary nav-link m-1"
               id="v-pills-rooms-tab"
               data-bs-toggle="pill"
@@ -138,7 +302,7 @@
             >
               <h6>Rooms</h6>
             </button>
-            <!-- accounting button --><button
+            <!--MAIN accounting button --><button
               class="btn-primary nav-link m-1"
               id="v-pills-accounting-tab"
               data-bs-toggle="pill"
@@ -150,7 +314,7 @@
             >
               <h6>Accounting</h6>
             </button>
-            <!-- reports button --><button
+            <!--MAIN reports button --><button
               class="btn-primary nav-link m-1"
               id="v-pills-reports-tab"
               data-bs-toggle="pill"
@@ -162,7 +326,7 @@
             >
               <h6>Reports</h6>
             </button>
-            <!-- other button --><button
+            <!--MAIN other button --><button
               class="btn-primary nav-link m-1"
               id="v-pills-other-tab"
               data-bs-toggle="pill"

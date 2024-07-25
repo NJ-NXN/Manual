@@ -33,3 +33,7 @@ button h6 {
   background-color: #147975 !important;
   border: none;
 }
+
+h7 {
+  text-align: start;
+}
