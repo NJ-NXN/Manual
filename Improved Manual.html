@@ -92,7 +92,6 @@
             >
               <h6>System Users & Role Management</h6>
             </button>
-
             <!--MAIN products button --><button
               class="btn-primary nav-link m-1"
               id="v-pills-products-tab"
@@ -106,166 +105,40 @@
               <h6>Products & Stock</h6>
             </button>
             <!--Products Sub buttons-->
-            <div>
-              <!--how to register button --><button
-                class="btn-primary nav-link m-1"
-                id="v-pills-register-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#v-pills-register"
-                type="button"
-                role="tab"
-                aria-controls="v-pills-register"
-                aria-selected="false"
-              >
-                <h7>&#x2022;Register,view,edit and delete items</h7>
-              </button>
-
-              <!--import items --><button
-                class="btn-primary nav-link m-1"
-                id="v-pills-import-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#v-pills-import"
-                type="button"
-                role="tab"
-                aria-controls="v-pills-import"
-                aria-selected="false"
-              >
-                <h7>&#x2022; Import Items</h7>
-              </button>
-
-              <!--generate serial number --><button
-                class="btn-primary nav-link m-1"
-                id="v-pills-serial-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#v-pills-serial"
-                type="button"
-                role="tab"
-                aria-controls="v-pills-serial"
-                aria-selected="false"
-              >
-                <h7>&#x2022; Generate Serial Number</h7>
-              </button>
-
-              <!--create item by-product --><button
-                class="btn-primary nav-link m-1"
-                id="v-pills-item-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#v-pills-item"
-                type="button"
-                role="tab"
-                aria-controls="v-pills-item"
-                aria-selected="false"
-              >
-                <h7>&#x2022; Create item by-product</h7>
-              </button>
-
-              <!--map items in respective stores --><button
-                class="btn-primary nav-link m-1"
-                id="v-pills-map-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#v-pills-map"
-                type="button"
-                role="tab"
-                aria-controls="v-pills-map"
-                aria-selected="false"
-              >
-                <h7>&#x2022; Map items in stores</h7>
-              </button>
-
-              <!--take stock --><button
-                class="btn-primary nav-link m-1"
-                id="v-pills-stock-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#v-pills-stock"
-                type="button"
-                role="tab"
-                aria-controls="v-pills-stock"
-                aria-selected="false"
-              >
-                <h7>&#x2022; Take stock</h7>
-              </button>
-
-              <!--reconcile stock --><button
-                class="btn-primary nav-link m-1"
-                id="v-pills-reconcile-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#v-pills-reconcile"
-                type="button"
-                role="tab"
-                aria-controls="v-pills-reconcile"
-                aria-selected="false"
-              >
-                <h7>&#x2022; Reconcile stock</h7>
-              </button>
-
-              <!--directly move stock --><button
-                class="btn-primary nav-link m-1"
-                id="v-pills-move-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#v-pills-move"
-                type="button"
-                role="tab"
-                aria-controls="v-pills-move"
-                aria-selected="false"
-              >
-                <h7>&#x2022; Directly move stock</h7>
-              </button>
-
-              <!--make requisition --><button
-                class="btn-primary nav-link m-1"
-                id="v-pills-requisition-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#v-pills-requisition"
-                type="button"
-                role="tab"
-                aria-controls="v-pills-requisition"
-                aria-selected="false"
-              >
-                <h7>&#x2022; Make requisition</h7>
-              </button>
-
-              <!--How to approve, print, delete and convert requisition into LPO--><button
-                class="btn-primary nav-link m-1"
-                id="v-pills-approve-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#v-pills-approve"
-                type="button"
-                role="tab"
-                aria-controls="v-pills-approve"
-                aria-selected="false"
-              >
-                <h7
-                  >&#x2022; Approve, print, delete and convert requisition into
-                  LPO</h7
+            <section>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-expanded="false"
+                  >Dropdown</a
                 >
-              </button>
-
-              <!--Create Recipe--><button
-                class="btn-primary nav-link m-1"
-                id="v-pills-recipe-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#v-pills-recipe"
-                type="button"
-                role="tab"
-                aria-controls="v-pills-recipe"
-                aria-selected="false"
-              >
-                <h7>&#x2022; Create Recipe</h7>
-              </button>
-
-              <!--Record wastes--><button
-                class="btn-primary nav-link m-1"
-                id="v-pills-wastes-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#v-pills-wastes"
-                type="button"
-                role="tab"
-                aria-controls="v-pills-wastes"
-                aria-selected="false"
-              >
-                <h7>&#x2022; Record wastes</h7>
-              </button>
-            </div>
+                <ul class="dropdown-menu">
+                  <li>
+                    <!--MAIN products button --><button
+                      class="btn-primary nav-link m-1"
+                      id="v-pills-products-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-products"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-products"
+                      aria-selected="false"
+                    >
+                      <h6>Products & Stock</h6>
+                    </button>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+              </li>
+            </section>
             <!--MAIN purchases button --><button
               class="btn-primary nav-link m-1"
               id="v-pills-purchases-tab"

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JiPOS User Manual</title>
+    <link rel="icon" href="./Images/Iosoft logo.avif" />
+    <link rel="stylesheet" href="Improved Manual.css" />
+    <script
+      src="https://kit.fontawesome.com/18ed336f4c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="./Images/Jipos 2.jpeg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./impoves.js"></script>
+  </head>
+  <body>
+    <div class="header container-fluid text-black">
+      <img
+        src="./Images/JIPOS 1.jpeg"
+        class="mx-auto d-block"
+        alt=""
+        height="80"
+      />
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="d-flex align-items-start">
+          <div
+            class="nav flex-column nav-pills me-4"
+            id="v-pills-tab"
+            role="tablist"
+            aria-orientation="vertical"
+          >
+            <!-- button tabs -->
+            <!--MAIN intro button --><button
+              class="btn-primary nav-link active m-1"
+              id="v-pills-intro-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-intro"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-intro"
+              aria-selected="true"
+            >
+              <h6>Introduction</h6>
+            </button>
+            <!--MAIN system user layout button --><button
+              class="btn-primary nav-link m-1"
+              id="v-pills-UI-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-UI"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-UI"
+              aria-selected="false"
+            >
+              <h6>System User Layout</h6>
+            </button>
+            <!--MAIN system configs button-->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >System Configurations</a
+              >
+              <ul class="dropdown-menu">
+                <!--org configs sub-button-->
+                <li>
+                  <button
+                    class="btn-primary nav-link m-1"
+                    id="v-pills-org-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-org"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-org"
+                    aria-selected="false"
+                  >
+                    <h7>Organization configurations</h7>
+                  </button>
+                </li>
+                <!--gen configs sub-button-->
+                <li>
+                  <button
+                    class="btn-primary nav-link m-1"
+                    id="v-pills-gen-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-gen"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-gen"
+                    aria-selected="false"
+                  >
+                    <h7>General configurations</h7>
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <!-- MAIN users button -->
+            <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-expanded="false"
+                  >System Users & Role Management</a
+                >
+                <ul class="dropdown-menu">
+                  <!--org configs sub-button-->
+                  <li>
+                    <button
+                      class="btn-primary nav-link m-1"
+                      id="v-pills-org-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-org"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-org"
+                      aria-selected="false"
+                    >
+                      <h7>Organization configurations</h7>
+                    </button>
+                  </li>
+                  <!--gen configs sub-button-->
+                  <li>
+                    <button
+                      class="btn-primary nav-link m-1"
+                      id="v-pills-gen-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-gen"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-gen"
+                      aria-selected="false"
+                    >
+                      <h7>General configurations</h7>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+          </div>
+          <!-- tab content-->
+          <div class="tab-content" id="v-pills-tabContent">
+            <!-- intro content-->
+            <div
+              class="tab-pane fade show active"
+              id="v-pills-intro"
+              role="tabpanel"
+              aria-labelledby="v-pills-intro-tab"
+            >
+              <h1>Introduction</h1>
+              <p class="fs-5">
+                JiPOS is a web-based point of sale system, which handles
+                inventory, production, requisition, purchasing, sales,
+                accommodation, accounting, user management and reporting
+                modules. JiPOS is mainly used in hotels & restaurants, wines &
+                spirit shops, hardware, mini-marts, mines, organizations and
+                pharmacies.
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/3jkDDLc_tpE"
+                title="JiPOS - iOSoft Smart Restaurant POS / Hotel Management System demo video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- system User Layout content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-UI"
+              role="tabpanel"
+              aria-labelledby="v-pills-UI-tab"
+            >
+              <h1>System User Layout</h1>
+              <p class="fs-5">
+                The system has two login pages, for the waiters and for front
+                office or back-office. Waiters use their pin only to login to
+                the system while the front and back office uses their registered
+                username and password to login.
+              </p>
+              <p class="fs-5">Front office and Back office login interface</p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/LbvgXu8P-x8"
+                title="JiPOS Dashboard Video Explanation:  Kenya&#39;s No.1 #POSSystem"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+              <p class="fs-5">Waiter/Cashier login interface</p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/CJaXqZ7WgME"
+                title="JiPOS Demo as a Hotel Management System | Best Restaurant Point Of Sale"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- org content-->
+            <div
+              class="tab-pane fade show active"
+              id="v-pills-org"
+              role="tabpanel"
+              aria-labelledby="v-pills-org-tab"
+            >
+            <h1>System Configurations</h1>
+            <h3>Organization configurations</h3>
+            <h5>
+              1. How to setup organization details including:
+              business/organization name, email, phone, KRA PIN, address, logo
+              e.t.c
+            </h5>
+            <p class="fs-5">
+              On the sidebar, navigate to Organizations > Orgs. In the window
+              that opens, you can update the details in the form appropriately
+              and save as shown in the image below
+            </p>
+            <h5>2. How to set-up stations</h5>
+            <p class="fs-5">
+              On the sidebar, navigate to Organizations > Stations. In the
+              window that opens, expand the form by clicking the top-right +
+              icon. Fill the form appropriately then save. You can view, edit
+              and delete all the registered stations from the list visible
+              under the form as shown below.
+            </p>
+            <h5>3. How to set-up departments</h5>
+            <p class="fs-5">
+              On the sidebar, navigate to Organizations > Departments. Fill in
+              the left form and submit to register a new department. Use the
+              table on the right to view, edit or delete already registered
+              departments.
+            </p>
+            </div>
+            <!-- gen content-->
+            <div
+              class="tab-pane fade show active"
+              id="v-pills-gen"
+              role="tabpanel"
+              aria-labelledby="v-pills-gen-tab"
+            >
+            <h1>System Configurations</h1>
+            <h3>General configurations</h3>
+              <h5>1. How to Happy Hour</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Happy Hour. Enter
+                the times you would like to sell with the happy hour prices. You
+                can switch the set times ON/OFF in the status column as shown
+                below. Happy Hour Prices are set in the item profile section.
+                Navigate to the Products > Items then open your item of choice
+                to set the happy hour price.
+              </p>
+              <h5>2. How to set-up attributes</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Attributes. Fill in
+                the left form and submit to register a new attribute. Use the
+                table on the right to view, edit or delete already registered
+                attribute.
+              </p>
+              <h5>3. How to set-up item categories</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Categories. Fill in
+                the left form and submit to register a new category. Use the
+                table on the right to view, edit or delete already registered
+                category. <br /><b>Note:</b>You map categories per store/shop
+                for multi-store system setup. This will respectively display the
+                categories at the specified points of sale. If a category is
+                hidden, it will not be displayed at the point of sale.
+              </p>
+              <h5>4. How to set-up brands</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Brands. Fill in the
+                left form and submit to register a new brand. Use the table on
+                the right to view, edit or delete already registered brand.
+              </p>
+              <h5>5. How to set-up colors</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Colors. Fill in the
+                left form and submit to register a new color. Use the table on
+                the right to view, edit or delete already registered color.
+              </p>
+              <h5>6. How to set-up units (item units)</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Units. Fill in the
+                left form and submit to register a new unit. Use the table on
+                the right to view, edit or delete already registered unit
+              </p>
+              <h5>7. How to set-up tax types</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Tax Types. Fill in
+                the left form and submit to register a new Tax Type. Use the
+                table on the right to view, edit or delete already registered
+                Tax type.
+              </p>
+              <h5>8. How to set-up fiscal years</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Fiscal Years. Fill
+                in the left form and submit to register a new Fiscal Year. Use
+                the table on the right to view, edit or delete already
+                registered Fiscal Year. The systems runs in an active
+                Fiscal/Financial Year, which should be set and activated in this
+                section.
+              </p>
+              <h5>9. How to set-up tables/counters</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Tables/Counters.
+                Fill in the left form and submit to register a new
+                Table/Counter. Use the table on the right to view, edit or
+                delete already registered Table/Counter. This option allows the
+                waiter to map every order to a given table so it is easy to
+                track. All the tables must be mapped appropriately per
+                store/shop/selling point.
+              </p>
+              <h5>10. How to set-up stores</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Stores. Fill in the
+                left form and submit to register a new Store. Use the table on
+                the right to view, edit or delete already registered Stores.
+                Making a store a <i>default selling point</i> makes it the
+                default store from which all the goods are sold upon login to
+                the POS. If the store is associated to accommodation, then check
+                <i>yes</i> in the <i>In accommodation</i> option. If this is
+                yes, then you should give it its appropriate M-Pesa payment
+                options (if available).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
