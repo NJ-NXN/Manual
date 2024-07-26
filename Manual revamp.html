@@ -170,6 +170,93 @@
                 </li>
               </ul>
             </li>
+            <!--MAIN products button -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >Products & Stock</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <!--register--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-register-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-register"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-register"
+                    aria-selected="false"
+                  >
+                    <h7>Register, View, Edit, Delete Items</h7>
+                  </button>
+                  <!--import configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-import-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-import"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-import"
+                    aria-selected="false"
+                  >
+                    <h7>Import Items</h7>
+                  </button>
+                  <!--serial configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-serial-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-serial"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-serial"
+                    aria-selected="false"
+                  >
+                    <h7>Generate Serial Numbers</h7>
+                  </button>
+                  <!--by-product configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-byproduct-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-byproduct"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-byproduct"
+                    aria-selected="false"
+                  >
+                    <h7>Create Item By-Product</h7>
+                  </button>
+                  <!--redistribute configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-redistribute-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-redistribute"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-redistribute"
+                    aria-selected="false"
+                  >
+                    <h7>Map Items (Redistribute)</h7>
+                  </button>
+                  <!--stock configs--><button
+                  class="btn-primary nav-link m-1 dropdown-item"
+                  id="v-pills-stock-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-stock"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-stock"
+                  aria-selected="false"
+                >
+                  <h7>Take Stock</h7>
+                </button>
+                </li>
+              </ul>
+            </li>
           </div>
           <!-- tab content-->
           <div class="tab-content" id="v-pills-tabContent">
@@ -443,6 +530,184 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
+            </div>
+            <!-- register content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-register"
+              role="tabpanel"
+              aria-labelledby="v-pills-register-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>How to register, view, edit and delete items</h3>
+              <p class="fs-5">
+                On the sidebar, navigate to Products > Items. You are presented
+                with the items list. Click <b>Add Item</b> button to register a
+                new item. In the window, which appears, fill in the form
+                appropriately and submit. All the mandatory fields (*) must be
+                field to submit the form. All the select input fields
+                (Categories/Units/Attributes/Tax Types) are set in the
+                Configurations section. Ensure you set these configurations
+                before you register an item. All the registered items are
+                displayed in the items list
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/05RVLPrJO2s"
+                title="How to add item or products in JiPOS | Stock Registration Video Explanation with #JiPOS"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- import content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-import"
+              role="tabpanel"
+              aria-labelledby="v-pills-import-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>How to import items</h3>
+              <p class="fs-5">
+                On the sidebar, navigate to Products > Items. You are presented
+                with the items list. Click Add Item button. In the new page,
+                click Upload Items button. This will open a popup form. Click
+                CSV Template button to download the data template, which you
+                appropriately fill then upload using the same form.
+                <br /><b>Note:</b> The system will redirect you to a failed
+                imports page where you will be able to see all the data, which
+                have not been imported. You can correct the data in the table
+                and import again. Alternatively, you can export the failed data,
+                correct them appropriately and then import again. The following
+                columns are required:
+                <i>
+                  Name, Barcode/SKU, Unit, Category, Buying Price, Selling
+                  Price/Marked Price and Opening Stock.</i
+                >
+                <br />All the failed imports data can be delete by clicking
+                Delete all button at the top-right of the page.
+              </p>
+            </div>
+            <!-- serial content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-serial"
+              role="tabpanel"
+              aria-labelledby="v-pills-serial-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>How to generate item serial numbers</h3>
+              <p class="fs-5">
+                On the sidebar click Products > Items. This will open a list of
+                items. Click on the item code to open the item profile. In the
+                serials widget, click Generate button to generate a new serial.
+                To print the generated serial, click Print button as shown in
+                the image below.
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/pDDtKlkcn1w"
+                title="Item or Product SKU or Barcode Registration in JiPOS Using Barcode Scanner"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- byproduct content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-byproduct"
+              role="tabpanel"
+              aria-labelledby="v-pills-byproduct-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>How to create item by-product</h3>
+              <p class="fs-5">
+                This is also known as
+                <i
+                  >item breakdown/ creating smaller versions of the same
+                  item.</i
+                >
+                On the sidebar click Products > Items. This will open a list of
+                items. Click on the item code to open the item profile. At the
+                top section, click Create By-product button to open the popup
+                form.
+              </p>
+            </div>
+            <!-- redistribute content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-redistribute"
+              role="tabpanel"
+              aria-labelledby="v-pills-redistribute-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>How to map items in respective stores (redistribution)</h3>
+              <p class="fs-5">
+                The purpose is to register/associate items into their preferred
+                respective store(s) selected, hence allowing for stock
+                monitoring/sales/requisitions per store/shop. Navigate to
+                Products > Stocks. Click Redistribute items button. In the popup
+                window, fill in the form appropriately and submit. Preferred
+                store/shop: select the preferred store/shop where you want to
+                avail/push these items. Get items: select the items here.
+                <br />Choose action point: <br />Distribute - allocates the
+                selected store the items selected <br />Rollback - a way undo
+                already redistributed items <br />Override - re-allocates the
+                selected store the items selected with the opening stock value
+                registered earlier during item registration
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/01a7xKa5nIQ"
+                title="How to redistribute items to various stores in JiPOS | Item redistribution video explanation #JiPOS"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- stock content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-stock"
+              role="tabpanel"
+              aria-labelledby="v-pills-stock-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>How to take stock</h3>
+              <p class="fs-5">
+                This feature allows for manual taking of stock. It can be
+                conducted daily, weekly, monthly, quarterly, semi-annually or
+                annually. Navigate to Products > Stocks the click the Stock Take
+                button. In the page, there is the form to create a stock
+                instance. Select the organization/store, set the instance name
+                (by default the current date is given), select the instance
+                date, mark as active, give any other description then submit.
+                <br />This will create an instance, which is visible on the
+                table displayed in the above image. If you open one instance,
+                you will be able to view all the items in the given store with
+                the system stock balances already generated. You are then
+                required to edit each item updating the physically counted
+                quantities. This will give either a positive or a negative
+                deviation, which will call for Stock reconciliation.
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/oIpW4OEPueY"
+                title="How to do stock take for your inventory with JiPOS | Stock Take Video Explanation #JiPOS"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>  
             </div>
           </div>
         </div>
