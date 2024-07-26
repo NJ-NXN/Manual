@@ -37,13 +37,13 @@
     <div class="container">
       <div class="row">
         <div class="d-flex align-items-start">
+          <!-- buttons-->
           <div
             class="nav flex-column nav-pills me-4"
             id="v-pills-tab"
             role="tablist"
             aria-orientation="vertical"
           >
-            <!-- button tabs -->
             <!--MAIN intro button --><button
               class="btn-primary nav-link active m-1"
               id="v-pills-intro-tab"
@@ -68,7 +68,7 @@
             >
               <h6>System User Layout</h6>
             </button>
-            <!--MAIN system configs button-->
+            <!--MAIN system configs button -->
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
@@ -79,10 +79,9 @@
                 >System Configurations</a
               >
               <ul class="dropdown-menu">
-                <!--org configs sub-button-->
                 <li>
-                  <button
-                    class="btn-primary nav-link m-1"
+                  <!--org configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
                     id="v-pills-org-tab"
                     data-bs-toggle="pill"
                     data-bs-target="#v-pills-org"
@@ -91,13 +90,10 @@
                     aria-controls="v-pills-org"
                     aria-selected="false"
                   >
-                    <h7>Organization configurations</h7>
+                    <h7>Organization Configurations</h7>
                   </button>
-                </li>
-                <!--gen configs sub-button-->
-                <li>
-                  <button
-                    class="btn-primary nav-link m-1"
+                  <!--gen configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
                     id="v-pills-gen-tab"
                     data-bs-toggle="pill"
                     data-bs-target="#v-pills-gen"
@@ -106,54 +102,11 @@
                     aria-controls="v-pills-gen"
                     aria-selected="false"
                   >
-                    <h7>General configurations</h7>
+                    <h7>General Configurations</h7>
                   </button>
                 </li>
               </ul>
             </li>
-            <!-- MAIN users button -->
-            <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  href="#"
-                  role="button"
-                  aria-expanded="false"
-                  >System Users & Role Management</a
-                >
-                <ul class="dropdown-menu">
-                  <!--org configs sub-button-->
-                  <li>
-                    <button
-                      class="btn-primary nav-link m-1"
-                      id="v-pills-org-tab"
-                      data-bs-toggle="pill"
-                      data-bs-target="#v-pills-org"
-                      type="button"
-                      role="tab"
-                      aria-controls="v-pills-org"
-                      aria-selected="false"
-                    >
-                      <h7>Organization configurations</h7>
-                    </button>
-                  </li>
-                  <!--gen configs sub-button-->
-                  <li>
-                    <button
-                      class="btn-primary nav-link m-1"
-                      id="v-pills-gen-tab"
-                      data-bs-toggle="pill"
-                      data-bs-target="#v-pills-gen"
-                      type="button"
-                      role="tab"
-                      aria-controls="v-pills-gen"
-                      aria-selected="false"
-                    >
-                      <h7>General configurations</h7>
-                    </button>
-                  </li>
-                </ul>
-              </li>
           </div>
           <!-- tab content-->
           <div class="tab-content" id="v-pills-tabContent">
@@ -221,50 +174,50 @@
                 allowfullscreen
               ></iframe>
             </div>
-            <!-- org content-->
+            <!--org configs content-->
             <div
-              class="tab-pane fade show active"
+              class="tab-pane fade"
               id="v-pills-org"
               role="tabpanel"
               aria-labelledby="v-pills-org-tab"
             >
-            <h1>System Configurations</h1>
-            <h3>Organization configurations</h3>
-            <h5>
-              1. How to setup organization details including:
-              business/organization name, email, phone, KRA PIN, address, logo
-              e.t.c
-            </h5>
-            <p class="fs-5">
-              On the sidebar, navigate to Organizations > Orgs. In the window
-              that opens, you can update the details in the form appropriately
-              and save as shown in the image below
-            </p>
-            <h5>2. How to set-up stations</h5>
-            <p class="fs-5">
-              On the sidebar, navigate to Organizations > Stations. In the
-              window that opens, expand the form by clicking the top-right +
-              icon. Fill the form appropriately then save. You can view, edit
-              and delete all the registered stations from the list visible
-              under the form as shown below.
-            </p>
-            <h5>3. How to set-up departments</h5>
-            <p class="fs-5">
-              On the sidebar, navigate to Organizations > Departments. Fill in
-              the left form and submit to register a new department. Use the
-              table on the right to view, edit or delete already registered
-              departments.
-            </p>
+              <h1>System Configurations</h1>
+              <h3>Organization configurations</h3>
+              <h5>
+                1. How to setup organization details including:
+                business/organization name, email, phone, KRA PIN, address, logo
+                e.t.c
+              </h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Organizations > Orgs. In the window
+                that opens, you can update the details in the form appropriately
+                and save as shown in the image below
+              </p>
+              <h5>2. How to set-up stations</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Organizations > Stations. In the
+                window that opens, expand the form by clicking the top-right +
+                icon. Fill the form appropriately then save. You can view, edit
+                and delete all the registered stations from the list visible
+                under the form as shown below.
+              </p>
+              <h5>3. How to set-up departments</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Organizations > Departments. Fill in
+                the left form and submit to register a new department. Use the
+                table on the right to view, edit or delete already registered
+                departments.
+              </p>
             </div>
-            <!-- gen content-->
+            <!--gen configs content-->
             <div
-              class="tab-pane fade show active"
+              class="tab-pane fade"
               id="v-pills-gen"
               role="tabpanel"
               aria-labelledby="v-pills-gen-tab"
             >
-            <h1>System Configurations</h1>
-            <h3>General configurations</h3>
+              <h1>System Configurations</h1>
+              <h3>General configurations</h3>
               <h5>1. How to Happy Hour</h5>
               <p class="fs-5">
                 On the sidebar, navigate to Configurations > Happy Hour. Enter
