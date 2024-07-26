@@ -243,17 +243,92 @@
                     <h7>Map Items (Redistribute)</h7>
                   </button>
                   <!--stock configs--><button
-                  class="btn-primary nav-link m-1 dropdown-item"
-                  id="v-pills-stock-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#v-pills-stock"
-                  type="button"
-                  role="tab"
-                  aria-controls="v-pills-stock"
-                  aria-selected="false"
-                >
-                  <h7>Take Stock</h7>
-                </button>
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-stock-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-stock"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-stock"
+                    aria-selected="false"
+                  >
+                    <h7>Take Stock</h7>
+                  </button>
+                  <!--reconcile configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-reconcile-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-reconcile"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-reconcile"
+                    aria-selected="false"
+                  >
+                    <h7>Reconcile Stock</h7>
+                  </button>
+                  <!--move configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-move-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-move"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-move"
+                    aria-selected="false"
+                  >
+                    <h7>Directly Move Stock</h7>
+                  </button>
+                  <!--requisition configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-requisition-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-requisition"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-requisition"
+                    aria-selected="false"
+                  >
+                    <h7>Requisition (internal/external)</h7>
+                  </button>
+                  <!--LPO configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-LPO-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-LPO"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-LPO"
+                    aria-selected="false"
+                  >
+                    <h7
+                      >Approve, Print, Delete and Convert Requisition into
+                      LPO</h7
+                    >
+                  </button>
+                  <!--recipe configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-recipe-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-recipe"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-recipe"
+                    aria-selected="false"
+                  >
+                    <h7>Create Recipe</h7>
+                  </button>
+                  <!--wastes configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-wastes-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-wastes"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-wastes"
+                    aria-selected="false"
+                  >
+                    <h7>Record Wastes</h7>
+                  </button>
                 </li>
               </ul>
             </li>
@@ -707,7 +782,155 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
-              ></iframe>  
+              ></iframe>
+            </div>
+            <!-- reconcile content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-reconcile"
+              role="tabpanel"
+              aria-labelledby="v-pills-reconcile-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>How to reconcile stock</h3>
+              <p class="fs-5">
+                This feature allows for the updating of the stock balances after
+                a stock take. It clears the deviations experienced after stock
+                takes. Navigate to Products > Stocks then click Reconcile Stock
+                button. In the popup, select the store for the reconciliation,
+                and the instance, and then submit. This will update the stock
+                balances to the instance selected.
+              </p>
+            </div>
+            <!-- move content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-move"
+              role="tabpanel"
+              aria-labelledby="v-pills-move-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>How to directly move stock</h3>
+              <p class="fs-5">
+                This feature helps you directly move stock from one store/shop
+                to the other.
+                <br /><b>Note:</b> You can only move items from one store to the
+                other if and only if the item is already redistributed in the
+                two stores. Navigate to Products > Move stock. Fill in the form
+                and submit as shown below; You can always check the availability
+                of an item within a given store before initiating a movement.
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/pM086mmNieM"
+                title="How to transfer stock from one store to another with JiPOS | Stock Movement Video Explanation #JiPOS"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- requisition content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-requisition"
+              role="tabpanel"
+              aria-labelledby="v-pills-requisition-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>How to make requisition (Internal/External)</h3>
+              <p class="fs-5">
+                On the sidebar, navigate to Products > Requisition. This will
+                open a page with the list of all requisitions. The list will
+                contain all requisitions from all departments or only a user’s
+                requisition; this depends on whether you have the approval
+                rights or not. First, select the store, which needs the items,
+                then the store, which should issue the items. Fill in the rest
+                of the form appropriately then submit. In the case of external
+                requisition, the issuing store should be ‘External Store’. If
+                this store is not appearing in the list, then it can be created
+                in the configurations-store section.
+              </p>
+            </div>
+            <!-- LPO content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-LPO"
+              role="tabpanel"
+              aria-labelledby="v-pills-LPO-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>
+                How to approve, print, delete and convert requisition into LPO
+              </h3>
+              <p class="fs-5">
+                On the sidebar, navigate to Products > Requisition. This will
+                open a page with the list of all requisitions. The list will
+                contain all requisitions from all departments. In the action
+                column, click View. This will open the requisition details. You
+                can approve/suspend/reject the requisition in this window. For
+                External Requisition, you will be able to select the supplier as
+                you convert the requisition into LPO. Only approved external
+                requisition can be converted into LPO.
+                <br /><b>Note:</b> You can only delete a requisition that has
+                neither been approved nor rejected.
+              </p>
+            </div>
+            <!-- recipe content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-recipe"
+              role="tabpanel"
+              aria-labelledby="v-pills-recipe-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>How to create recipe (Production)</h3>
+              <p class="fs-5">
+                Ensure all the required recipe items are already registered in
+                the item registration section. Navigate to Products > Recipe.
+                Read carefully the instructions on the right section of the page
+                before you begin creating the recipe. Fill in the recipe form
+                appropriately then submit.
+                <br /><b>Note:</b> All the recipe items must be redistributed in
+                the Affected Store per Sale before creating a recipe. This will
+                ensure accurate stock control during sales. If an item has been
+                registered before and you wish to override/replace its profile
+                with a new recipe, then insert the initial item code (barcode)
+                in the ‘Conflicting Barcode/SKU (cbs)’ input field. All created
+                recipes are found at the bottom table on the same page. You can
+                view/edit/delete any recipe created. The recipes are also
+                available in the general items list in the Products > Items
+                section.
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/XKINYnVOng0"
+                title="How to make a recipe using a Ji-POS system | Managing Inventory Control Using Recipe"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- waste content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-waste"
+              role="tabpanel"
+              aria-labelledby="v-pills-waste-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>How to record Wastes</h3>
+              <p class="fs-5">
+                We can have all wastes recorded in this section. Navigate to
+                Products > Wastages. Click Add Wastage button at the top-right
+                to open the waste registration form. Select the store affected,
+                item, quantity, date and an explanation (if any) then submit the
+                form. All the wastes are shown in the list displayed on the same
+                page.
+              </p>
             </div>
           </div>
         </div>
