@@ -107,6 +107,69 @@
                 </li>
               </ul>
             </li>
+            <!--MAIN users button -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >System Users & Role Management</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <!--user configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-user-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-user"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-user"
+                    aria-selected="false"
+                  >
+                    <h7>Set-up Users</h7>
+                  </button>
+                  <!--customer configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-customer-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-customer"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-customer"
+                    aria-selected="false"
+                  >
+                    <h7>Set-up Customers</h7>
+                  </button>
+                  <!--suppliers configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-suppliers-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-suppliers"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-suppliers"
+                    aria-selected="false"
+                  >
+                    <h7>Set-up Suppliers</h7>
+                  </button>
+                  <!--roles configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-roles-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-roles"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-roles"
+                    aria-selected="false"
+                  >
+                    <h7>Set-up User Roles and Privileges</h7>
+                  </button>
+                </li>
+              </ul>
+            </li>
           </div>
           <!-- tab content-->
           <div class="tab-content" id="v-pills-tabContent">
@@ -300,6 +363,86 @@
                 yes, then you should give it its appropriate M-Pesa payment
                 options (if available).
               </p>
+            </div>
+            <!-- user content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-user"
+              role="tabpanel"
+              aria-labelledby="v-pills-user-tab"
+            >
+              <h1>System Users & Role Management</h1>
+              <h3>How to set-up system users</h3>
+              <p class="fs-5">
+                On the sidebar, navigate to System Users > System Users. Fill in
+                the left form and submit to register new Stores. Use the table
+                on the right to view or delete already registered Users. In the
+                user profile, you can set the users pin, reset password and
+                update other user details including roles & privileges
+                appropriately. If a user is suspended from using the system,
+                then make the Inactive from their profile section.
+              </p>
+            </div>
+            <!-- customer content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-customer"
+              role="tabpanel"
+              aria-labelledby="v-pills-customer-tab"
+            >
+              <h1>System Users & Role Management</h1>
+              <h3>How to set-up customers</h3>
+              <p class="fs-5">
+                On the sidebar, navigate to System Users > Customers. Fill in
+                the left form and submit to register a new Customer. Use the
+                table on the right to view, edit & delete already registered
+                Customer.
+              </p>
+            </div>
+            <!-- suppliers content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-suppliers"
+              role="tabpanel"
+              aria-labelledby="v-pills-suppliers-tab"
+            >
+              <h1>System Users & Role Management</h1>
+              <h3>How to set-up suppliers</h3>
+              <p class="fs-5">
+                On the sidebar, navigate to System Users > Suppliers. Fill in
+                the left form and submit to register a new Supplier. Use the
+                table on the right to view, edit & delete already registered
+                Supplier.
+              </p>
+            </div>
+            <!-- roles content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-roles"
+              role="tabpanel"
+              aria-labelledby="v-pills-roles-tab"
+            >
+              <h1>System Users & Role Management</h1>
+              <h3>How to set-up user roles & privileges</h3>
+              <p class="fs-5">
+                On the sidebar, navigate to System Users > Role Management. This
+                will open a page with the list of all roles. You can view/
+                delete the created roles. Click Add Role button at the top-left
+                section to add a new role In the new page enter the name of the
+                role and check all the boxes appropriately then save. The
+                created roles can then be assigned to users while setting up a
+                user.
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/CznrXmy3DJw"
+                title="User roles and configurations in JiPOS"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
             </div>
           </div>
         </div>
