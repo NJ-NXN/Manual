@@ -556,12 +556,12 @@
                   </button>
                   <!--book room--><button
                     class="btn-primary nav-link m-1 dropdown-item"
-                    id="v-pills-credit-tab"
+                    id="v-pills-book-tab"
                     data-bs-toggle="pill"
-                    data-bs-target="#v-pills-credit"
+                    data-bs-target="#v-pills-book"
                     type="button"
                     role="tab"
-                    aria-controls="v-pills-credit"
+                    aria-controls="v-pills-book"
                     aria-selected="false"
                   >
                     <h7>Book a Room</h7>
@@ -591,23 +591,37 @@
                     <h7>Add Extra Charges to Guest Bookings</h7>
                   </button>
                   <!--map food/drink orders--><button
-                  class="btn-primary nav-link m-1 dropdown-item"
-                  id="v-pills-map-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#v-pills-map"
-                  type="button"
-                  role="tab"
-                  aria-controls="v-pills-map"
-                  aria-selected="false"
-                >
-                  <h7>Add Extra Charges to Guest Bookings</h7>
-                </button>
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-map-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-map"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-map"
+                    aria-selected="false"
+                  >
+                    <h7>Map Food/ Drink Orders to Guest Booking</h7>
+                  </button>
+                  <!--settle/clear guest bill--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-clear-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-clear"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-clear"
+                    aria-selected="false"
+                  >
+                    <h7>Settle/ Clear Guest Bill</h7>
+                  </button>
                 </li>
               </ul>
             </li>
           </div>
           <!-- tab content-->
           <div class="tab-content" id="v-pills-tabContent">
+            <!--INTRODUCTION-->
+
             <!-- intro content-->
             <div
               class="tab-pane fade show active"
@@ -635,6 +649,9 @@
                 allowfullscreen
               ></iframe>
             </div>
+
+            <!--SYSTEM USER LAYOUT-->
+
             <!-- system User Layout content-->
             <div
               class="tab-pane fade"
@@ -672,6 +689,9 @@
                 allowfullscreen
               ></iframe>
             </div>
+
+            <!--SYSTEM CONFIGURATIONS-->
+
             <!--org configs content-->
             <div
               class="tab-pane fade"
@@ -799,6 +819,9 @@
                 options (if available).
               </p>
             </div>
+
+            <!--SYSTEM USERS & ROLE MANAGEMENT-->
+
             <!-- user content-->
             <div
               class="tab-pane fade"
@@ -879,6 +902,9 @@
                 allowfullscreen
               ></iframe>
             </div>
+
+            <!--PRODUCTS & STOCK-->
+
             <!-- register content-->
             <div
               class="tab-pane fade"
@@ -1205,6 +1231,9 @@
                 page.
               </p>
             </div>
+
+            <!--PURCHASES-->
+
             <!--create purchase content-->
             <div
               class="tab-pane fade"
@@ -1347,6 +1376,9 @@
                 allowfullscreen
               ></iframe>
             </div>
+
+            <!--SALES-->
+
             <!--make sale content-->
             <div
               class="tab-pane fade"
@@ -1538,6 +1570,224 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
+            </div>
+
+            <!--ROOMS-->
+
+            <!--room types content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-types"
+              role="tabpanel"
+              aria-labelledby="v-pills-types-tab"
+            >
+              <h1>Rooms</h1>
+              <h3>How to set-up room types</h3>
+              <p class="fs-5">
+                Navigate to Rooms > Room Types. Fill in the form on the left
+                section of the page and submit. All the registered room types
+                can be viewed from the table within the page as shown below.
+              </p>
+            </div>
+            <!--room maintenance content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-maintenance"
+              role="tabpanel"
+              aria-labelledby="v-pills-maintenance-tab"
+            >
+              <h1>Rooms</h1>
+              <h3>How to set-up room maintenance status</h3>
+              <p class="fs-5">
+                Navigate to Rooms > Register Maintenance Status Fill in the form
+                on the left section of the page and submit. All the registered
+                Maintenance Status can be viewed from the table within the page
+                as shown below.
+              </p>
+            </div>
+            <!--room setup content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-setup"
+              role="tabpanel"
+              aria-labelledby="v-pills-setup-tab"
+            >
+              <h1>Rooms</h1>
+              <h3>How to set-up rooms</h3>
+              <p class="fs-5">
+                Navigate to Rooms > Rooms. Click New Room button at the top
+                right section of the page. Fill in the pop-up form that appears
+                and submit. All the registered rooms are displayed in the table
+                within the same page. You can Activate/ Deactivate a room in the
+                Active column as shown below. Inactive rooms are not visible in
+                the front office for booking while Active rooms are visible for
+                booking.
+              </p>
+            </div>
+            <!--room maintenance change content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-change"
+              role="tabpanel"
+              aria-labelledby="v-pills-change-tab"
+            >
+              <h1>Rooms</h1>
+              <h3>How to change room maintenance status</h3>
+              <p class="fs-5">
+                Navigate to Rooms > Rooms. Locate condition column in the table.
+                Click the edit icon in this column to change the room condition
+                status as shown below.
+              </p>
+            </div>
+            <!--room amenities content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-amenities"
+              role="tabpanel"
+              aria-labelledby="v-pills-amenities-tab"
+            >
+              <h1>Rooms</h1>
+              <h3>How to add/assign amenities to a room</h3>
+              <p class="fs-5">
+                Navigate to Rooms > Rooms. Click View button in the action
+                column. This will open the room profile. Click Add Amenity
+                button at the top-right section of the page. This will open the
+                registration form. Fill it and click submit. The store has to be
+                selected first to generate the item list available in the
+                preferred store. This is the store from which the item is
+                issued.
+                <br /><b>Note:</b> To move items into and out the room use the
+                action buttons explained below; <br /><b>1. Add Qty:</b> This
+                helps in restocking the quantities of the same item in the room.
+                <br /><b>2. Consumed:</b> This helps in reducing the quantities
+                of the same item in the room. <br /><b>3. View Icon:</b> This
+                opens the item movement ledger as shown below.
+              </p>
+            </div>
+            <!--book room content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-book"
+              role="tabpanel"
+              aria-labelledby="v-pills-book-tab"
+            >
+              <h1>Rooms</h1>
+              <h3>How to book a room</h3>
+              <p class="fs-5">
+                On the sidebar open Rooms > Book Room. This opens the booking
+                page. To create a booking, follow the steps below;
+                <br />1. Select the reservation dates and click Search button.
+                This will auto-populate the number of nights input field while
+                it filters in the open rooms within the set period. <br />2.
+                Select the booking type. <br />3. Pick the room would like to
+                reserve. <br />4. Input Full Name, <br />5. Input Phone Number,
+                <br />6. Input Occupancy <br />7. Input the description in the
+                narrative input field. This field is optional <br />8. Input the
+                Amount Paid and 0 (zero) if no amount is paid at this time
+                <br />9. Select the Payment Mode if some amount is paid. If no
+                amount is paid, select Not Applicable from the list <br />10.
+                Input the transaction Reference number, if available, and NA if
+                not available <br />11. After ensuring all the details are
+                correct, click Book Now button to complete the reservation
+                process
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/iqY30tYZ-N4"
+                title="Room Booking Module in JiPOS"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!--check in & out guests content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-in"
+              role="tabpanel"
+              aria-labelledby="v-pills-in-tab"
+            >
+              <h1>Rooms</h1>
+              <h3>How to check-in & checkout guest</h3>
+              <p class="fs-5">
+                To check-in a guest, navigate to Rooms > Bookings section in the
+                sidebar. This will open a list of all the bookings. Search the
+                client using name, ID/passport number, phone number, reference
+                number in the search box. Click the Bill No to open the booking
+                profile. At the bottom of the page, click More Action then
+                Check-in button. In the pop-up which appears, fill in all the
+                required field and submit. You have to check Confirm Guest
+                Check-in box in order to check-in this particular guest. To
+                check-out a guest, open a booking profile then click More Action
+                button at the bottom-right section of the page. Select Checkout
+                option and confirm. This will check this guest out.
+                <br /><b>Note:</b> The check-in and check-out time are
+                auto-registered in the system when these operations are carried
+                out.
+              </p>
+            </div>
+            <!--extra charges content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-extra"
+              role="tabpanel"
+              aria-labelledby="v-pills-extra-tab"
+            >
+              <h1>Rooms</h1>
+              <h3>How to add extra charges to guest bookings</h3>
+              <p class="fs-5">
+                To check-in a guest, navigate to Rooms > Bookings section in the
+                sidebar. This will open a list of all the bookings. Search the
+                client using name, ID/passport number, phone number, reference
+                number in the search box. Click the Bill No to open the booking
+                profile. Click More Action button at the bottom-right section of
+                the page. Choose Extra Charges option from the list displayed.
+                Fill in the form appropriately then submit. <br /><b>Note:</b>
+                You can register more charge categories in the Accounting >
+                Charts of Accounts section. Open register account and fill in
+                the form as shown below. Pick ‘Income’ as the account type and
+                ‘Extra Charges’ as the sub-account type.
+              </p>
+            </div>
+            <!--map food/drink orders content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-map"
+              role="tabpanel"
+              aria-labelledby="v-pills-map-tab"
+            >
+              <h1>Rooms</h1>
+              <h3>How to map food/drink orders to guest booking</h3>
+              <p class="fs-5">
+                It is a good practice to add food/drink orders to the
+                accommodation bill. This is done while making a sale in the POS
+                window. You have to select the room then then guest for this to
+                be successful as shown below.
+              </p>
+            </div>
+            <!--settle/clear guest bill content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-clear"
+              role="tabpanel"
+              aria-labelledby="v-pills-clear-tab"
+            >
+              <h1>Rooms</h1>
+              <h3>How to settle/clear guest bill</h3>
+              <p class="fs-5">
+                To check-in a guest, navigate to Rooms > Bookings section in the
+                sidebar. This will open a list of all the bookings. Search the
+                client using name, ID/passport number, phone number, reference
+                number in the search box. Click the Bill No to open the booking
+                profile. As long as the guest has any pending bill, Make Payment
+                form at the bottom of the booking profile will be displayed. Use
+                this form to ONLY settle the room/accommodation charges. The
+                meals/drinks charges are settled/cleared in the sale profile
+                section. Click on the reference code in the Foods ordered table
+                as shown below then proceed to clear the bill as earlier shown.
+              </p>
             </div>
           </div>
         </div>
