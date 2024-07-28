@@ -317,17 +317,68 @@
                   >
                     <h7>Create Recipe</h7>
                   </button>
-                  <!--wastes configs--><button
+                  <!--waste configs--><button
                     class="btn-primary nav-link m-1 dropdown-item"
-                    id="v-pills-wastes-tab"
+                    id="v-pills-waste-tab"
                     data-bs-toggle="pill"
-                    data-bs-target="#v-pills-wastes"
+                    data-bs-target="#v-pills-waste"
                     type="button"
                     role="tab"
-                    aria-controls="v-pills-wastes"
+                    aria-controls="v-pills-waste"
                     aria-selected="false"
                   >
                     <h7>Record Wastes</h7>
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <!--MAIN purchases button -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >Purchases</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <!--create purchase--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-create-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-create"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-create"
+                    aria-selected="false"
+                  >
+                    <h7>Create, View, Delete a Purchase</h7>
+                  </button>
+                  <!--purchase payment configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-payment-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-payment"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-payment"
+                    aria-selected="false"
+                  >
+                    <h7>Make a Purchase Payment</h7>
+                  </button>
+                  <!--Create LPO configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-createLPO-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-createLPO"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-createLPO"
+                    aria-selected="false"
+                  >
+                    <h7>Create, View and Delete an LPO</h7>
                   </button>
                 </li>
               </ul>
@@ -931,6 +982,148 @@
                 form. All the wastes are shown in the list displayed on the same
                 page.
               </p>
+            </div>
+            <!--create purchase-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-create"
+              role="tabpanel"
+              aria-labelledby="v-pills-create-tab"
+            >
+              <h1>Purchases</h1>
+              <h3>How to create, view and delete a purchase</h3>
+              <h5>1. Register a purchase</h5>
+              <p class="fs-5">
+                On the left sidebar click Purchase which will then be expanded.
+                Click New purchase, which will redirect you to purchase
+                registration page Fill in the purchase form by select the
+                supplier, the store that will receive the purchased items and
+                the items. After ensuring everything is OK, click the Submit
+                button to register the purchase.
+                <br /><b>Note:</b> Registering a new purchase will automatically
+                increase the stock balances in the selected store as well as
+                affect the purchase and supplier accounts.
+              </p>
+              <h5>2. Viewing and editing a purchase</h5>
+              <p class="fs-5">
+                To view a purchase, click Purchases > Purchase List in the
+                sidebar. This will open the list of all initial purchases On the
+                Action/Last table column, click Action button, which will
+                expand. The click View to view more information about the
+                purchase. This page is called the purchase profile page. You can
+                then edit and save this particular purchase details. At the
+                bottom-right section of the page, you can add Purchase Expenses,
+                which are directly sent to the Expenses & Payments module as
+                explained later on.
+              </p>
+              <h5>3. Deleting a purchase</h5>
+              <p class="fs-5">
+                To Delete A purchase, click Purchases > Purchase List in the
+                sidebar. This will open the list of all initial purchases. On
+                the Action/Last table column, click Action button, which will
+                expand. The click Delete to delete the purchase.
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/tnZYPDfAkV8"
+                title="How to make purchase in JiPOS - #JiPOS, Kenya&#39;s best POS Software."
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!--purchase payment configs-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-payment"
+              role="tabpanel"
+              aria-labelledby="v-pills-payment-tab"
+            >
+              <h1>Purchases</h1>
+              <h3>How to make a purchase payment</h3>
+              <p class="fs-5">
+                This can also be called Settling of supplier balances. To make
+                new or view purchase payment(s), click Purchases > Purchase List
+                on the sidebar. This will open the list of all purchases. On the
+                Action/Last table column, click Action button that will expand.
+                The click View to open the purchase profile. At the bottom of
+                the profile, you will find ‘Make payment’ form. Fill it
+                appropriately then submit. This will make the purchase payment.
+                <br />This form allows you to make payments in bits: you only
+                need to specify the paying account, amount, date and a
+                reference. All the purchase payment (also known as order
+                payments) will be displayed in the same page at the bottom. You
+                can then click the last print action button to get the payment
+                voucher, which can be printed/downloaded. <br /><b>Note:</b> The
+                purchase payment form appears only if the purchase has some
+                balances not settled. If the balances are cleared fully, then
+                only the ‘Order payments’ table will be visible. This helps
+                avoid double payments.
+              </p>
+            </div>
+            <!--Create LPO configs-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-createLPO"
+              role="tabpanel"
+              aria-labelledby="v-pills-createLPO-tab"
+            >
+              <h1>Purchases</h1>
+              <h3>How to create, view and delete an LPO</h3>
+              <h5>1. Creating a new LPO</h5>
+              <p class="fs-5">There two ways of creating and LPO;</p>
+              <h6 class="fs-5">
+                <i>a. Direct creation through New LPO link</i>
+              </h6>
+              <p class="fs-5">
+                On the left sidebar click Purchase > New LPO which will redirect
+                you to LPO form page. Fill in the LPO form by select the
+                supplier, the store that will receive the purchased items and
+                the items. After ensuring everything is OK, click the Submit
+                button to register the new LPO.
+              </p>
+              <h6 class="fs-5">
+                <i>b. Converting an External Requisition into an LPO</i>
+              </h6>
+              <p class="fs-5">
+                Navigate to Products > Requisition. From the list, click the
+                action button in the action column. From the drop-down menu,
+                click Edit In the popup form that displays the LPO details;
+                convert the requisition to LPO by checking Yes option. Then,
+                select the supplier and click the Submit button as shown.
+                <br /><b>Note:</b> Only External Requisitions can be converted
+                to an LPO.
+              </p>
+              <h5>2. Viewing and editing LPO</h5>
+              <p class="fs-5">
+                To view an LPO, click Purchases > LPO List in the sidebar. This
+                will open the list of all LPOs. On the Action/Last table column,
+                click Action button, which will expand. Then click View link to
+                view more information about the LPO. The new page opened is
+                called the LPO profile page where you can edit then save the LPO
+                details.<br /><b>Note:</b> To move an LPO into the Purchase
+                List; Select YES option under Move to purchase order? Before you
+                click Update LPO button. This action also auto-increases the
+                stock balances in the respective stores.
+              </p>
+              <h5>3. Deleting an LPO</h5>
+              <p class="fs-5">
+                Navigate to Purchases > LPO List. In the LPO list Action table
+                column, click Action button, which will expand. Then click
+                Delete to delete the LPO.
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/scgsZBgkDHg"
+                title="Creating an LPO in JiPOS"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
             </div>
           </div>
         </div>
