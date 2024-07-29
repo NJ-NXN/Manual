@@ -11,6 +11,7 @@
 .btn-primary {
   color: #147975 !important;
 }
+
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
@@ -20,7 +21,7 @@
   background-color: #147975 !important;
 }
 
-button h6 {
+button {
   text-align: start;
 }
 
@@ -37,9 +38,24 @@ button h6 {
 h7 {
   text-align: start;
 }
-img{
-  width: 65vw;
-  height: 65vh;
-  margin-top: 20px;
-  margin-bottom: 20px;
+
+li .btn-primary {
+  width: 20vw;
+}
+
+li a {
+  color: #147975 !important;
+}
+
+li a:hover,
+li a:focus,
+li a:active,
+li a.active,
+.open > .dropdown-toggle.btn-primary {
+  color: #f7f7f7 !important;
+  background-color: #147975 !important;
+}
+.dropdown-toggle {
+  display: flex !important;
+  align-items: center !important;
 }
