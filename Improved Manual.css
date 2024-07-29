@@ -11,6 +11,7 @@
 .btn-primary {
   color: #147975 !important;
 }
+
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
@@ -36,4 +37,18 @@ button h6 {
 
 h7 {
   text-align: start;
+}
+
+li .btn-primary {
+  width: 20vw;
+}
+
+li a {
+  color: #147975 !important;
+  font-size: medium !important;
+}
+
+a:hover {
+  color: #f7f7f7 !important;
+  background-color: #147975 !important;
 }
