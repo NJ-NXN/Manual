@@ -37,3 +37,9 @@ button h6 {
 h7 {
   text-align: start;
 }
+img{
+  width: 65vw;
+  height: 65vh;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
