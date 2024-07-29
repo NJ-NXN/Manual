@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JiPOS User Manual</title>
+    <link rel="icon" href="./Images/Iosoft logo.avif" />
+    <link rel="stylesheet" href="Improved Manual.css" />
+    <script
+      src="https://kit.fontawesome.com/18ed336f4c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="./Images/Jipos 2.jpeg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./impoves.js"></script>
+  </head>
+  <body>
+    <div class="header container-fluid text-black">
+      <img
+        src="./Images/JIPOS 1.jpeg"
+        class="mx-auto d-block"
+        alt=""
+        height="80"
+      />
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="d-flex align-items-start">
+          <!-- buttons-->
+          <div
+            class="nav flex-column nav-pills me-4"
+            id="v-pills-tab"
+            role="tablist"
+            aria-orientation="vertical"
+          >
+            <!--MAIN intro button --><button
+              class="btn-primary nav-link active m-1"
+              id="v-pills-intro-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-intro"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-intro"
+              aria-selected="true"
+            >
+              <h6>Introduction</h6>
+            </button>
+            <!--MAIN system user layout button --><button
+              class="btn-primary nav-link m-1"
+              id="v-pills-UI-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-UI"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-UI"
+              aria-selected="false"
+            >
+              <h6>System User Layout</h6>
+            </button>
+            <!--MAIN system configs button -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >System Configurations</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <!--org configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-org-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-org"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-org"
+                    aria-selected="false"
+                  >
+                    <h7>Organization Configurations</h7>
+                  </button>
+                  <!--gen configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-gen-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-gen"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-gen"
+                    aria-selected="false"
+                  >
+                    <h7>General Configurations</h7>
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <!--MAIN users button -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >System Users & Role Management</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <!--user configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-user-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-user"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-user"
+                    aria-selected="false"
+                  >
+                    <h7>Set-up Users</h7>
+                  </button>
+                  <!--customer configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-customer-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-customer"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-customer"
+                    aria-selected="false"
+                  >
+                    <h7>Set-up Customers</h7>
+                  </button>
+                  <!--suppliers configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-suppliers-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-suppliers"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-suppliers"
+                    aria-selected="false"
+                  >
+                    <h7>Set-up Suppliers</h7>
+                  </button>
+                  <!--roles configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-roles-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-roles"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-roles"
+                    aria-selected="false"
+                  >
+                    <h7>Set-up User Roles and Privileges</h7>
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <!--MAIN products button -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >Products & Stock</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <!--register--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-register-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-register"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-register"
+                    aria-selected="false"
+                  >
+                    <h7>Register, View, Edit, Delete Items</h7>
+                  </button>
+                  <!--import configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-import-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-import"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-import"
+                    aria-selected="false"
+                  >
+                    <h7>Import Items</h7>
+                  </button>
+                  <!--serial configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-serial-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-serial"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-serial"
+                    aria-selected="false"
+                  >
+                    <h7>Generate Serial Numbers</h7>
+                  </button>
+                  <!--by-product configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-byproduct-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-byproduct"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-byproduct"
+                    aria-selected="false"
+                  >
+                    <h7>Create Item By-Product</h7>
+                  </button>
+                  <!--redistribute configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-redistribute-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-redistribute"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-redistribute"
+                    aria-selected="false"
+                  >
+                    <h7>Map Items (Redistribute)</h7>
+                  </button>
+                  <!--stock configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-stock-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-stock"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-stock"
+                    aria-selected="false"
+                  >
+                    <h7>Take Stock</h7>
+                  </button>
+                  <!--reconcile configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-reconcile-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-reconcile"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-reconcile"
+                    aria-selected="false"
+                  >
+                    <h7>Reconcile Stock</h7>
+                  </button>
+                  <!--move configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-move-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-move"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-move"
+                    aria-selected="false"
+                  >
+                    <h7>Directly Move Stock</h7>
+                  </button>
+                  <!--requisition configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-requisition-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-requisition"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-requisition"
+                    aria-selected="false"
+                  >
+                    <h7>Requisition (internal/external)</h7>
+                  </button>
+                  <!--LPO configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-LPO-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-LPO"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-LPO"
+                    aria-selected="false"
+                  >
+                    <h7
+                      >Approve, Print, Delete and Convert Requisition into
+                      LPO</h7
+                    >
+                  </button>
+                  <!--recipe configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-recipe-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-recipe"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-recipe"
+                    aria-selected="false"
+                  >
+                    <h7>Create Recipe</h7>
+                  </button>
+                  <!--waste configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-waste-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-waste"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-waste"
+                    aria-selected="false"
+                  >
+                    <h7>Record Wastes</h7>
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <!--MAIN purchases button -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >Purchases</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <!--create purchase--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-create-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-create"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-create"
+                    aria-selected="false"
+                  >
+                    <h7>Create, View, Delete a Purchase</h7>
+                  </button>
+                  <!--purchase payment configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-payment-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-payment"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-payment"
+                    aria-selected="false"
+                  >
+                    <h7>Make a Purchase Payment</h7>
+                  </button>
+                  <!--Create LPO configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-createLPO-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-createLPO"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-createLPO"
+                    aria-selected="false"
+                  >
+                    <h7>Create, View and Delete an LPO</h7>
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <!--MAIN sales button -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >Sales</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <!--make sale--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-makesale-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-makesale"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-makesale"
+                    aria-selected="false"
+                  >
+                    <h7>Make a Sale</h7>
+                  </button>
+                  <!--edit sales--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-edit-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-edit"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-edit"
+                    aria-selected="false"
+                  >
+                    <h7>Edit Open Sales/ Open Orders/ Pending Bills</h7>
+                  </button>
+                  <!--settle sale--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-settle-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-settle"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-settle"
+                    aria-selected="false"
+                  >
+                    <h7>Settle/ Clear/ Make Payment on a Sale</h7>
+                  </button>
+                  <!--void sale--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-void-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-void"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-void"
+                    aria-selected="false"
+                  >
+                    <h7>Void a Sale</h7>
+                  </button>
+                  <!--complement sale--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-complement-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-complement"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-complement"
+                    aria-selected="false"
+                  >
+                    <h7>Complement a Sale</h7>
+                  </button>
+                  <!--credit sale--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-credit-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-credit"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-credit"
+                    aria-selected="false"
+                  >
+                    <h7>Extend Credit</h7>
+                  </button>
+                  <!--return sale--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-return-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-return"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-return"
+                    aria-selected="false"
+                  >
+                    <h7>Receive Sales Return</h7>
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <!--MAIN rooms button -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >Rooms</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <!--room types--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-types-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-types"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-types"
+                    aria-selected="false"
+                  >
+                    <h7>Room Types</h7>
+                  </button>
+                  <!--room maintenance--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-maintenance-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-maintenance"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-maintenance"
+                    aria-selected="false"
+                  >
+                    <h7>Room Maintenance Status</h7>
+                  </button>
+                  <!--room setup--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-setup-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-setup"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-setup"
+                    aria-selected="false"
+                  >
+                    <h7>Room Set-Up</h7>
+                  </button>
+                  <!--room maintenance change--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-change-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-change"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-change"
+                    aria-selected="false"
+                  >
+                    <h7>Change Room Maintenance Status</h7>
+                  </button>
+                  <!--room amenities--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-amenities-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-amenities"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-amenities"
+                    aria-selected="false"
+                  >
+                    <h7>Assign Amenities to a Room</h7>
+                  </button>
+                  <!--book room--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-book-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-book"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-book"
+                    aria-selected="false"
+                  >
+                    <h7>Book a Room</h7>
+                  </button>
+                  <!--check in & out guests--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-in-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-in"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-in"
+                    aria-selected="false"
+                  >
+                    <h7>Check-in & out Guests</h7>
+                  </button>
+                  <!--extra charges--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-extra-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-extra"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-extra"
+                    aria-selected="false"
+                  >
+                    <h7>Add Extra Charges to Guest Bookings</h7>
+                  </button>
+                  <!--map food/drink orders--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-map-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-map"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-map"
+                    aria-selected="false"
+                  >
+                    <h7>Map Food/ Drink Orders to Guest Booking</h7>
+                  </button>
+                  <!--settle/clear guest bill--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-clear-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-clear"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-clear"
+                    aria-selected="false"
+                  >
+                    <h7>Settle/ Clear Guest Bill</h7>
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </div>
+          <!-- tab content-->
+          <div class="tab-content" id="v-pills-tabContent">
+            <!--INTRODUCTION-->
+
+            <!-- intro content-->
+            <div
+              class="tab-pane fade show active"
+              id="v-pills-intro"
+              role="tabpanel"
+              aria-labelledby="v-pills-intro-tab"
+            >
+              <h1>Introduction</h1>
+              <p class="fs-5">
+                JiPOS is a web-based point of sale system, which handles
+                inventory, production, requisition, purchasing, sales,
+                accommodation, accounting, user management and reporting
+                modules. JiPOS is mainly used in hotels & restaurants, wines &
+                spirit shops, hardware, mini-marts, mines, organizations and
+                pharmacies.
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/3jkDDLc_tpE"
+                title="JiPOS - iOSoft Smart Restaurant POS / Hotel Management System demo video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <!--SYSTEM USER LAYOUT-->
+
+            <!-- system User Layout content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-UI"
+              role="tabpanel"
+              aria-labelledby="v-pills-UI-tab"
+            >
+              <h1>System User Layout</h1>
+              <p class="fs-5">
+                The system has two login pages, for the waiters and for front
+                office or back-office. Waiters use their pin only to login to
+                the system while the front and back office uses their registered
+                username and password to login.
+              </p>
+             
+                <img src="./Images/system_user_layout.PNG"  alt="">
+             
+              <p class="fs-5">Front office and Back office login interface</p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/LbvgXu8P-x8"
+                title="JiPOS Dashboard Video Explanation:  Kenya&#39;s No.1 #POSSystem"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+              <p class="fs-5">Waiter/Cashier login interface</p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/CJaXqZ7WgME"
+                title="JiPOS Demo as a Hotel Management System | Best Restaurant Point Of Sale"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <!--SYSTEM CONFIGURATIONS-->
+
+            <!--org configs content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-org"
+              role="tabpanel"
+              aria-labelledby="v-pills-org-tab"
+            >
+              <h1>System Configurations</h1>
+              <h3>Organization configurations</h3>
+              <h5>
+                1. How to setup organization details including:
+                business/organization name, email, phone, KRA PIN, address, logo
+                e.t.c
+              </h5>
+             
+              <p class="fs-5">
+                On the sidebar, navigate to Organizations > Orgs. In the window
+                that opens, you can update the details in the form appropriately
+                and save as shown in the image below
+              </p>
+              <h5>2. How to set-up stations</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Organizations > Stations. In the
+                window that opens, expand the form by clicking the top-right +
+                icon. Fill the form appropriately then save. You can view, edit
+                and delete all the registered stations from the list visible
+                under the form as shown below.
+              </p>
+              <h5>3. How to set-up departments</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Organizations > Departments. Fill in
+                the left form and submit to register a new department. Use the
+                table on the right to view, edit or delete already registered
+                departments.
+              </p>
+            </div>
+            <!--gen configs content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-gen"
+              role="tabpanel"
+              aria-labelledby="v-pills-gen-tab"
+            >
+              <h1>System Configurations</h1>
+              <h3>General configurations</h3>
+              <h5>1. How to Happy Hour</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Happy Hour. Enter
+                the times you would like to sell with the happy hour prices. You
+                can switch the set times ON/OFF in the status column as shown
+                below. Happy Hour Prices are set in the item profile section.
+                Navigate to the Products > Items then open your item of choice
+                to set the happy hour price.
+              </p>
+              <h5>2. How to set-up attributes</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Attributes. Fill in
+                the left form and submit to register a new attribute. Use the
+                table on the right to view, edit or delete already registered
+                attribute.
+              </p>
+              <h5>3. How to set-up item categories</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Categories. Fill in
+                the left form and submit to register a new category. Use the
+                table on the right to view, edit or delete already registered
+                category. <br /><b>Note:</b>You map categories per store/shop
+                for multi-store system setup. This will respectively display the
+                categories at the specified points of sale. If a category is
+                hidden, it will not be displayed at the point of sale.
+              </p>
+              <h5>4. How to set-up brands</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Brands. Fill in the
+                left form and submit to register a new brand. Use the table on
+                the right to view, edit or delete already registered brand.
+              </p>
+              <h5>5. How to set-up colors</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Colors. Fill in the
+                left form and submit to register a new color. Use the table on
+                the right to view, edit or delete already registered color.
+              </p>
+              <h5>6. How to set-up units (item units)</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Units. Fill in the
+                left form and submit to register a new unit. Use the table on
+                the right to view, edit or delete already registered unit
+              </p>
+              <h5>7. How to set-up tax types</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Tax Types. Fill in
+                the left form and submit to register a new Tax Type. Use the
+                table on the right to view, edit or delete already registered
+                Tax type.
+              </p>
+              <h5>8. How to set-up fiscal years</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Fiscal Years. Fill
+                in the left form and submit to register a new Fiscal Year. Use
+                the table on the right to view, edit or delete already
+                registered Fiscal Year. The systems runs in an active
+                Fiscal/Financial Year, which should be set and activated in this
+                section.
+              </p>
+              <h5>9. How to set-up tables/counters</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Tables/Counters.
+                Fill in the left form and submit to register a new
+                Table/Counter. Use the table on the right to view, edit or
+                delete already registered Table/Counter. This option allows the
+                waiter to map every order to a given table so it is easy to
+                track. All the tables must be mapped appropriately per
+                store/shop/selling point.
+              </p>
+              <h5>10. How to set-up stores</h5>
+              <p class="fs-5">
+                On the sidebar, navigate to Configurations > Stores. Fill in the
+                left form and submit to register a new Store. Use the table on
+                the right to view, edit or delete already registered Stores.
+                Making a store a <i>default selling point</i> makes it the
+                default store from which all the goods are sold upon login to
+                the POS. If the store is associated to accommodation, then check
+                <i>yes</i> in the <i>In accommodation</i> option. If this is
+                yes, then you should give it its appropriate M-Pesa payment
+                options (if available).
+              </p>
+            </div>
+
+            <!--SYSTEM USERS & ROLE MANAGEMENT-->
+
+            <!-- user content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-user"
+              role="tabpanel"
+              aria-labelledby="v-pills-user-tab"
+            >
+              <h1>System Users & Role Management</h1>
+              <h3>How to set-up system users</h3>
+              <p class="fs-5">
+                On the sidebar, navigate to System Users > System Users. Fill in
+                the left form and submit to register new Stores. Use the table
+                on the right to view or delete already registered Users. In the
+                user profile, you can set the users pin, reset password and
+                update other user details including roles & privileges
+                appropriately. If a user is suspended from using the system,
+                then make the Inactive from their profile section.
+              </p>
+            </div>
+            <!-- customer content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-customer"
+              role="tabpanel"
+              aria-labelledby="v-pills-customer-tab"
+            >
+              <h1>System Users & Role Management</h1>
+              <h3>How to set-up customers</h3>
+              <p class="fs-5">
+                On the sidebar, navigate to System Users > Customers. Fill in
+                the left form and submit to register a new Customer. Use the
+                table on the right to view, edit & delete already registered
+                Customer.
+              </p>
+            </div>
+            <!-- suppliers content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-suppliers"
+              role="tabpanel"
+              aria-labelledby="v-pills-suppliers-tab"
+            >
+              <h1>System Users & Role Management</h1>
+              <h3>How to set-up suppliers</h3>
+              <p class="fs-5">
+                On the sidebar, navigate to System Users > Suppliers. Fill in
+                the left form and submit to register a new Supplier. Use the
+                table on the right to view, edit & delete already registered
+                Supplier.
+              </p>
+            </div>
+            <!-- roles content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-roles"
+              role="tabpanel"
+              aria-labelledby="v-pills-roles-tab"
+            >
+              <h1>System Users & Role Management</h1>
+              <h3>How to set-up user roles & privileges</h3>
+              <p class="fs-5">
+                On the sidebar, navigate to System Users > Role Management. This
+                will open a page with the list of all roles. You can view/
+                delete the created roles. Click Add Role button at the top-left
+                section to add a new role In the new page enter the name of the
+                role and check all the boxes appropriately then save. The
+                created roles can then be assigned to users while setting up a
+                user.
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/CznrXmy3DJw"
+                title="User roles and configurations in JiPOS"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <!--PRODUCTS & STOCK-->
+
+            <!-- register content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-register"
+              role="tabpanel"
+              aria-labelledby="v-pills-register-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>How to register, view, edit and delete items</h3>
+              <p class="fs-5">
+                On the sidebar, navigate to Products > Items. You are presented
+                with the items list. Click <b>Add Item</b> button to register a
+                new item. In the window, which appears, fill in the form
+                appropriately and submit. All the mandatory fields (*) must be
+                field to submit the form. All the select input fields
+                (Categories/Units/Attributes/Tax Types) are set in the
+                Configurations section. Ensure you set these configurations
+                before you register an item. All the registered items are
+                displayed in the items list
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/05RVLPrJO2s"
+                title="How to add item or products in JiPOS | Stock Registration Video Explanation with #JiPOS"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- import content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-import"
+              role="tabpanel"
+              aria-labelledby="v-pills-import-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>How to import items</h3>
+              <p class="fs-5">
+                On the sidebar, navigate to Products > Items. You are presented
+                with the items list. Click Add Item button. In the new page,
+                click Upload Items button. This will open a popup form. Click
+                CSV Template button to download the data template, which you
+                appropriately fill then upload using the same form.
+                <br /><b>Note:</b> The system will redirect you to a failed
+                imports page where you will be able to see all the data, which
+                have not been imported. You can correct the data in the table
+                and import again. Alternatively, you can export the failed data,
+                correct them appropriately and then import again. The following
+                columns are required:
+                <i>
+                  Name, Barcode/SKU, Unit, Category, Buying Price, Selling
+                  Price/Marked Price and Opening Stock.</i
+                >
+                <br />All the failed imports data can be delete by clicking
+                Delete all button at the top-right of the page.
+              </p>
+            </div>
+            <!-- serial content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-serial"
+              role="tabpanel"
+              aria-labelledby="v-pills-serial-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>How to generate item serial numbers</h3>
+              <p class="fs-5">
+                On the sidebar click Products > Items. This will open a list of
+                items. Click on the item code to open the item profile. In the
+                serials widget, click Generate button to generate a new serial.
+                To print the generated serial, click Print button as shown in
+                the image below.
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/pDDtKlkcn1w"
+                title="Item or Product SKU or Barcode Registration in JiPOS Using Barcode Scanner"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- byproduct content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-byproduct"
+              role="tabpanel"
+              aria-labelledby="v-pills-byproduct-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>How to create item by-product</h3>
+              <p class="fs-5">
+                This is also known as
+                <i
+                  >item breakdown/ creating smaller versions of the same
+                  item.</i
+                >
+                On the sidebar click Products > Items. This will open a list of
+                items. Click on the item code to open the item profile. At the
+                top section, click Create By-product button to open the popup
+                form.
+              </p>
+            </div>
+            <!-- redistribute content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-redistribute"
+              role="tabpanel"
+              aria-labelledby="v-pills-redistribute-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>How to map items in respective stores (redistribution)</h3>
+              <p class="fs-5">
+                The purpose is to register/associate items into their preferred
+                respective store(s) selected, hence allowing for stock
+                monitoring/sales/requisitions per store/shop. Navigate to
+                Products > Stocks. Click Redistribute items button. In the popup
+                window, fill in the form appropriately and submit. Preferred
+                store/shop: select the preferred store/shop where you want to
+                avail/push these items. Get items: select the items here.
+                <br />Choose action point: <br />Distribute - allocates the
+                selected store the items selected <br />Rollback - a way undo
+                already redistributed items <br />Override - re-allocates the
+                selected store the items selected with the opening stock value
+                registered earlier during item registration
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/01a7xKa5nIQ"
+                title="How to redistribute items to various stores in JiPOS | Item redistribution video explanation #JiPOS"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- stock content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-stock"
+              role="tabpanel"
+              aria-labelledby="v-pills-stock-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>How to take stock</h3>
+              <p class="fs-5">
+                This feature allows for manual taking of stock. It can be
+                conducted daily, weekly, monthly, quarterly, semi-annually or
+                annually. Navigate to Products > Stocks the click the Stock Take
+                button. In the page, there is the form to create a stock
+                instance. Select the organization/store, set the instance name
+                (by default the current date is given), select the instance
+                date, mark as active, give any other description then submit.
+                <br />This will create an instance, which is visible on the
+                table displayed in the above image. If you open one instance,
+                you will be able to view all the items in the given store with
+                the system stock balances already generated. You are then
+                required to edit each item updating the physically counted
+                quantities. This will give either a positive or a negative
+                deviation, which will call for Stock reconciliation.
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/oIpW4OEPueY"
+                title="How to do stock take for your inventory with JiPOS | Stock Take Video Explanation #JiPOS"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- reconcile content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-reconcile"
+              role="tabpanel"
+              aria-labelledby="v-pills-reconcile-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>How to reconcile stock</h3>
+              <p class="fs-5">
+                This feature allows for the updating of the stock balances after
+                a stock take. It clears the deviations experienced after stock
+                takes. Navigate to Products > Stocks then click Reconcile Stock
+                button. In the popup, select the store for the reconciliation,
+                and the instance, and then submit. This will update the stock
+                balances to the instance selected.
+              </p>
+            </div>
+            <!-- move content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-move"
+              role="tabpanel"
+              aria-labelledby="v-pills-move-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>How to directly move stock</h3>
+              <p class="fs-5">
+                This feature helps you directly move stock from one store/shop
+                to the other.
+                <br /><b>Note:</b> You can only move items from one store to the
+                other if and only if the item is already redistributed in the
+                two stores. Navigate to Products > Move stock. Fill in the form
+                and submit as shown below; You can always check the availability
+                of an item within a given store before initiating a movement.
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/pM086mmNieM"
+                title="How to transfer stock from one store to another with JiPOS | Stock Movement Video Explanation #JiPOS"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- requisition content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-requisition"
+              role="tabpanel"
+              aria-labelledby="v-pills-requisition-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>How to make requisition (Internal/External)</h3>
+              <p class="fs-5">
+                On the sidebar, navigate to Products > Requisition. This will
+                open a page with the list of all requisitions. The list will
+                contain all requisitions from all departments or only a user’s
+                requisition; this depends on whether you have the approval
+                rights or not. First, select the store, which needs the items,
+                then the store, which should issue the items. Fill in the rest
+                of the form appropriately then submit. In the case of external
+                requisition, the issuing store should be ‘External Store’. If
+                this store is not appearing in the list, then it can be created
+                in the configurations-store section.
+              </p>
+            </div>
+            <!-- LPO content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-LPO"
+              role="tabpanel"
+              aria-labelledby="v-pills-LPO-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>
+                How to approve, print, delete and convert requisition into LPO
+              </h3>
+              <p class="fs-5">
+                On the sidebar, navigate to Products > Requisition. This will
+                open a page with the list of all requisitions. The list will
+                contain all requisitions from all departments. In the action
+                column, click View. This will open the requisition details. You
+                can approve/suspend/reject the requisition in this window. For
+                External Requisition, you will be able to select the supplier as
+                you convert the requisition into LPO. Only approved external
+                requisition can be converted into LPO.
+                <br /><b>Note:</b> You can only delete a requisition that has
+                neither been approved nor rejected.
+              </p>
+            </div>
+            <!-- recipe content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-recipe"
+              role="tabpanel"
+              aria-labelledby="v-pills-recipe-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>How to create recipe (Production)</h3>
+              <p class="fs-5">
+                Ensure all the required recipe items are already registered in
+                the item registration section. Navigate to Products > Recipe.
+                Read carefully the instructions on the right section of the page
+                before you begin creating the recipe. Fill in the recipe form
+                appropriately then submit.
+                <br /><b>Note:</b> All the recipe items must be redistributed in
+                the Affected Store per Sale before creating a recipe. This will
+                ensure accurate stock control during sales. If an item has been
+                registered before and you wish to override/replace its profile
+                with a new recipe, then insert the initial item code (barcode)
+                in the ‘Conflicting Barcode/SKU (cbs)’ input field. All created
+                recipes are found at the bottom table on the same page. You can
+                view/edit/delete any recipe created. The recipes are also
+                available in the general items list in the Products > Items
+                section.
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/XKINYnVOng0"
+                title="How to make a recipe using a Ji-POS system | Managing Inventory Control Using Recipe"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- waste content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-waste"
+              role="tabpanel"
+              aria-labelledby="v-pills-waste-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>How to record Wastes</h3>
+              <p class="fs-5">
+                We can have all wastes recorded in this section. Navigate to
+                Products > Wastages. Click Add Wastage button at the top-right
+                to open the waste registration form. Select the store affected,
+                item, quantity, date and an explanation (if any) then submit the
+                form. All the wastes are shown in the list displayed on the same
+                page.
+              </p>
+            </div>
+
+            <!--PURCHASES-->
+
+            <!--create purchase content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-create"
+              role="tabpanel"
+              aria-labelledby="v-pills-create-tab"
+            >
+              <h1>Purchases</h1>
+              <h3>How to create, view and delete a purchase</h3>
+              <h5>1. Register a purchase</h5>
+              <p class="fs-5">
+                On the left sidebar click Purchase which will then be expanded.
+                Click New purchase, which will redirect you to purchase
+                registration page Fill in the purchase form by select the
+                supplier, the store that will receive the purchased items and
+                the items. After ensuring everything is OK, click the Submit
+                button to register the purchase.
+                <br /><b>Note:</b> Registering a new purchase will automatically
+                increase the stock balances in the selected store as well as
+                affect the purchase and supplier accounts.
+              </p>
+              <h5>2. Viewing and editing a purchase</h5>
+              <p class="fs-5">
+                To view a purchase, click Purchases > Purchase List in the
+                sidebar. This will open the list of all initial purchases On the
+                Action/Last table column, click Action button, which will
+                expand. The click View to view more information about the
+                purchase. This page is called the purchase profile page. You can
+                then edit and save this particular purchase details. At the
+                bottom-right section of the page, you can add Purchase Expenses,
+                which are directly sent to the Expenses & Payments module as
+                explained later on.
+              </p>
+              <h5>3. Deleting a purchase</h5>
+              <p class="fs-5">
+                To Delete A purchase, click Purchases > Purchase List in the
+                sidebar. This will open the list of all initial purchases. On
+                the Action/Last table column, click Action button, which will
+                expand. The click Delete to delete the purchase.
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/tnZYPDfAkV8"
+                title="How to make purchase in JiPOS - #JiPOS, Kenya&#39;s best POS Software."
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!--purchase payment content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-payment"
+              role="tabpanel"
+              aria-labelledby="v-pills-payment-tab"
+            >
+              <h1>Purchases</h1>
+              <h3>How to make a purchase payment</h3>
+              <p class="fs-5">
+                This can also be called Settling of supplier balances. To make
+                new or view purchase payment(s), click Purchases > Purchase List
+                on the sidebar. This will open the list of all purchases. On the
+                Action/Last table column, click Action button that will expand.
+                The click View to open the purchase profile. At the bottom of
+                the profile, you will find ‘Make payment’ form. Fill it
+                appropriately then submit. This will make the purchase payment.
+                <br />This form allows you to make payments in bits: you only
+                need to specify the paying account, amount, date and a
+                reference. All the purchase payment (also known as order
+                payments) will be displayed in the same page at the bottom. You
+                can then click the last print action button to get the payment
+                voucher, which can be printed/downloaded. <br /><b>Note:</b> The
+                purchase payment form appears only if the purchase has some
+                balances not settled. If the balances are cleared fully, then
+                only the ‘Order payments’ table will be visible. This helps
+                avoid double payments.
+              </p>
+            </div>
+            <!--Create LPO content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-createLPO"
+              role="tabpanel"
+              aria-labelledby="v-pills-createLPO-tab"
+            >
+              <h1>Purchases</h1>
+              <h3>How to create, view and delete an LPO</h3>
+              <h5>1. Creating a new LPO</h5>
+              <p class="fs-5">There two ways of creating and LPO;</p>
+              <h6 class="fs-5">
+                <i>a. Direct creation through New LPO link</i>
+              </h6>
+              <p class="fs-5">
+                On the left sidebar click Purchase > New LPO which will redirect
+                you to LPO form page. Fill in the LPO form by select the
+                supplier, the store that will receive the purchased items and
+                the items. After ensuring everything is OK, click the Submit
+                button to register the new LPO.
+              </p>
+              <h6 class="fs-5">
+                <i>b. Converting an External Requisition into an LPO</i>
+              </h6>
+              <p class="fs-5">
+                Navigate to Products > Requisition. From the list, click the
+                action button in the action column. From the drop-down menu,
+                click Edit In the popup form that displays the LPO details;
+                convert the requisition to LPO by checking Yes option. Then,
+                select the supplier and click the Submit button as shown.
+                <br /><b>Note:</b> Only External Requisitions can be converted
+                to an LPO.
+              </p>
+              <h5>2. Viewing and editing LPO</h5>
+              <p class="fs-5">
+                To view an LPO, click Purchases > LPO List in the sidebar. This
+                will open the list of all LPOs. On the Action/Last table column,
+                click Action button, which will expand. Then click View link to
+                view more information about the LPO. The new page opened is
+                called the LPO profile page where you can edit then save the LPO
+                details.<br /><b>Note:</b> To move an LPO into the Purchase
+                List; Select YES option under Move to purchase order? Before you
+                click Update LPO button. This action also auto-increases the
+                stock balances in the respective stores.
+              </p>
+              <h5>3. Deleting an LPO</h5>
+              <p class="fs-5">
+                Navigate to Purchases > LPO List. In the LPO list Action table
+                column, click Action button, which will expand. Then click
+                Delete to delete the LPO.
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/scgsZBgkDHg"
+                title="Creating an LPO in JiPOS"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <!--SALES-->
+
+            <!--make sale content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-makesale"
+              role="tabpanel"
+              aria-labelledby="v-pills-makesale-tab"
+            >
+              <h1>Sales</h1>
+              <h3>How to make a sale</h3>
+              <p class="fs-5">
+                To make a sale in the system, navigate to Sales > POS as shown
+                below. If you login using your pin, the system will
+                auto-redirect you the POS section.<br />JiPOS has two POS modes:
+              </p>
+              <h5>1. Desktop Mode</h5>
+              <p class="fs-5">
+                This is mainly used in other industries except the Hospitality
+                Industry. It is used with the non-touch screen devices. This
+                mode supports bar-code scanners.
+              </p>
+              <h5>2. POS Mode</h5>
+              <p class="fs-5">
+                This mode is commonly used in the Hospitality Industry and
+                supports both touch screen and non-touch screen devices.After
+                opening the POS window, fill in the form appropriately and click
+                sell as shown below. You can filter the items by categories
+                displayed at the top. You can also search the item in the search
+                bar, by typing the item name or barcode then clicking the item
+                in the display. This action will auto-add the item in the
+                calculator displayed in the left section of the page. You can
+                increase the item quantity from the calculator section.
+                <br /><b>Note:</b> You can only sell items with their quantities
+                greater than 1. The quantities available is displayed by the
+                blue icon at the top of every item except for the recipe items.
+                <br />Upon clicking the SELL button, you will be automatically
+                logged out of the system, while the system prints the invoice
+                and/or captain order, where applicable.
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/EXnOxp-UWhA"
+                title="How To Make Sales in JiPOS - Point Of Sale Module Explained"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!--edit sales content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-edit"
+              role="tabpanel"
+              aria-labelledby="v-pills-edit-tab"
+            >
+              <h1>Sales</h1>
+              <h3>How to edit open sales/ open orders/ pending bills</h3>
+              <p class="fs-5">
+                Navigate to the POS section. At top of the page, click Open
+                Sales. In the popup window, search the sales, which you would
+                like to edit and click View/Edit button. You can add new items
+                onto the same order in this new page. Note that the initially
+                sold items in the same order cannot be removed or edited. One
+                done, click the Update button to post this edited order. The
+                captain order printed after editing this order will contain only
+                the added items.
+              </p>
+            </div>
+            <!--settle sales content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-settle"
+              role="tabpanel"
+              aria-labelledby="v-pills-settle-tab"
+            >
+              <h1>Sales</h1>
+              <h3>How to settle/clear/make payment on a sale</h3>
+              <p class="fs-5">
+                The cashier or accountant should preferably be handling this
+                section. Navigate to the Sales > Sales List on the sidebar. This
+                will present you all the sales made arranged in a descending
+                order. All the pending bills/open sales will be having a
+                balance. Click the Bill No to open the sale profile as shown
+                below. At the bottom of the sale profile, you will find the
+                ‘Make Payment’ form. Enter the payment mode, amount, date and
+                reference then submit. You can post multiple payments in this
+                form. The form disappears as soon as the sale balance is
+                completely settled. You can find all the payments made on this
+                sale in the ‘Payments Made’ table. After clearing the bill, you
+                can print the receipt.
+              </p>
+            </div>
+            <!--void sales content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-void"
+              role="tabpanel"
+              aria-labelledby="v-pills-void-tab"
+            >
+              <h1>Sales</h1>
+              <h3>How to void a sale</h3>
+              <p class="fs-5">
+                Navigate to the Sales > Sales List on the sidebar. This will
+                present you all the sales made arranged in a descending order.
+                Find the last column (Action column) in the table the click the
+                Action button. If your display screen is small, then you will
+                have to expand the row details by clicking the blue plus (+)
+                icon to open the action column as shown below. Click Void Sale
+                link and confirm to void the sale. Voiding a sale is like
+                cancellation of a whole order. The order/sale is canceled with
+                the items restocked. All voided sales are pushed to Products >
+                Voided Sales section.
+              </p>
+            </div>
+            <!--complement sales content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-complement"
+              role="tabpanel"
+              aria-labelledby="v-pills-complement-tab"
+            >
+              <h1>Sales</h1>
+              <h3>How to complement a sale</h3>
+              <p class="fs-5">
+                Navigate to the Sales > Sales List on the sidebar. This will
+                present you all the sales made arranged in a descending order.
+                Find the last column (Action column) in the table the click the
+                Action button. If your display screen is small, then you will
+                have to expand the row details by clicking the blue plus (+)
+                icon to open the action column as shown in the image above.
+                Click Complement Sale link and confirm to complement the sale.
+                All complementary sales are pushed to Products > Complementary
+                Sales section and are recorded as business expenses.
+              </p>
+            </div>
+            <!--credit sales content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-credit"
+              role="tabpanel"
+              aria-labelledby="v-pills-credit-tab"
+            >
+              <h1>Sales</h1>
+              <h3>How to extend credit</h3>
+              <p class="fs-5">
+                Giving the sales Extended Credit tag helps easily track the
+                long-term credit sales as well as allows you to close shift with
+                some open sales Navigate to the Sales > Sales List on the
+                sidebar. This will present you all the sales made arranged in a
+                descending order. Find the last column (Action column) in the
+                table the click the Action button. If your display screen is
+                small, then you will have to expand the row details by clicking
+                the blue plus (+) icon to open the action column as shown in the
+                image above. Click Extend Credit link and confirm to extend
+                credit. From the sales list, all sales are tagged with the
+                Extend Credit tag.
+              </p>
+            </div>
+            <!--return sales content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-return"
+              role="tabpanel"
+              aria-labelledby="v-pills-return-tab"
+            >
+              <h1>Sales</h1>
+              <h3>How to receive sales returns</h3>
+              <p class="fs-5">
+                Returns as conducted on a specific sale/purchase item. You must
+                have the order reference number to conduct a successful return.
+                To record a return, navigate to Sales > Returns. This will open
+                the returns page. Fill in the return form appropriately and
+                Save. For sales: Select Sale Return option, select the order and
+                the item to be returned. Insert the quantity to be return and
+                the return condition. You can describe the return before you
+                Save. For purchase: Select the Purchase Return option, select
+                the order and the item to be returned. Insert the quantity to be
+                return and the return condition. You can describe the return
+                before you Save.
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/ESoYlyL1cD4"
+                title="A complete video for making and clearing of sales in JiPOS"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <!--ROOMS-->
+
+            <!--room types content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-types"
+              role="tabpanel"
+              aria-labelledby="v-pills-types-tab"
+            >
+              <h1>Rooms</h1>
+              <h3>How to set-up room types</h3>
+              <p class="fs-5">
+                Navigate to Rooms > Room Types. Fill in the form on the left
+                section of the page and submit. All the registered room types
+                can be viewed from the table within the page as shown below.
+              </p>
+            </div>
+            <!--room maintenance content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-maintenance"
+              role="tabpanel"
+              aria-labelledby="v-pills-maintenance-tab"
+            >
+              <h1>Rooms</h1>
+              <h3>How to set-up room maintenance status</h3>
+              <p class="fs-5">
+                Navigate to Rooms > Register Maintenance Status Fill in the form
+                on the left section of the page and submit. All the registered
+                Maintenance Status can be viewed from the table within the page
+                as shown below.
+              </p>
+            </div>
+            <!--room setup content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-setup"
+              role="tabpanel"
+              aria-labelledby="v-pills-setup-tab"
+            >
+              <h1>Rooms</h1>
+              <h3>How to set-up rooms</h3>
+              <p class="fs-5">
+                Navigate to Rooms > Rooms. Click New Room button at the top
+                right section of the page. Fill in the pop-up form that appears
+                and submit. All the registered rooms are displayed in the table
+                within the same page. You can Activate/ Deactivate a room in the
+                Active column as shown below. Inactive rooms are not visible in
+                the front office for booking while Active rooms are visible for
+                booking.
+              </p>
+            </div>
+            <!--room maintenance change content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-change"
+              role="tabpanel"
+              aria-labelledby="v-pills-change-tab"
+            >
+              <h1>Rooms</h1>
+              <h3>How to change room maintenance status</h3>
+              <p class="fs-5">
+                Navigate to Rooms > Rooms. Locate condition column in the table.
+                Click the edit icon in this column to change the room condition
+                status as shown below.
+              </p>
+            </div>
+            <!--room amenities content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-amenities"
+              role="tabpanel"
+              aria-labelledby="v-pills-amenities-tab"
+            >
+              <h1>Rooms</h1>
+              <h3>How to add/assign amenities to a room</h3>
+              <p class="fs-5">
+                Navigate to Rooms > Rooms. Click View button in the action
+                column. This will open the room profile. Click Add Amenity
+                button at the top-right section of the page. This will open the
+                registration form. Fill it and click submit. The store has to be
+                selected first to generate the item list available in the
+                preferred store. This is the store from which the item is
+                issued.
+                <br /><b>Note:</b> To move items into and out the room use the
+                action buttons explained below; <br /><b>1. Add Qty:</b> This
+                helps in restocking the quantities of the same item in the room.
+                <br /><b>2. Consumed:</b> This helps in reducing the quantities
+                of the same item in the room. <br /><b>3. View Icon:</b> This
+                opens the item movement ledger as shown below.
+              </p>
+            </div>
+            <!--book room content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-book"
+              role="tabpanel"
+              aria-labelledby="v-pills-book-tab"
+            >
+              <h1>Rooms</h1>
+              <h3>How to book a room</h3>
+              <p class="fs-5">
+                On the sidebar open Rooms > Book Room. This opens the booking
+                page. To create a booking, follow the steps below;
+                <br />1. Select the reservation dates and click Search button.
+                This will auto-populate the number of nights input field while
+                it filters in the open rooms within the set period. <br />2.
+                Select the booking type. <br />3. Pick the room would like to
+                reserve. <br />4. Input Full Name, <br />5. Input Phone Number,
+                <br />6. Input Occupancy <br />7. Input the description in the
+                narrative input field. This field is optional <br />8. Input the
+                Amount Paid and 0 (zero) if no amount is paid at this time
+                <br />9. Select the Payment Mode if some amount is paid. If no
+                amount is paid, select Not Applicable from the list <br />10.
+                Input the transaction Reference number, if available, and NA if
+                not available <br />11. After ensuring all the details are
+                correct, click Book Now button to complete the reservation
+                process
+              </p>
+              <iframe
+                width="500"
+                height="250"
+                src="https://www.youtube.com/embed/iqY30tYZ-N4"
+                title="Room Booking Module in JiPOS"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!--check in & out guests content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-in"
+              role="tabpanel"
+              aria-labelledby="v-pills-in-tab"
+            >
+              <h1>Rooms</h1>
+              <h3>How to check-in & checkout guest</h3>
+              <p class="fs-5">
+                To check-in a guest, navigate to Rooms > Bookings section in the
+                sidebar. This will open a list of all the bookings. Search the
+                client using name, ID/passport number, phone number, reference
+                number in the search box. Click the Bill No to open the booking
+                profile. At the bottom of the page, click More Action then
+                Check-in button. In the pop-up which appears, fill in all the
+                required field and submit. You have to check Confirm Guest
+                Check-in box in order to check-in this particular guest. To
+                check-out a guest, open a booking profile then click More Action
+                button at the bottom-right section of the page. Select Checkout
+                option and confirm. This will check this guest out.
+                <br /><b>Note:</b> The check-in and check-out time are
+                auto-registered in the system when these operations are carried
+                out.
+              </p>
+            </div>
+            <!--extra charges content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-extra"
+              role="tabpanel"
+              aria-labelledby="v-pills-extra-tab"
+            >
+              <h1>Rooms</h1>
+              <h3>How to add extra charges to guest bookings</h3>
+              <p class="fs-5">
+                To check-in a guest, navigate to Rooms > Bookings section in the
+                sidebar. This will open a list of all the bookings. Search the
+                client using name, ID/passport number, phone number, reference
+                number in the search box. Click the Bill No to open the booking
+                profile. Click More Action button at the bottom-right section of
+                the page. Choose Extra Charges option from the list displayed.
+                Fill in the form appropriately then submit. <br /><b>Note:</b>
+                You can register more charge categories in the Accounting >
+                Charts of Accounts section. Open register account and fill in
+                the form as shown below. Pick ‘Income’ as the account type and
+                ‘Extra Charges’ as the sub-account type.
+              </p>
+            </div>
+            <!--map food/drink orders content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-map"
+              role="tabpanel"
+              aria-labelledby="v-pills-map-tab"
+            >
+              <h1>Rooms</h1>
+              <h3>How to map food/drink orders to guest booking</h3>
+              <p class="fs-5">
+                It is a good practice to add food/drink orders to the
+                accommodation bill. This is done while making a sale in the POS
+                window. You have to select the room then then guest for this to
+                be successful as shown below.
+              </p>
+            </div>
+            <!--settle/clear guest bill content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-clear"
+              role="tabpanel"
+              aria-labelledby="v-pills-clear-tab"
+            >
+              <h1>Rooms</h1>
+              <h3>How to settle/clear guest bill</h3>
+              <p class="fs-5">
+                To check-in a guest, navigate to Rooms > Bookings section in the
+                sidebar. This will open a list of all the bookings. Search the
+                client using name, ID/passport number, phone number, reference
+                number in the search box. Click the Bill No to open the booking
+                profile. As long as the guest has any pending bill, Make Payment
+                form at the bottom of the booking profile will be displayed. Use
+                this form to ONLY settle the room/accommodation charges. The
+                meals/drinks charges are settled/cleared in the sale profile
+                section. Click on the reference code in the Foods ordered table
+                as shown below then proceed to clear the bill as earlier shown.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
