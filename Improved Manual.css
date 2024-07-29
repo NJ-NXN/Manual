@@ -21,7 +21,7 @@
   background-color: #147975 !important;
 }
 
-button h6 {
+button {
   text-align: start;
 }
 
@@ -45,10 +45,17 @@ li .btn-primary {
 
 li a {
   color: #147975 !important;
-  font-size: medium !important;
 }
 
-a:hover {
+li a:hover,
+li a:focus,
+li a:active,
+li a.active,
+.open > .dropdown-toggle.btn-primary {
   color: #f7f7f7 !important;
   background-color: #147975 !important;
+}
+.dropdown-toggle {
+  display: flex !important;
+  align-items: center !important;
 }
