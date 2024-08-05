@@ -86,5 +86,5 @@ img {
 }
 
 .dropdown-menu {
-  transition: transform 0.5s;
+  transition: ease-in 0.25s;
 }
