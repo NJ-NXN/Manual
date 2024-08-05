@@ -84,3 +84,7 @@ img {
 .dropdown-toggle[aria-expanded="true"] .fa-angle-down {
   transform: rotate(180deg);
 }
+
+.dropdown-menu {
+  transition: transform 0.5s;
+}
