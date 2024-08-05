@@ -78,7 +78,7 @@ img {
 }
 
 .dropdown-toggle .fa-angle-down {
-  transition: transform 0.6s;
+  transition: transform 0.5s;
 }
 .dropdown-toggle[aria-expanded="true"] .fa-angle-down {
   transform: rotate(180deg);
