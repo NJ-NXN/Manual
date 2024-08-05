@@ -58,6 +58,7 @@ li a.active,
 .dropdown-toggle {
   display: flex !important;
   align-items: center !important;
+  position: relative !important;
 }
 /*img{
   height: 60vh;
@@ -70,8 +71,8 @@ iframe {
   margin-bottom: 20px;
   margin-top: 20px;
 }
-img {
-  margin-top: 20px;
+img{
+  margin-top: 20px;;
 }
 .dropdown-toggle::after {
   display: none !important;
