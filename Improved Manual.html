@@ -10,6 +10,8 @@
       src="https://kit.fontawesome.com/18ed336f4c.js"
       crossorigin="anonymous"
     ></script>
+    <link rel=”stylesheet”
+    href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”>
     <link rel="icon" href="./Images/Jipos 2.jpeg" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -26,10 +28,10 @@
     <script src="./impoves.js"></script>
   </head>
   <body>
-    <div class="header container-fluid text-black">
+    <div class="header container-fluid">
       <img
         src="./Images/JIPOS 1.jpeg"
-        class="mx-auto d-block"
+        class="mx-auto d-block mt-0"
         alt=""
         height="80"
       />
@@ -37,13 +39,13 @@
     <div class="container">
       <div class="row">
         <div class="d-flex align-items-start">
+          <!-- buttons-->
           <div
             class="nav flex-column nav-pills me-4"
             id="v-pills-tab"
             role="tablist"
             aria-orientation="vertical"
           >
-            <!-- button tabs -->
             <!--MAIN intro button --><button
               class="btn-primary nav-link active m-1"
               id="v-pills-intro-tab"
@@ -68,146 +70,1155 @@
             >
               <h6>System User Layout</h6>
             </button>
-            <!--MAIN system configs button --><button
-              class="btn-primary nav-link m-1"
-              id="v-pills-configs-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#v-pills-configs"
-              type="button"
-              role="tab"
-              aria-controls="v-pills-configs"
-              aria-selected="false"
-            >
-              <h6>System Configurations</h6>
-            </button>
-            <!--MAIN users button --><button
-              class="btn-primary nav-link m-1"
-              id="v-pills-users-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#v-pills-users"
-              type="button"
-              role="tab"
-              aria-controls="v-pills-users"
-              aria-selected="false"
-            >
-              <h6>System Users & Role Management</h6>
-            </button>
-            <!--MAIN products button --><button
-              class="btn-primary nav-link m-1"
-              id="v-pills-products-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#v-pills-products"
-              type="button"
-              role="tab"
-              aria-controls="v-pills-products"
-              aria-selected="false"
-            >
-              <h6>Products & Stock</h6>
-            </button>
-            <!--Products Sub buttons-->
-            <section>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  href="#"
-                  role="button"
-                  aria-expanded="false"
-                  >Products & Stock</a
-                >
-                <ul class="dropdown-menu">
-                  <li>
-                    <!--MAIN products button --><button
-                      class="btn-primary nav-link m-1"
-                      id="v-pills-products-tab"
-                      data-bs-toggle="pill"
-                      data-bs-target="#v-pills-products"
-                      type="button"
-                      role="tab"
-                      aria-controls="v-pills-products"
-                      aria-selected="false"
+            <!--MAIN system configs button -->
+            <li class="nav-item dropdown m-1">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                data-bs-auto-close="outside"
+                aria-expanded="false"
+                ><h6>
+                  System Configurations
+                  <!-- Changing the default icon with toggle -->
+                  <i
+                    onclick="myFunction(this)"
+                    class="dropdown-button fa-solid fa-angle-down ms-2"
+                  ></i>
+                </h6>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <!--org configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-org-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-org"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-org"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Organization Details</h7>
+                  </button>
+                  <!--stations configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-stations-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-stations"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-stations"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Station Set-up</h7>
+                  </button>
+                  <!--departments configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-departments-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-departments"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-departments"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Departments Set-up</h7>
+                  </button>
+                  <!--happy hour configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-happy-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-happy"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-happy"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Happy Hour Set-up</h7>
+                  </button>
+                  <!--attributes configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-attributes-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-attributes"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-attributes"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Attributes Set-up</h7>
+                  </button>
+                  <!--item cat configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-itemcat-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-itemcat"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-itemcat"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Item Categories Set-up</h7>
+                  </button>
+                  <!--brands configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-brands-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-brands"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-brands"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Brands Set-up</h7>
+                  </button>
+                  <!--colors configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-colors-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-colors"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-colors"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Colors Set-up</h7>
+                  </button>
+                  <!--units configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-units-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-units"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-units"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Item Units Set-up</h7>
+                  </button>
+                  <!--tax configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-tax-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-tax"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-tax"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Tax Types Set-up</h7>
+                  </button>
+                  <!--fiscal year configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-fiscal-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-fiscal"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-fiscal"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Fiscal Year Set-up</h7>
+                  </button>
+                  <!--tables configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-tables-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-tables"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-tables"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Tables Set-up</h7>
+                  </button>
+                  <!--stores configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-stores-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-stores"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-stores"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Stores Set-up</h7>
+                  </button>
+                </li>
+              </ul>
+            </li>
+
+            <!--MAIN users button -->
+            <li class="nav-item dropdown m-1">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="outside"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                ><h6>
+                  System Users & Role Management
+                  <!-- Changing the default icon with toggle -->
+                  <i
+                    onclick="myFunction(this)"
+                    class="dropdown-button fa-solid fa-angle-down ms-2"
+                  ></i></h6
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <!--user configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-user-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-user"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-user"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Set-up Users</h7>
+                  </button>
+                  <!--customer configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-customer-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-customer"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-customer"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Set-up Customers</h7>
+                  </button>
+                  <!--suppliers configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-suppliers-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-suppliers"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-suppliers"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Set-up Suppliers</h7>
+                  </button>
+                  <!--roles configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-roles-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-roles"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-roles"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Set-up User Roles and Privileges</h7>
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <!--MAIN products button -->
+            <li class="nav-item dropdown m-1">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="outside"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                ><h6>
+                  Products & Stock<!-- Changing the default icon with toggle -->
+                  <i
+                    onclick="myFunction(this)"
+                    class="dropdown-button fa-solid fa-angle-down ms-2"
+                  ></i></h6
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <!--register--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-register-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-register"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-register"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap"
+                      >Register, View, Edit, Delete Items</h7
                     >
-                      <h6>Products & Stock</h6>
-                    </button>
-                  </li>
-                </ul>
-              </li>
-            </section>
-            <!--MAIN purchases button --><button
-              class="btn-primary nav-link m-1"
-              id="v-pills-purchases-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#v-pills-purchases"
-              type="button"
-              role="tab"
-              aria-controls="v-pills-purchases"
-              aria-selected="false"
-            >
-              <h6>Purchases</h6>
-            </button>
-            <!--MAIN sales button --><button
-              class="btn-primary nav-link m-1"
-              id="v-pills-sales-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#v-pills-sales"
-              type="button"
-              role="tab"
-              aria-controls="v-pills-sales"
-              aria-selected="false"
-            >
-              <h6>Sales</h6>
-            </button>
-            <!--MAIN rooms button --><button
-              class="btn-primary nav-link m-1"
-              id="v-pills-rooms-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#v-pills-rooms"
-              type="button"
-              role="tab"
-              aria-controls="v-pills-rooms"
-              aria-selected="false"
-            >
-              <h6>Rooms</h6>
-            </button>
-            <!--MAIN accounting button --><button
-              class="btn-primary nav-link m-1"
-              id="v-pills-accounting-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#v-pills-accounting"
-              type="button"
-              role="tab"
-              aria-controls="v-pills-accounting"
-              aria-selected="false"
-            >
-              <h6>Accounting</h6>
-            </button>
-            <!--MAIN reports button --><button
-              class="btn-primary nav-link m-1"
-              id="v-pills-reports-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#v-pills-reports"
-              type="button"
-              role="tab"
-              aria-controls="v-pills-reports"
-              aria-selected="false"
-            >
-              <h6>Reports</h6>
-            </button>
-            <!--MAIN other button --><button
-              class="btn-primary nav-link m-1"
-              id="v-pills-other-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#v-pills-other"
-              type="button"
-              role="tab"
-              aria-controls="v-pills-other"
-              aria-selected="false"
-            >
-              <h6>Other Configurations</h6>
-            </button>
+                  </button>
+                  <!--import configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-import-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-import"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-import"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Import Items</h7>
+                  </button>
+                  <!--serial configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-serial-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-serial"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-serial"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Generate Serial Numbers</h7>
+                  </button>
+                  <!--by-product configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-byproduct-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-byproduct"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-byproduct"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Create Item By-Product</h7>
+                  </button>
+                  <!--redistribute configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-redistribute-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-redistribute"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-redistribute"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Map Items (Redistribute)</h7>
+                  </button>
+                  <!--stock configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-stock-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-stock"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-stock"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Take Stock</h7>
+                  </button>
+                  <!--reconcile configs<button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-reconcile-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-reconcile"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-reconcile"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Reconcile Stock</h7>
+                  </button>-->
+                  <!--move configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-move-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-move"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-move"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Directly Move Stock</h7>
+                  </button>
+                  <!--requisition configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-requisition-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-requisition"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-requisition"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Requisition (internal/external)</h7>
+                  </button>
+                  <!--LPO configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-LPO-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-LPO"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-LPO"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap"
+                      >Approve, Print, Delete and Convert Requisition into
+                      LPO</h7
+                    >
+                  </button>
+                  <!--recipe configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-recipe-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-recipe"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-recipe"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Create Recipe</h7>
+                  </button>
+                  <!--waste configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-waste-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-waste"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-waste"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Record Wastes</h7>
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <!--MAIN purchases button -->
+            <li class="nav-item dropdown m-1">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="outside"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                ><h6>
+                  Purchases
+                  <!-- Changing the default icon with toggle -->
+                  <i
+                    onclick="myFunction(this)"
+                    class="dropdown-button fa-solid fa-angle-down ms-2"
+                  ></i></h6
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <!--create purchase--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-create-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-create"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-create"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Create, View, Delete a Purchase</h7>
+                  </button>
+                  <!--purchase payment configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-payment-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-payment"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-payment"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Make a Purchase Payment</h7>
+                  </button>
+                  <!--Create LPO configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-createLPO-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-createLPO"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-createLPO"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Create, View and Delete an LPO</h7>
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <!--MAIN sales button -->
+            <li class="nav-item dropdown m-1">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="outside"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                ><h6>
+                  Sales
+                  <!-- Changing the default icon with toggle -->
+                  <i
+                    onclick="myFunction(this)"
+                    class="dropdown-button fa-solid fa-angle-down ms-2"
+                  ></i></h6
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <!--make sale--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-makesale-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-makesale"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-makesale"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Make a Sale</h7>
+                  </button>
+                  <!--edit sales--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-edit-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-edit"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-edit"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap"
+                      >Edit Open Sales/ Open Orders/ Pending Bills</h7
+                    >
+                  </button>
+                  <!--settle sale--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-settle-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-settle"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-settle"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap"
+                      >Settle/ Clear/ Make Payment on a Sale</h7
+                    >
+                  </button>
+                  <!--void sale--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-void-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-void"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-void"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Void a Sale</h7>
+                  </button>
+                  <!--complement sale--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-complement-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-complement"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-complement"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Complement a Sale</h7>
+                  </button>
+                  <!--credit sale--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-credit-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-credit"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-credit"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Extend Credit</h7>
+                  </button>
+                  <!--return sale--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-return-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-return"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-return"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Receive Sales Return</h7>
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <!--MAIN rooms button -->
+            <li class="nav-item dropdown m-1">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="outside"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                ><h6>
+                  Rooms
+                  <!-- Changing the default icon with toggle -->
+                  <i
+                    onclick="myFunction(this)"
+                    class="dropdown-button fa-solid fa-angle-down ms-2"
+                  ></i></h6
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <!--room types--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-types-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-types"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-types"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Room Types</h7>
+                  </button>
+                  <!--room maintenance--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-maintenance-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-maintenance"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-maintenance"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Room Maintenance Status</h7>
+                  </button>
+                  <!--room setup--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-setup-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-setup"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-setup"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Room Set-Up</h7>
+                  </button>
+                  <!--room maintenance change--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-change-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-change"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-change"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Change Room Maintenance Status</h7>
+                  </button>
+                  <!--room amenities--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-amenities-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-amenities"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-amenities"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Assign Amenities to a Room</h7>
+                  </button>
+                  <!--book room--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-book-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-book"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-book"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Book a Room</h7>
+                  </button>
+                  <!--check in & out guests--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-in-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-in"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-in"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Check-in & out Guests</h7>
+                  </button>
+                  <!--extra charges--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-extra-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-extra"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-extra"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap"
+                      >Add Extra Charges to Guest Bookings</h7
+                    >
+                  </button>
+                  <!--map food/drink orders--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-map-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-map"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-map"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap"
+                      >Map Food/ Drink Orders to Guest Booking</h7
+                    >
+                  </button>
+                  <!--settle/clear guest bill--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-clear-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-clear"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-clear"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Settle/ Clear Guest Bill</h7>
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <!--MAIN accounting button -->
+            <li class="nav-item dropdown m-1">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="outside"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                ><h6>
+                  Accounting
+                  <!-- Changing the default icon with toggle -->
+                  <i
+                    onclick="myFunction(this)"
+                    class="dropdown-button fa-solid fa-angle-down ms-2"
+                  ></i></h6
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <!--sub-account types--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-sub-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-sub"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-sub"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Set-up Sub-Account Types</h7>
+                  </button>
+                  <!--accounts/ ledger/charts of accounts--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-ledger-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-ledger"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-ledger"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap"
+                      >Accounts/ Ledger Accounts/ Charts of Accounts</h7
+                    >
+                  </button>
+                  <!--request, approve<button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-request-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-request"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-request"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap"
+                      >Request, Approve & Make Petty Cash Payments</h7
+                    >
+                  </button>-->
+                  <!--budgets--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-budgets-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-budgets"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-budgets"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Budgets</h7>
+                  </button>
+                  <!--create, approve expenses payments--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-expenses-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-expenses"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-expenses"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap"
+                      >Create, Approve & Make Expenses Payments</h7
+                    >
+                  </button>
+                  <!--journal entry--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-entry-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-entry"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-entry"
+                    aria-selected="false"
+                  >
+                    <h7>Journal Entry</h7>
+                  </button>
+                  <!--create sub-account--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-subaccount-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-subaccount"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-subaccount"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Create Sub-Account Type</h7>
+                  </button>
+                  <!--account/journal/ledger account--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-journal-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-journal"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-journal"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap"
+                      >Create an Account/ Journal/ Ledger Account
+                    </h7>
+                  </button>
+                  <!--account balances report--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-balances-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-balances"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-balances"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Account Balances Report</h7>
+                  </button>
+                  <!--cash flow report--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-cash-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-cash"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-cash"
+                    aria-selected="false"
+                  >
+                    <h7>Cash Flow Report</h7>
+                  </button>
+                  <!--balance sheet report--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-sheet-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-sheet"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-sheet"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Balance Sheet Report</h7>
+                  </button>
+                  <!--profit loss report--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-profit-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-profit"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-profit"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Profit & Loss Report</h7>
+                  </button>
+                  <!--general ledger report--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-general-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-general"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-general"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">General Ledger Report</h7>
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <!--MAIN reports button -->
+            <li class="nav-item dropdown m-1">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="outside"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                ><h6>
+                  Reports
+                  <!-- Changing the default icon with toggle -->
+                  <i
+                    onclick="myFunction(this)"
+                    class="dropdown-button fa-solid fa-angle-down ms-2"
+                  ></i></h6
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <!--close day report--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-close-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-close"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-close"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">End of Day/ Close Day Report</h7>
+                  </button>
+                  <!--room sales report--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-roomsales-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-roomsales"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-roomsales"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Room Sales Report</h7>
+                  </button>
+                  <!--item sales report--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-itemsales-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-itemsales"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-itemsales"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Item Sales Report</h7>
+                  </button>
+                  <!--Item purchase report--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-itempurchase-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-itempurchase"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-itempurchase"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Item Purchase Report</h7>
+                  </button>
+                  <!--staff sales summary--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-summary-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-summary"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-summary"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Staff Sales Summary</h7>
+                  </button>
+                  <!--general sales report--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-generalsales-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-generalsales"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-generalsales"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">General Sales Report</h7>
+                  </button>
+                  <!--suppliers report--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-suppliersreport-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-suppliersreport"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-subaccount"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Suppliers Report</h7>
+                  </button>
+                  <!--customers report--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-customersreport-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-customersreport"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-customersreport"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Customers Report</h7>
+                  </button>
+                  <!--account statements report--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-statements-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-statements"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-statements"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Account Statements Report</h7>
+                  </button>
+                  <!--customer statements report--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-customerstatements-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-customerstatements"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-customerstatements"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Customer Statements Report</h7>
+                  </button>
+                  <!--supplier statements report--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-supplierstatements-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-supplierstatements"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-supplierstatements"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Supplier Statements Report</h7>
+                  </button>
+                  <!--supplier balances report--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-supplierbalances-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-supplierbalances"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-supplierbalances"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Supplier Balances Report</h7>
+                  </button>
+                  <!--general expenses report--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-generalexpenses-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-generalexpenses"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-generalexpenses"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">General Expenses Report</h7>
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <!--MAIN other configs button -->
+            <li class="nav-item dropdown m-1">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="outside"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                ><h6>
+                  Other Configurations
+                  <!-- Changing the default icon with toggle -->
+                  <i
+                    onclick="myFunction(this)"
+                    class="dropdown-button fa-solid fa-angle-down ms-2"
+                  ></i></h6
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <!--printer configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-printer-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-printer"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-printer"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Printer Configurations</h7>
+                  </button>
+                  <!--browser configs--><button
+                    class="btn-primary nav-link m-1 dropdown-item"
+                    id="v-pills-browser-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-browser"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-browser"
+                    aria-selected="false"
+                  >
+                    <h7 class="text-wrap">Browser Configurations</h7>
+                  </button>
+                </li>
+              </ul>
+            </li>
           </div>
           <!-- tab content-->
           <div class="tab-content" id="v-pills-tabContent">
+            <!--INTRODUCTION-->
+
             <!-- intro content-->
             <div
               class="tab-pane fade show active"
@@ -235,6 +1246,9 @@
                 allowfullscreen
               ></iframe>
             </div>
+
+            <!--SYSTEM USER LAYOUT-->
+
             <!-- system User Layout content-->
             <div
               class="tab-pane fade"
@@ -249,6 +1263,8 @@
                 the system while the front and back office uses their registered
                 username and password to login.
               </p>
+              <img src="./resized/JiPOS.png" alt="" />
+              <p><i>Login page</i></p>
               <p class="fs-5">Front office and Back office login interface</p>
               <iframe
                 width="500"
@@ -272,26 +1288,39 @@
                 allowfullscreen
               ></iframe>
             </div>
-            <!-- system configs content-->
+
+            <!--SYSTEM CONFIGURATIONS-->
+
+            <!--org configs content-->
             <div
               class="tab-pane fade"
-              id="v-pills-configs"
+              id="v-pills-org"
               role="tabpanel"
-              aria-labelledby="v-pills-configs-tab"
+              aria-labelledby="v-pills-org-tab"
             >
               <h1>System Configurations</h1>
-              <h3>Organization configurations</h3>
-              <h5>
-                1. How to setup organization details including:
+              <h3>
+                How to setup organization details including:
                 business/organization name, email, phone, KRA PIN, address, logo
                 e.t.c
-              </h5>
+              </h3>
               <p class="fs-5">
                 On the sidebar, navigate to Organizations > Orgs. In the window
                 that opens, you can update the details in the form appropriately
                 and save as shown in the image below
               </p>
-              <h5>2. How to set-up stations</h5>
+              <img src="./resized/Organization-JiPOS.png" alt="" />
+              <p><i>Organization Details</i></p>
+            </div>
+            <!--stations configs content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-stations"
+              role="tabpanel"
+              aria-labelledby="v-pills-stations-tab"
+            >
+              <h1>System Configurations</h1>
+              <h3>How to set-up stations</h3>
               <p class="fs-5">
                 On the sidebar, navigate to Organizations > Stations. In the
                 window that opens, expand the form by clicking the top-right +
@@ -299,15 +1328,37 @@
                 and delete all the registered stations from the list visible
                 under the form as shown below.
               </p>
-              <h5>3. How to set-up departments</h5>
+              <img src="./resized/Stations-JiPOS.png" alt="" />
+
+              <p><i>Station Set-Up</i></p>
+            </div>
+            <!--departments configs content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-departments"
+              role="tabpanel"
+              aria-labelledby="v-pills-departments-tab"
+            >
+              <h1>System Configurations</h1>
+              <h3>How to set-up departments</h3>
               <p class="fs-5">
                 On the sidebar, navigate to Organizations > Departments. Fill in
                 the left form and submit to register a new department. Use the
                 table on the right to view, edit or delete already registered
                 departments.
               </p>
-              <h3>General configurations</h3>
-              <h5>1. How to Happy Hour</h5>
+              <img src="./resized/Department-JiPOS.png" alt="" />
+              <p><i>Departments Set-Up</i></p>
+            </div>
+            <!--happy hour configs content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-happy"
+              role="tabpanel"
+              aria-labelledby="v-pills-happy-tab"
+            >
+              <h1>System Configurations</h1>
+              <h3>How to Happy Hour</h3>
               <p class="fs-5">
                 On the sidebar, navigate to Configurations > Happy Hour. Enter
                 the times you would like to sell with the happy hour prices. You
@@ -316,14 +1367,36 @@
                 Navigate to the Products > Items then open your item of choice
                 to set the happy hour price.
               </p>
-              <h5>2. How to set-up attributes</h5>
+              <img src="./resized/Happy-Hour-JiPOS.png" alt="" />
+              <p><i>Happy Hour</i></p>
+            </div>
+            <!--attributes configs content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-attributes"
+              role="tabpanel"
+              aria-labelledby="v-pills-attributes-tab"
+            >
+              <h1>System Configurations</h1>
+              <h3>How to set-up attributes</h3>
               <p class="fs-5">
                 On the sidebar, navigate to Configurations > Attributes. Fill in
                 the left form and submit to register a new attribute. Use the
                 table on the right to view, edit or delete already registered
                 attribute.
               </p>
-              <h5>3. How to set-up item categories</h5>
+              <img src="./resized/Attributes-JiPOS.png" alt="" />
+              <p><i>Attributes Set-Up</i></p>
+            </div>
+            <!--item cat configs content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-itemcat"
+              role="tabpanel"
+              aria-labelledby="v-pills-itemcat-tab"
+            >
+              <h1>System Configurations</h1>
+              <h3>How to set-up item categories</h3>
               <p class="fs-5">
                 On the sidebar, navigate to Configurations > Categories. Fill in
                 the left form and submit to register a new category. Use the
@@ -333,32 +1406,88 @@
                 categories at the specified points of sale. If a category is
                 hidden, it will not be displayed at the point of sale.
               </p>
-              <h5>4. How to set-up brands</h5>
+              <img src="./resized/Categories-JiPOS.png" alt="" />
+              <p><i>Item Categories Set-Up</i></p>
+            </div>
+            <!--brands configs content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-brands"
+              role="tabpanel"
+              aria-labelledby="v-pills-brands-tab"
+            >
+              <h1>System Configurations</h1>
+              <h3>How to set-up brands</h3>
               <p class="fs-5">
                 On the sidebar, navigate to Configurations > Brands. Fill in the
                 left form and submit to register a new brand. Use the table on
                 the right to view, edit or delete already registered brand.
               </p>
-              <h5>5. How to set-up colors</h5>
+              <img src="./resized/Brands-JiPOS.png" alt="" />
+              <p><i>Brands Set-Up</i></p>
+            </div>
+            <!--colors configs content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-colors"
+              role="tabpanel"
+              aria-labelledby="v-pills-colors-tab"
+            >
+              <h1>System Configurations</h1>
+              <h3>How to set-up colors</h3>
               <p class="fs-5">
                 On the sidebar, navigate to Configurations > Colors. Fill in the
                 left form and submit to register a new color. Use the table on
                 the right to view, edit or delete already registered color.
               </p>
-              <h5>6. How to set-up units (item units)</h5>
+              <img src="./resized/Colors-JiPOS.png" alt="" />
+              <p><i>Colors Set-Up</i></p>
+            </div>
+            <!--units configs content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-units"
+              role="tabpanel"
+              aria-labelledby="v-pills-units-tab"
+            >
+              <h1>System Configurations</h1>
+              <h3>How to set-up units (item units)</h3>
               <p class="fs-5">
                 On the sidebar, navigate to Configurations > Units. Fill in the
                 left form and submit to register a new unit. Use the table on
                 the right to view, edit or delete already registered unit
               </p>
-              <h5>7. How to set-up tax types</h5>
+              <img src="./resized/Units-JiPOS.png" alt="" />
+
+              <p><i>Units Set-Up</i></p>
+            </div>
+            <!--tax configs content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-tax"
+              role="tabpanel"
+              aria-labelledby="v-pills-tax-tab"
+            >
+              <h1>System Configurations</h1>
+              <h3>How to set-up tax types</h3>
               <p class="fs-5">
                 On the sidebar, navigate to Configurations > Tax Types. Fill in
                 the left form and submit to register a new Tax Type. Use the
                 table on the right to view, edit or delete already registered
                 Tax type.
               </p>
-              <h5>8. How to set-up fiscal years</h5>
+              <img src="./resized/Tax-Types-JiPOS.png" alt="" />
+              <p><i>Tax Types Set-Up</i></p>
+            </div>
+            <!--fiscal year configs content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-fiscal"
+              role="tabpanel"
+              aria-labelledby="v-pills-fiscal-tab"
+            >
+              <h1>System Configurations</h1>
+              <h3>How to set-up fiscal years</h3>
               <p class="fs-5">
                 On the sidebar, navigate to Configurations > Fiscal Years. Fill
                 in the left form and submit to register a new Fiscal Year. Use
@@ -367,7 +1496,18 @@
                 Fiscal/Financial Year, which should be set and activated in this
                 section.
               </p>
-              <h5>9. How to set-up tables/counters</h5>
+              <img src="./resized/Fiscal-Years-JiPOS.png" alt="" />
+              <p><i>Fiscal Years Set-Up</i></p>
+            </div>
+            <!--tables configs content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-tables"
+              role="tabpanel"
+              aria-labelledby="v-pills-tables-tab"
+            >
+              <h1>System Configurations</h1>
+              <h3>How to set-up tables/counters</h3>
               <p class="fs-5">
                 On the sidebar, navigate to Configurations > Tables/Counters.
                 Fill in the left form and submit to register a new
@@ -377,7 +1517,18 @@
                 track. All the tables must be mapped appropriately per
                 store/shop/selling point.
               </p>
-              <h5>10. How to set-up stores</h5>
+              <img src="./resized/Eating-Tables-JiPOS.png" alt="" />
+              <p><i>Tables/Counters Set-Up</i></p>
+            </div>
+            <!--stores configs content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-stores"
+              role="tabpanel"
+              aria-labelledby="v-pills-stores-tab"
+            >
+              <h1>System Configurations</h1>
+              <h3>How to set-up stores</h3>
               <p class="fs-5">
                 On the sidebar, navigate to Configurations > Stores. Fill in the
                 left form and submit to register a new Store. Use the table on
@@ -389,13 +1540,18 @@
                 yes, then you should give it its appropriate M-Pesa payment
                 options (if available).
               </p>
+              <img src="./resized/Stores-JiPOS.png" alt="" />
+              <p><i>Stores Set-Up</i></p>
             </div>
-            <!-- system users content-->
+
+            <!--SYSTEM USERS & ROLE MANAGEMENT-->
+
+            <!-- user content-->
             <div
               class="tab-pane fade"
-              id="v-pills-users"
+              id="v-pills-user"
               role="tabpanel"
-              aria-labelledby="v-pills-users-tab"
+              aria-labelledby="v-pills-user-tab"
             >
               <h1>System Users & Role Management</h1>
               <h3>How to set-up system users</h3>
@@ -408,6 +1564,17 @@
                 appropriately. If a user is suspended from using the system,
                 then make the Inactive from their profile section.
               </p>
+              <img src="./resized/User Profile _ JiPOS.png" alt="" />
+              <p><i>Setting up system users</i></p>
+            </div>
+            <!-- customer content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-customer"
+              role="tabpanel"
+              aria-labelledby="v-pills-customer-tab"
+            >
+              <h1>System Users & Role Management</h1>
               <h3>How to set-up customers</h3>
               <p class="fs-5">
                 On the sidebar, navigate to System Users > Customers. Fill in
@@ -415,6 +1582,17 @@
                 table on the right to view, edit & delete already registered
                 Customer.
               </p>
+              <img src="./resized/Customers _ JiPOS.png" alt="" />
+              <p><i>Setting up customers</i></p>
+            </div>
+            <!-- suppliers content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-suppliers"
+              role="tabpanel"
+              aria-labelledby="v-pills-suppliers-tab"
+            >
+              <h1>System Users & Role Management</h1>
               <h3>How to set-up suppliers</h3>
               <p class="fs-5">
                 On the sidebar, navigate to System Users > Suppliers. Fill in
@@ -422,6 +1600,17 @@
                 table on the right to view, edit & delete already registered
                 Supplier.
               </p>
+              <img src="./resized/Set up Suppliers-JiPOS.png" alt="" />
+              <p><i>Setting up suppliers</i></p>
+            </div>
+            <!-- roles content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-roles"
+              role="tabpanel"
+              aria-labelledby="v-pills-roles-tab"
+            >
+              <h1>System Users & Role Management</h1>
               <h3>How to set-up user roles & privileges</h3>
               <p class="fs-5">
                 On the sidebar, navigate to System Users > Role Management. This
@@ -432,6 +1621,9 @@
                 created roles can then be assigned to users while setting up a
                 user.
               </p>
+              <img src="./resized/System Roles _ JiPOS.png" alt="" />
+              <p><i>Setting up user roles & privileges</i></p>
+
               <iframe
                 width="500"
                 height="250"
@@ -443,12 +1635,15 @@
                 allowfullscreen
               ></iframe>
             </div>
-            <!-- products content-->
+
+            <!--PRODUCTS & STOCK-->
+
+            <!-- register content-->
             <div
               class="tab-pane fade"
-              id="v-pills-products"
+              id="v-pills-register"
               role="tabpanel"
-              aria-labelledby="v-pills-products-tab"
+              aria-labelledby="v-pills-register-tab"
             >
               <h1>Products & Stock</h1>
               <h3>How to register, view, edit and delete items</h3>
@@ -463,6 +1658,8 @@
                 before you register an item. All the registered items are
                 displayed in the items list
               </p>
+              <img src="./resized/products & stocks.png" alt="" />
+              <p><i>Register, View, Edit, Delete Item</i></p>
               <iframe
                 width="500"
                 height="250"
@@ -473,7 +1670,15 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
-              
+            </div>
+            <!-- import content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-import"
+              role="tabpanel"
+              aria-labelledby="v-pills-import-tab"
+            >
+              <h1>Products & Stock</h1>
               <h3>How to import items</h3>
               <p class="fs-5">
                 On the sidebar, navigate to Products > Items. You are presented
@@ -494,6 +1699,17 @@
                 <br />All the failed imports data can be delete by clicking
                 Delete all button at the top-right of the page.
               </p>
+              <img src="./resized/import item .png" alt="" />
+              <p><i>Import Items</i></p>
+            </div>
+            <!-- serial content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-serial"
+              role="tabpanel"
+              aria-labelledby="v-pills-serial-tab"
+            >
+              <h1>Products & Stock</h1>
               <h3>How to generate item serial numbers</h3>
               <p class="fs-5">
                 On the sidebar click Products > Items. This will open a list of
@@ -502,6 +1718,8 @@
                 To print the generated serial, click Print button as shown in
                 the image below.
               </p>
+              <img src="./resized/serials-JiPOS.png" alt="" />
+              <p><i>Generate Item Serial Numbers</i></p>
               <iframe
                 width="500"
                 height="250"
@@ -512,6 +1730,15 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
+            </div>
+            <!-- byproduct content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-byproduct"
+              role="tabpanel"
+              aria-labelledby="v-pills-byproduct-tab"
+            >
+              <h1>Products & Stock</h1>
               <h3>How to create item by-product</h3>
               <p class="fs-5">
                 This is also known as
@@ -524,6 +1751,17 @@
                 top section, click Create By-product button to open the popup
                 form.
               </p>
+              <img src="./resized/By products-JiPOS.png" alt="" />
+              <p><i>Item by-product</i></p>
+            </div>
+            <!-- redistribute content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-redistribute"
+              role="tabpanel"
+              aria-labelledby="v-pills-redistribute-tab"
+            >
+              <h1>Products & Stock</h1>
               <h3>How to map items in respective stores (redistribution)</h3>
               <p class="fs-5">
                 The purpose is to register/associate items into their preferred
@@ -539,6 +1777,8 @@
                 selected store the items selected with the opening stock value
                 registered earlier during item registration
               </p>
+              <img src="./resized/Redistribution.png" alt="" />
+              <p><i>Redistribution</i></p>
               <iframe
                 width="500"
                 height="250"
@@ -549,6 +1789,15 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
+            </div>
+            <!-- stock content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-stock"
+              role="tabpanel"
+              aria-labelledby="v-pills-stock-tab"
+            >
+              <h1>Products & Stock</h1>
               <h3>How to take stock</h3>
               <p class="fs-5">
                 This feature allows for manual taking of stock. It can be
@@ -566,6 +1815,8 @@
                 quantities. This will give either a positive or a negative
                 deviation, which will call for Stock reconciliation.
               </p>
+              <img src="./resized/Stock Takes _ JiPOS.png" alt="" />
+              <p><i>Stock Take</i></p>
               <iframe
                 width="500"
                 height="250"
@@ -576,6 +1827,15 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
+            </div>
+            <!-- reconcile content
+            <div
+              class="tab-pane fade"
+              id="v-pills-reconcile"
+              role="tabpanel"
+              aria-labelledby="v-pills-reconcile-tab"
+            >
+              <h1>Products & Stock</h1>
               <h3>How to reconcile stock</h3>
               <p class="fs-5">
                 This feature allows for the updating of the stock balances after
@@ -585,6 +1845,15 @@
                 and the instance, and then submit. This will update the stock
                 balances to the instance selected.
               </p>
+            </div>-->
+            <!-- move content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-move"
+              role="tabpanel"
+              aria-labelledby="v-pills-move-tab"
+            >
+              <h1>Products & Stock</h1>
               <h3>How to directly move stock</h3>
               <p class="fs-5">
                 This feature helps you directly move stock from one store/shop
@@ -595,6 +1864,8 @@
                 and submit as shown below; You can always check the availability
                 of an item within a given store before initiating a movement.
               </p>
+              <img src="./resized/Move Stock _ JiPOS.png" alt="" />
+              <p><i>Move Stock</i></p>
               <iframe
                 width="500"
                 height="250"
@@ -605,7 +1876,16 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
-              <h3>How to make requisition (internal/external)</h3>
+            </div>
+            <!-- requisition content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-requisition"
+              role="tabpanel"
+              aria-labelledby="v-pills-requisition-tab"
+            >
+              <h1>Products & Stock</h1>
+              <h3>How to make requisition (Internal/External)</h3>
               <p class="fs-5">
                 On the sidebar, navigate to Products > Requisition. This will
                 open a page with the list of all requisitions. The list will
@@ -618,6 +1898,17 @@
                 this store is not appearing in the list, then it can be created
                 in the configurations-store section.
               </p>
+              <img src="./resized/Requisition _ JiPOS (1).png" alt="" />
+              <p><i>Requisition</i></p>
+            </div>
+            <!-- LPO content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-LPO"
+              role="tabpanel"
+              aria-labelledby="v-pills-LPO-tab"
+            >
+              <h1>Products & Stock</h1>
               <h3>
                 How to approve, print, delete and convert requisition into LPO
               </h3>
@@ -633,6 +1924,19 @@
                 <br /><b>Note:</b> You can only delete a requisition that has
                 neither been approved nor rejected.
               </p>
+              <img src="./resized/Print Requisition 1-JiPOS.png" alt="" />
+              <p><i>Internal Requisition</i></p>
+              <img src="./resized/Print Requisition 2-JiPOS.png" alt="" />
+              <p><i>External Requisition</i></p>
+            </div>
+            <!-- recipe content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-recipe"
+              role="tabpanel"
+              aria-labelledby="v-pills-recipe-tab"
+            >
+              <h1>Products & Stock</h1>
               <h3>How to create recipe (Production)</h3>
               <p class="fs-5">
                 Ensure all the required recipe items are already registered in
@@ -651,6 +1955,8 @@
                 available in the general items list in the Products > Items
                 section.
               </p>
+              <img src="./resized/Recipe-JiPOS.png" alt="" />
+              <p><i>Create Recipe</i></p>
               <iframe
                 width="500"
                 height="250"
@@ -661,6 +1967,15 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
+            </div>
+            <!-- waste content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-waste"
+              role="tabpanel"
+              aria-labelledby="v-pills-waste-tab"
+            >
+              <h1>Products & Stock</h1>
               <h3>How to record Wastes</h3>
               <p class="fs-5">
                 We can have all wastes recorded in this section. Navigate to
@@ -670,13 +1985,18 @@
                 form. All the wastes are shown in the list displayed on the same
                 page.
               </p>
+              <img src="./resized/Wastages _ JiPOS.png" alt="" />
+              <p><i>Record Wastes</i></p>
             </div>
-            <!-- purchases content-->
+
+            <!--PURCHASES-->
+
+            <!--create purchase content-->
             <div
               class="tab-pane fade"
-              id="v-pills-purchases"
+              id="v-pills-create"
               role="tabpanel"
-              aria-labelledby="v-pills-purchases-tab"
+              aria-labelledby="v-pills-create-tab"
             >
               <h1>Purchases</h1>
               <h3>How to create, view and delete a purchase</h3>
@@ -692,6 +2012,9 @@
                 increase the stock balances in the selected store as well as
                 affect the purchase and supplier accounts.
               </p>
+              <img src="./resized/purchases _ JiPOS.png" alt="" />
+              <p><i>Registering a purchase</i></p>
+
               <h5>2. Viewing and editing a purchase</h5>
               <p class="fs-5">
                 To view a purchase, click Purchases > Purchase List in the
@@ -704,6 +2027,11 @@
                 which are directly sent to the Expenses & Payments module as
                 explained later on.
               </p>
+              <img
+                src="./resized/Viewing and editing purchase 2JiPOS.png"
+                alt=""
+              />
+              <p><i>Viewing & editing purchase</i></p>
               <h5>3. Deleting a purchase</h5>
               <p class="fs-5">
                 To Delete A purchase, click Purchases > Purchase List in the
@@ -721,6 +2049,15 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
+            </div>
+            <!--purchase payment content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-payment"
+              role="tabpanel"
+              aria-labelledby="v-pills-payment-tab"
+            >
+              <h1>Purchases</h1>
               <h3>How to make a purchase payment</h3>
               <p class="fs-5">
                 This can also be called Settling of supplier balances. To make
@@ -741,6 +2078,17 @@
                 only the ‘Order payments’ table will be visible. This helps
                 avoid double payments.
               </p>
+              <img src="./resized/Purchase payment.png" alt="" />
+              <p><i>Making a purchase payment</i></p>
+            </div>
+            <!--Create LPO content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-createLPO"
+              role="tabpanel"
+              aria-labelledby="v-pills-createLPO-tab"
+            >
+              <h1>Purchases</h1>
               <h3>How to create, view and delete an LPO</h3>
               <h5>1. Creating a new LPO</h5>
               <p class="fs-5">There two ways of creating and LPO;</p>
@@ -754,6 +2102,9 @@
                 the items. After ensuring everything is OK, click the Submit
                 button to register the new LPO.
               </p>
+              <img src="./resized/New LPO _ JiPOS.png" alt="" />
+              <p><i>Creating through new LPO link</i></p>
+
               <h6 class="fs-5">
                 <i>b. Converting an External Requisition into an LPO</i>
               </h6>
@@ -766,6 +2117,8 @@
                 <br /><b>Note:</b> Only External Requisitions can be converted
                 to an LPO.
               </p>
+              <img src="./resized/External Requisition-JiPOS.png" alt="" />
+              <p><i>External requisition to LPO</i></p>
               <h5>2. Viewing and editing LPO</h5>
               <p class="fs-5">
                 To view an LPO, click Purchases > LPO List in the sidebar. This
@@ -795,12 +2148,15 @@
                 allowfullscreen
               ></iframe>
             </div>
-            <!-- sales content-->
+
+            <!--SALES-->
+
+            <!--make sale content-->
             <div
               class="tab-pane fade"
-              id="v-pills-sales"
+              id="v-pills-makesale"
               role="tabpanel"
-              aria-labelledby="v-pills-sales-tab"
+              aria-labelledby="v-pills-makesale-tab"
             >
               <h1>Sales</h1>
               <h3>How to make a sale</h3>
@@ -815,6 +2171,8 @@
                 Industry. It is used with the non-touch screen devices. This
                 mode supports bar-code scanners.
               </p>
+              <img src="./resized/Desktop mode-JiPOS.png" alt="" />
+              <p><i>Desktop Mode</i></p>
               <h5>2. POS Mode</h5>
               <p class="fs-5">
                 This mode is commonly used in the Hospitality Industry and
@@ -833,6 +2191,8 @@
                 logged out of the system, while the system prints the invoice
                 and/or captain order, where applicable.
               </p>
+              <img src="./resized/POS Mode.png" alt="" />
+              <p><i>POS Mode</i></p>
               <iframe
                 width="500"
                 height="250"
@@ -843,6 +2203,15 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
+            </div>
+            <!--edit sales content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-edit"
+              role="tabpanel"
+              aria-labelledby="v-pills-edit-tab"
+            >
+              <h1>Sales</h1>
               <h3>How to edit open sales/ open orders/ pending bills</h3>
               <p class="fs-5">
                 Navigate to the POS section. At top of the page, click Open
@@ -854,6 +2223,17 @@
                 captain order printed after editing this order will contain only
                 the added items.
               </p>
+              <img src="./resized/open sales.png" alt="" />
+              <p><i>Edit Open Sales</i></p>
+            </div>
+            <!--settle sales content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-settle"
+              role="tabpanel"
+              aria-labelledby="v-pills-settle-tab"
+            >
+              <h1>Sales</h1>
               <h3>How to settle/clear/make payment on a sale</h3>
               <p class="fs-5">
                 The cashier or accountant should preferably be handling this
@@ -869,6 +2249,17 @@
                 sale in the ‘Payments Made’ table. After clearing the bill, you
                 can print the receipt.
               </p>
+              <img src="./resized/Settle clear sale.png" alt="" />
+              <p><i>Settle, Clear and Make Payment on a Sale</i></p>
+            </div>
+            <!--void sales content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-void"
+              role="tabpanel"
+              aria-labelledby="v-pills-void-tab"
+            >
+              <h1>Sales</h1>
               <h3>How to void a sale</h3>
               <p class="fs-5">
                 Navigate to the Sales > Sales List on the sidebar. This will
@@ -882,6 +2273,17 @@
                 the items restocked. All voided sales are pushed to Products >
                 Voided Sales section.
               </p>
+              <img src="./resized/Voided Sales _ JiPOS.png" alt="" />
+              <p><i>Void Sale</i></p>
+            </div>
+            <!--complement sales content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-complement"
+              role="tabpanel"
+              aria-labelledby="v-pills-complement-tab"
+            >
+              <h1>Sales</h1>
               <h3>How to complement a sale</h3>
               <p class="fs-5">
                 Navigate to the Sales > Sales List on the sidebar. This will
@@ -894,6 +2296,17 @@
                 All complementary sales are pushed to Products > Complementary
                 Sales section and are recorded as business expenses.
               </p>
+              <img src="./resized/Complementary Sales _ JiPOS.png" alt="" />
+              <p><i>Complementary Sales</i></p>
+            </div>
+            <!--credit sales content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-credit"
+              role="tabpanel"
+              aria-labelledby="v-pills-credit-tab"
+            >
+              <h1>Sales</h1>
               <h3>How to extend credit</h3>
               <p class="fs-5">
                 Giving the sales Extended Credit tag helps easily track the
@@ -908,6 +2321,17 @@
                 credit. From the sales list, all sales are tagged with the
                 Extend Credit tag.
               </p>
+              <img src="./resized/extend credit.png" alt="" />
+              <p><i>Extend Credit</i></p>
+            </div>
+            <!--return sales content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-return"
+              role="tabpanel"
+              aria-labelledby="v-pills-return-tab"
+            >
+              <h1>Sales</h1>
               <h3>How to receive sales returns</h3>
               <p class="fs-5">
                 Returns as conducted on a specific sale/purchase item. You must
@@ -922,6 +2346,8 @@
                 return and the return condition. You can describe the return
                 before you Save.
               </p>
+              <img src="./resized/Receive Sales Return-JiPOS.png" alt="" />
+              <p><i>Receive Sales Returns</i></p>
               <iframe
                 width="500"
                 height="250"
@@ -933,12 +2359,15 @@
                 allowfullscreen
               ></iframe>
             </div>
-            <!-- rooms content-->
+
+            <!--ROOMS-->
+
+            <!--room types content-->
             <div
               class="tab-pane fade"
-              id="v-pills-rooms"
+              id="v-pills-types"
               role="tabpanel"
-              aria-labelledby="v-pills-rooms-tab"
+              aria-labelledby="v-pills-types-tab"
             >
               <h1>Rooms</h1>
               <h3>How to set-up room types</h3>
@@ -947,6 +2376,17 @@
                 section of the page and submit. All the registered room types
                 can be viewed from the table within the page as shown below.
               </p>
+              <img src="./resized/Room type.png" alt="" />
+              <p><i>Setting up room types</i></p>
+            </div>
+            <!--room maintenance content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-maintenance"
+              role="tabpanel"
+              aria-labelledby="v-pills-maintenance-tab"
+            >
+              <h1>Rooms</h1>
               <h3>How to set-up room maintenance status</h3>
               <p class="fs-5">
                 Navigate to Rooms > Register Maintenance Status Fill in the form
@@ -954,6 +2394,17 @@
                 Maintenance Status can be viewed from the table within the page
                 as shown below.
               </p>
+              <img src="./resized/Maintenance Status _ JiPOS.png" alt="" />
+              <p><i>Setting up room maintenance status</i></p>
+            </div>
+            <!--room setup content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-setup"
+              role="tabpanel"
+              aria-labelledby="v-pills-setup-tab"
+            >
+              <h1>Rooms</h1>
               <h3>How to set-up rooms</h3>
               <p class="fs-5">
                 Navigate to Rooms > Rooms. Click New Room button at the top
@@ -964,12 +2415,34 @@
                 the front office for booking while Active rooms are visible for
                 booking.
               </p>
+              <img src="./resized/Room set up.png" alt="room setup" />
+              <p><i>Setting up rooms</i></p>
+            </div>
+            <!--room maintenance change content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-change"
+              role="tabpanel"
+              aria-labelledby="v-pills-change-tab"
+            >
+              <h1>Rooms</h1>
               <h3>How to change room maintenance status</h3>
               <p class="fs-5">
                 Navigate to Rooms > Rooms. Locate condition column in the table.
                 Click the edit icon in this column to change the room condition
                 status as shown below.
               </p>
+              <img src="./resized/Rooms maintenance-JiPOS.png" alt="" />
+              <p><i>Change room maintenance status</i></p>
+            </div>
+            <!--room amenities content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-amenities"
+              role="tabpanel"
+              aria-labelledby="v-pills-amenities-tab"
+            >
+              <h1>Rooms</h1>
               <h3>How to add/assign amenities to a room</h3>
               <p class="fs-5">
                 Navigate to Rooms > Rooms. Click View button in the action
@@ -979,6 +2452,11 @@
                 selected first to generate the item list available in the
                 preferred store. This is the store from which the item is
                 issued.
+              </p>
+              <img src="./resized/amenity.png" alt="" />
+              <p><i>Assigning amenities to a room</i></p>
+
+              <p class="fs-5">
                 <br /><b>Note:</b> To move items into and out the room use the
                 action buttons explained below; <br /><b>1. Add Qty:</b> This
                 helps in restocking the quantities of the same item in the room.
@@ -986,6 +2464,15 @@
                 of the same item in the room. <br /><b>3. View Icon:</b> This
                 opens the item movement ledger as shown below.
               </p>
+            </div>
+            <!--book room content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-book"
+              role="tabpanel"
+              aria-labelledby="v-pills-book-tab"
+            >
+              <h1>Rooms</h1>
               <h3>How to book a room</h3>
               <p class="fs-5">
                 On the sidebar open Rooms > Book Room. This opens the booking
@@ -1005,6 +2492,9 @@
                 correct, click Book Now button to complete the reservation
                 process
               </p>
+              <img src="./resized/Book Room _ JiPOS (1).png" alt="" />
+              <p><i>Booking a room</i></p>
+
               <iframe
                 width="500"
                 height="250"
@@ -1015,6 +2505,15 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
+            </div>
+            <!--check in & out guests content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-in"
+              role="tabpanel"
+              aria-labelledby="v-pills-in-tab"
+            >
+              <h1>Rooms</h1>
               <h3>How to check-in & checkout guest</h3>
               <p class="fs-5">
                 To check-in a guest, navigate to Rooms > Bookings section in the
@@ -1032,6 +2531,18 @@
                 auto-registered in the system when these operations are carried
                 out.
               </p>
+              <img src="./resized/check-in_out_ JiPOS.png" alt="" />
+              <p><i>Checking in & out guests</i></p>
+            </div>
+
+            <!--extra charges content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-extra"
+              role="tabpanel"
+              aria-labelledby="v-pills-extra-tab"
+            >
+              <h1>Rooms</h1>
               <h3>How to add extra charges to guest bookings</h3>
               <p class="fs-5">
                 To check-in a guest, navigate to Rooms > Bookings section in the
@@ -1046,6 +2557,17 @@
                 the form as shown below. Pick ‘Income’ as the account type and
                 ‘Extra Charges’ as the sub-account type.
               </p>
+              <img src="./resized/Extra charges-JiPOS.png" alt="" />
+              <p><i>Extra charges to guest bookings</i></p>
+            </div>
+            <!--map food/drink orders content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-map"
+              role="tabpanel"
+              aria-labelledby="v-pills-map-tab"
+            >
+              <h1>Rooms</h1>
               <h3>How to map food/drink orders to guest booking</h3>
               <p class="fs-5">
                 It is a good practice to add food/drink orders to the
@@ -1053,6 +2575,17 @@
                 window. You have to select the room then then guest for this to
                 be successful as shown below.
               </p>
+              <img src="./resized/map food JiPOS.png" alt="" />
+              <p><i>Mapping food and drink orders</i></p>
+            </div>
+            <!--settle/clear guest bill content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-clear"
+              role="tabpanel"
+              aria-labelledby="v-pills-clear-tab"
+            >
+              <h1>Rooms</h1>
               <h3>How to settle/clear guest bill</h3>
               <p class="fs-5">
                 To check-in a guest, navigate to Rooms > Bookings section in the
@@ -1066,13 +2599,18 @@
                 section. Click on the reference code in the Foods ordered table
                 as shown below then proceed to clear the bill as earlier shown.
               </p>
+              <img src="./resized/clear bill _ JiPOS.png" alt="" />
+              <p><i>Clearing guest bill</i></p>
             </div>
-            <!-- accounting content-->
+
+            <!--ACCOUNTING-->
+
+            <!--sub-account content-->
             <div
               class="tab-pane fade"
-              id="v-pills-accounting"
+              id="v-pills-sub"
               role="tabpanel"
-              aria-labelledby="v-pills-accounting-tab"
+              aria-labelledby="v-pills-sub-tab"
             >
               <h1>Accounting</h1>
               <h3>How to set-up sub-account types</h3>
@@ -1087,6 +2625,17 @@
                 type codes or deleting these sub-account types as they are used
                 in running the cron jobs.
               </p>
+              <img src="./resized/Sub-account _ JiPOS.png" alt="Sub Account" />
+              <p><i>Sub-Account Set-Up</i></p>
+            </div>
+            <!--accounts/ ledger/charts of accounts content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-ledger"
+              role="tabpanel"
+              aria-labelledby="v-pills-ledger-tab"
+            >
+              <h1>Accounting</h1>
               <h3>
                 How to set-up accounts/ ledger accounts / charts of accounts
               </h3>
@@ -1102,6 +2651,20 @@
                 displayed in the table within the same page. You can use the
                 action column to View/Edit/Delete these accounts
               </p>
+              <img
+                src="./resized/Account Types _ JiPOS.png"
+                alt="Account Types"
+              />
+              <p><i>Account Set-Up</i></p>
+            </div>
+            <!--request, approve content
+            <div
+              class="tab-pane fade"
+              id="v-pills-request"
+              role="tabpanel"
+              aria-labelledby="v-pills-request-tab"
+            >
+              <h1>Accounting</h1>
               <h3>How to request, approve & make petty cash payments</h3>
               <p class="fs-5">
                 This sub-module allows any other employee to request for petty
@@ -1130,6 +2693,15 @@
                 submit. A request cannot be deleted/edited once a payment has
                 been made against it.
               </p>
+            </div>-->
+            <!--budgets content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-budgets"
+              role="tabpanel"
+              aria-labelledby="v-pills-budgets-tab"
+            >
+              <h1>Accounting</h1>
               <h3>How to set-up budgets</h3>
               <p class="fs-5">
                 You can set-up budgets and truck you expenditure in this
@@ -1142,6 +2714,8 @@
                 the budgets created are displayed in the table at the right
                 section of the page.
               </p>
+              <img src="./resized/Budgeting _ JiPOS.png" alt="" />
+              <p><i>Create a Budget</i></p>
               <h5>2. Tracking budget expenditure</h5>
               <p class="fs-5">
                 Navigate to Account > Budgeting. On the table to the right, you
@@ -1150,12 +2724,25 @@
                 amounts spent on these particular expense heads. You can click
                 the Name column to view the budget ledger.
               </p>
+              <img src="./resized/Tracking Budgeting-JiPOS.png" alt="" />
+              <p><i>Tracking Budget Expenditure</i></p>
+            </div>
+            <!--create, approve expenses payments content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-expenses"
+              role="tabpanel"
+              aria-labelledby="v-pills-expenses-tab"
+            >
+              <h1>Accounting</h1>
               <h3>How to create, approve & make expenses payments</h3>
               <h5>1. Creating an expense</h5>
               <p class="fs-5">
                 Navigate to Accounting > Expenses & Payments. Fill in the form
                 appropriately to create a new expense.
               </p>
+              <img src="./resized/Expense _ JiPOS.png" alt="" />
+              <p><i>Create expense</i></p>
               <h5>2. Approving an expense</h5>
               <p class="fs-5">
                 All expenses have to be approved before payments can be made
@@ -1166,6 +2753,8 @@
                 select approved/canceled/suspended option from the drop-down as
                 shown below and update.
               </p>
+              <img src="./resized/Approving Expense2-JiPOS.png" alt="" />
+              <p><i>Approving an Expense</i></p>
               <h5>3. Making expense payment(s)</h5>
               <p class="fs-5">
                 Navigate to Accounting > Expenses & Payments Open the open as
@@ -1177,6 +2766,17 @@
                 voucher, click print icon in the action column. The collector
                 can then sign the voucher.
               </p>
+              <img src="./resized/Expense payment-Details-JiPOS.png" alt="" />
+              <p><i>Making Expenses Details</i></p>
+            </div>
+            <!--journal entry content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-entry"
+              role="tabpanel"
+              aria-labelledby="v-pills-entry-tab"
+            >
+              <h1>Accounting</h1>
               <h3>How to make a journal entry</h3>
               <p class="fs-5">
                 Navigate to Accounting > Journal Entry. In the page, you can
@@ -1184,6 +2784,17 @@
                 are effective when working with asset accounts e.g. loading the
                 cash account from bank and vice versa. See the image below.
               </p>
+              <img src="./resized/Journal Entry _ JiPOS.png" alt="" />
+              <p><i>Journal Entry</i></p>
+            </div>
+            <!--create sub-account content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-subaccount"
+              role="tabpanel"
+              aria-labelledby="v-pills-subaccount-tab"
+            >
+              <h1>Accounting</h1>
               <h3>Creating a sub-account type</h3>
               <p class="fs-5">
                 Navigate to Accounting > Account Types. At the right section
@@ -1194,6 +2805,17 @@
                 type will be visible in the payment options found the sales &
                 purchase options.
               </p>
+              <img src="./resized/Sub-account _ JiPOS.png" alt="Sub Account" />
+              <p><i>Sub-Account Type Set-Up</i></p>
+            </div>
+            <!--account/journal/ledger account content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-journal"
+              role="tabpanel"
+              aria-labelledby="v-pills-journal-tab"
+            >
+              <h1>Accounting</h1>
               <h3>Creating an account/journal account/ledger account</h3>
               <p class="fs-5">
                 This is how to register the expense types, income accounts,
@@ -1206,23 +2828,67 @@
                 the bottom section of the same page. You can edit/delete the
                 account created from the action column.
               </p>
+              <img src="./resized/Set-up Accounts _ JiPOS.png" alt="" />
+              <p><i>Create an Account</i></p>
+            </div>
+            <!--account balances report content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-balances"
+              role="tabpanel"
+              aria-labelledby="v-pills-balances-tab"
+            >
+              <h1>Accounting</h1>
               <h3>Account balances report</h3>
               <p class="fs-5">
                 Navigate to Accounting > Account Balances. This will give you an
                 overview of all the account balances. At the top-right section
                 of the page, click print icon to print/export the report to PDF.
               </p>
+              <img src="./resized/Account Balances _ JiPOS.png" alt="" />
+              <p><i>Account Balances</i></p>
+            </div>
+            <!--cash flow report content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-cash"
+              role="tabpanel"
+              aria-labelledby="v-pills-cash-tab"
+            >
+              <h1>Accounting</h1>
               <h3>Cash flow report</h3>
               <p class="fs-5">
                 Navigate to Accounting > Cash Flow. This will get you the cash
                 flow report.
               </p>
+              <img src="./resized/Cash Flow _ JiPOS.png" alt="" />
+              <p><i>Cash Flow Report</i></p>
+            </div>
+            <!--balance sheet report content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-sheet"
+              role="tabpanel"
+              aria-labelledby="v-pills-sheet-tab"
+            >
+              <h1>Accounting</h1>
               <h3>Balance sheet report</h3>
               <p class="fs-5">
                 Navigate to Accounting > Balance Sheet. Select the date the
                 click the print icon to get the report, which can then be
                 printed or downloaded.
               </p>
+              <img src="./resized/Balance Sheet _ JiPOS.png" alt="" />
+              <p><i>Balance Sheet Report</i></p>
+            </div>
+            <!--profit loss report content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-profit"
+              role="tabpanel"
+              aria-labelledby="v-pills-profit-tab"
+            >
+              <h1>Accounting</h1>
               <h3>Profit & Loss report</h3>
               <p class="fs-5">
                 Navigate to Accounting > Profit & Loss. Select the Store/Shop in
@@ -1238,18 +2904,34 @@
                 the cost of sale recorded during the sales posted within the
                 specified report period.
               </p>
+              <img src="./resized/Profit and Loss _ JiPOS.png" alt="" />
+              <p><i>Profit & Loss Report</i></p>
+            </div>
+            <!--general ledger report content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-general"
+              role="tabpanel"
+              aria-labelledby="v-pills-general-tab"
+            >
+              <h1>Accounting</h1>
               <h3>General ledger report</h3>
               <p class="fs-5">
                 Navigate to Accounting > General Ledger. This will open all the
                 accounting transactions in the system.
               </p>
+              <img src="./resized/General Ledger _ JiPOS.png" alt="" />
+              <p><i>General Ledger Report</i></p>
             </div>
-            <!-- reports content-->
+
+            <!--REPORTS-->
+
+            <!--close day report content-->
             <div
               class="tab-pane fade"
-              id="v-pills-reports"
+              id="v-pills-close"
               role="tabpanel"
-              aria-labelledby="v-pills-reports-tab"
+              aria-labelledby="v-pills-close-tab"
             >
               <h1>Reports</h1>
               <h3>End of day/ close day report</h3>
@@ -1264,12 +2946,26 @@
                 Click Filter button to first query the report preview before you
                 click the Print button to either print/download the report.
               </p>
+              <img src="./resized/Close Day Report _ JiPOS.png" alt="" />
+              <p><i>End of day/ close day report</i></p>
+            </div>
+            <!--room sales report content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-roomsales"
+              role="tabpanel"
+              aria-labelledby="v-pills-roomsales-tab"
+            >
+              <h1>Reports</h1>
               <h3>Room sales report</h3>
               <p class="fs-5">
                 Navigate to Reports > Room Sales. Filter based the preferred
                 mode, then Print the report as shown below. This gives you the
                 list of rooms sold, the amounts and balances.
               </p>
+              <img src="./resized/Room Sale Report _ JiPOS.png" alt="" />
+              <p><i>Room sales report</i></p>
+
               <iframe
                 width="500"
                 height="250"
@@ -1280,6 +2976,15 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
+            </div>
+            <!--item sales report content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-itemsales"
+              role="tabpanel"
+              aria-labelledby="v-pills-itemsales-tab"
+            >
+              <h1>Reports</h1>
               <h3>Item sales report</h3>
               <p class="fs-5">
                 This report shows only the specific items sold within the
@@ -1287,6 +2992,17 @@
                 Chose the preferred mode and Filter. You can then either
                 Print/export the report to .CSV format.
               </p>
+              <img src="./resized/Items Sale Report _ JiPOS.png" alt="" />
+              <p><i>Item sales report</i></p>
+            </div>
+            <!--item purchase report content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-itempurchase"
+              role="tabpanel"
+              aria-labelledby="v-pills-itempurchase-tab"
+            >
+              <h1>Reports</h1>
               <h3>Item purchase report</h3>
               <p class="fs-5">
                 This report shows a summary of the purchases, which have been
@@ -1295,6 +3011,15 @@
                 print/export to .CSV format. All the recorded purchase expense
                 are also displayed in the report as shown below.
               </p>
+            </div>
+            <!--staff sales summary content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-summary"
+              role="tabpanel"
+              aria-labelledby="v-pills-summary-tab"
+            >
+              <h1>Reports</h1>
               <h3>Staff sales summary/ sales per staff report</h3>
               <p class="fs-5">
                 This report shows sales for every staff account. Navigate to
@@ -1305,12 +3030,34 @@
                 and adjust appropriately and click the filter button again as
                 shown below.
               </p>
+              <img src="./resized/Staff Sales Summary _ JiPOS.png" alt="" />
+              <p><i>Staff sales report</i></p>
+            </div>
+            <!--general sales report content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-generalsales"
+              role="tabpanel"
+              aria-labelledby="v-pills-generalsales-tab"
+            >
+              <h1>Reports</h1>
               <h3>General sales report</h3>
               <p class="fs-5">
                 This report gives you an overview of all the sales per store.
                 Navigate to Reports > General Sales. Select the Store and Report
                 period the click Generate Button.
               </p>
+              <img src="./resized/General sales.png" alt="" />
+              <p><i>General sales report</i></p>
+            </div>
+            <!--suppliers report content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-suppliersreport"
+              role="tabpanel"
+              aria-labelledby="v-pills-suppliersreport-tab"
+            >
+              <h1>Reports</h1>
               <h3>Suppliers report</h3>
               <p class="fs-5">
                 This gives you the list of suppliers and the purchases made from
@@ -1318,6 +3065,17 @@
                 column, select Orders to view the order history of the preferred
                 supplier.
               </p>
+              <img src="./resized/supplier .png" alt="" />
+              <p><i>Suppliers report</i></p>
+            </div>
+            <!--customers report content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-customersreport"
+              role="tabpanel"
+              aria-labelledby="v-pills-customersreport-tab"
+            >
+              <h1>Reports</h1>
               <h3>Customers report</h3>
               <p class="fs-5">
                 This gives you the list of customers and the sales made to them
@@ -1325,6 +3083,15 @@
                 column, select Orders to view the order history of the preferred
                 customer.
               </p>
+            </div>
+            <!--account statements report content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-statements"
+              role="tabpanel"
+              aria-labelledby="v-pills-statements-tab"
+            >
+              <h1>Reports</h1>
               <h3>Account statements report</h3>
               <p class="fs-5">
                 You can get the ledger statements for any account in this
@@ -1333,35 +3100,84 @@
                 Filter button. You can then export this report to pdf/csv file
                 formats.
               </p>
+              <img src="./resized/Account-Statements-JiPOS.png" alt="" />
+              <p><i>Account statements report</i></p>
+            </div>
+            <!--customer statements report content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-customerstatements"
+              role="tabpanel"
+              aria-labelledby="v-pills-customerstatements-tab"
+            >
+              <h1>Reports</h1>
               <h3>Customer statements report</h3>
               <p class="fs-5">
                 This allows you to generate and print all the customer
                 statements. Navigate to Reports > Customer Statements. Select
                 the customer and the report period then click the filter button.
               </p>
+              <img src="./resized/Customer-Statements-JiPOS.png" alt="" />
+              <p><i>Customer statements report</i></p>
+            </div>
+            <!--supplier statements report content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-supplierstatements"
+              role="tabpanel"
+              aria-labelledby="v-pills-supplierstatements-tab"
+            >
+              <h1>Reports</h1>
               <h3>Supplier statements report</h3>
               <p class="fs-5">
                 This allows you to generate and print all the supplier
                 statements. Navigate to Reports > Supplier Statements. Select
                 the supplier and the report period then click the filter button.
               </p>
+              <img src="./resized/Supplier-Statements-JiPOS.png" alt="" />
+              <p><i>Supplier statements report</i></p>
+            </div>
+            <!--supplier balances report content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-supplierbalances"
+              role="tabpanel"
+              aria-labelledby="v-pills-supplierbalances-tab"
+            >
+              <h1>Reports</h1>
               <h3>Supplier balances report</h3>
               <p class="fs-5">
                 This allows you to have an overview of the supplier balances
                 reports. Navigate to Reports > Supplier Balances.
               </p>
+              <img src="./resized/Supplier-Balances-JiPOS.png" alt="" />
+              <p><i>Supplier balances report</i></p>
+            </div>
+            <!--general expenses report content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-generalexpenses"
+              role="tabpanel"
+              aria-labelledby="v-pills-generalexpenses-tab"
+            >
+              <h1>Reports</h1>
               <h3>General expenses report</h3>
               <p class="fs-5">
                 Navigate to Reports > General Expenses. This gives an overview
                 of expenses ran in the business.
               </p>
+              <img src="./resized/General-Expenses-JiPOS.png" alt="" />
+              <p><i>General expenses report</i></p>
             </div>
-            <!-- other content-->
+
+            <!--OTHER CONFIGURATIONS-->
+
+            <!--printer content-->
             <div
               class="tab-pane fade"
-              id="v-pills-other"
+              id="v-pills-printer"
               role="tabpanel"
-              aria-labelledby="v-pills-other-tab"
+              aria-labelledby="v-pills-printer-tab"
             >
               <h1>Other Configurations</h1>
               <h3>Printer configurations</h3>
@@ -1403,6 +3219,15 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
+            </div>
+            <!--browser content-->
+            <div
+              class="tab-pane fade"
+              id="v-pills-browser"
+              role="tabpanel"
+              aria-labelledby="v-pills-browser-tab"
+            >
+              <h1>Other Configurations</h1>
               <h3>Browser configurations</h3>
               <p class="fs-5">
                 The preferred browser for running JiPOS is
@@ -1411,6 +3236,7 @@
                   target="_blank"
                   >FireFox</a
                 >
+
                 which you can download and install. Set FireFox as the default
                 browser as explained
                 <a
@@ -1421,13 +3247,17 @@
                 about:preferences#home without any spaces. Type url in the
                 search box which appears. Under Homepage and new windows, select
                 Custom URL and insert the url given to you by the vendor as
-                shown below. In the same search box, type popup. Click
-                Exceptions in Block pop-up windows section. Insert the URL
+                shown below. In the same search box, type popup.
+              </p>
+              <img src="./resized/firefox 1.png" alt="" />
+              <p class="fs-5">
+                Click Exceptions in Block pop-up windows section. Insert the URL
                 provided by the vendor in this section, Click Allow then Save
                 Changes.
               </p>
+              <img src="./resized/firefox 2.png" alt="" />
             </div>
-            <!-- scroll to top button-->
+            <!-- SCROLL TO TOP BUTTON-->
             <button
               type="button"
               class="btn btn-danger btn-floating btn-lg"
@@ -1439,6 +3269,7 @@
         </div>
       </div>
     </div>
+
     <script src="Improved Manual.js"></script>
   </body>
 </html>
