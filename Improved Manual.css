@@ -70,6 +70,16 @@ iframe {
   margin-bottom: 20px;
   margin-top: 20px;
 }
-img{
-  margin-top: 20px;;
+img {
+  margin-top: 20px;
+}
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.dropdown-toggle .fa-angle-down {
+  transition: transform 0.6s;
+}
+.dropdown-toggle[aria-expanded="true"] .fa-angle-down {
+  transform: rotate(180deg);
 }
